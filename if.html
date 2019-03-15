@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Условный оператор</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name="yandex-verification" content="9ac4fb38cc221824" />
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header id='header'>
+			<div class="overlay"></div>
+			<p id="text"></p>
+			<button id="down">﹀</button>
+		</header>
+		<main>
+			<div class="screen">
+				<h1 style='margin-bottom: 0;'>Условный оператор</h1>
+				<h2 style='margin-top: 0.5em;' class="subtitle">Что такое условный оператор и с чем его едят?</h2>
+				<p class="text">Всем привет! В этой статье мы позна&shy;комимся с такой чудесной штукой, как условный оператор <code>if...else</code>. Представим себе такую ситуацию:</p>
+				<code class="code multiline">Вы сидите дома и хотите пойти погулять. Будучи разумным человеком вы решаете перед выходом по&shy;смот&shy;реть прогноз по&shy;го&shy;ды, чтобы не прогадать с выбором предметов одеж&shy;ды. Погодная сводка пу&shy;гает вас дождем и по&shy;ры&shy;ва&shy;ми ветра до 20 метров в секунду. Вы решаете надеть куртку и взять с собой зонт.</code>
+				<p class="text">В примере выше, вы решаете, какую одежду стоит надеть, основываясь на внешних факторах. <code>если</code> на улице холодно и идет дождь, <code>то</code> я надену теплую одежду и возьму зонт, <code>иначе</code> сделаю выбор в пользу футболки и новеньких шорт.</p> 
+				<p class="text">Итак, переходим к примерам:</p>
+				<code class="code">
+					<span class="grey"># isRaining равна True, значит идет дождь</span>
+					<br>
+					isRaining<span class="red"> = </span><span class="purple">True</span> 
+					<br>
+					<span class="red">if</span> isRaining: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Надеть теплую одежду'</span>) 
+					<br>
+					<span class="red">else</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ура! Футболка и шорты!'</span>) 
+					<br>
+					<span class="grey"># Надеть теплую одежду</span>
+				</code>
+				<br>
+				<code class="code">
+					<span class="grey"># isRaining равна False, значит на улице солнышко!</span>
+					<br>
+					isRaining<span class="red"> = </span><span class="purple">False</span> 
+					<br>
+					<span class="red">if</span> isRaining: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Надеть теплую одежду'</span>) 
+					<br>
+					<span class="red">else</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ура! Футболка и шорты!'</span>) 
+					<br>
+					<span class="grey"># Ура! Футболка и шорты!</span>
+				</code>
+				<p class="text">Это и есть условный оператор <code>if...else</code>. Работает это так: если выражение после <code>if</code> равно <span style='white-space: nowrap;'><code><span class="purple">True</span></code>,</span> то будет выполнен блок код, на&shy;ходя&shy;щий&shy;ся под <code>if</code></p>
+				<code class="code">
+					<span class="red">if</span> <span class="purple">True</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Я напечатаюсь'</span>) 
+					<br>
+					<span class="red">else</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'А я - нет :('</span>) 
+					<br>
+					<span class="grey"># Я напечатаюсь</span>
+				</code>
+				<p class="text">В противном случае, если выражение под <code>if</code> равно <code><span class="purple">False</span></code>, то выполнится блок кода, на&shy;ходя&shy;щий&shy;ся под <code>else</code></p>
+				<code class="code">
+					<span class="red">if</span> <span class="purple">False</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Эй, что за дела?'</span>) 
+					<br>
+					<span class="red">else</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'АХАХАХ, ну наконец-то'</span>) 
+					<br>
+					<span class="grey"># АХАХАХ, ну наконец-то</span>
+				</code>
+				<p class="text">Иногда достаточно только блока <code>if</code></p>
+				<code class="code">
+					<span class="red">if</span> <span class="purple">True</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Одному как-то одиноко...'</span>) 
+					<br>
+					<span class="grey"># Одному как-то одиноко...</span>
+				</code>
+				<br>
+				<code class="code">
+					<span class="grey"># Здесь ничего не выведется, <br> # потому что функция print не будет вызвана</span>
+					<br>
+					<span class="red">if</span> <span class="purple">False</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Так, подожди, в каком смысле False?'</span>) 
+					<br>
+					<span class="grey"># </span>
+				</code>
+				<h2 class="subtitle">Было у царя три сына...</h2>
+				<p class="text">У <code>if</code> и <code>else</code> есть братик - <code>elif</code>. Всё сложнее и сложнее, зачем нам нужен <code>elif</code>? Конструкция <code>if...else</code> пред&shy;став&shy;ляет собой логические выражения вида:</p>
+				<code class='code'>если условие истинно, то делаем <span class="orange">действие1</span>, иначе <span class="orange">действие2</span></code>
+				<p class="text">А что если у нас несколько ва&shy;риан&shy;тов? Для этого и нужен <code>elif</code></p>
+				<code class='code'>если первое условие истинно, то делаем <span class="orange">действие1</span>, <br>если второе условие истинно, то делаем <span class="orange">действие2</span>, <br>если третье условие истинно, то делаем <span class="orange">действие3</span>, <br>иначе <span class="orange">действие4</span></code>
+				<p class="text">Приведу простой пример:</p>
+				<code class="code">
+					number<span class="red"> = </span><span class="purple">10</span>
+					<br>
+					<span class="red">if</span> number <span class="red">==</span> <span class="purple">3</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'number равен 3'</span>) 
+					<br>
+					<span class="red">elif</span> number <span class="red">==</span> <span class="purple">5</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'number равен 5'</span>) 
+					<br>
+					<span class="red">elif</span> number <span class="red">==</span> <span class="purple">10</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'number равен 10'</span>) 
+					<br>
+					<span class="red">else</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Оно тебе надо? Держи лучше котика ≧(◕ ‿‿ ◕)≦'</span>) 
+					<br>
+					<span class="grey"># number равен 10</span>
+				</code>
+				<p class="text">Мы не ограничены в количестве блоков <code>elif</code></p>
+				<code class="code">
+					number<span class="red"> = </span><span class="yellow">'А я вообще строка ( ͡° ͜ʖ ͡°)'</span>
+					<br>
+					<span class="red">if</span> number <span class="red">==</span> <span class="purple">3</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'number равен 3'</span>) 
+					<br>
+					<span class="red">elif</span> number <span class="red">==</span> <span class="purple">5</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'number равен 5'</span>) 
+					<br>
+					<span class="red">elif</span> number <span class="red">==</span> <span class="purple">10</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'number равен 10'</span>) 
+					<br>
+					<span class="red">elif</span> number <span class="red">==</span> <span class="purple">100</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'number равен 100'</span>) 
+					<br>
+					<span class="red">elif</span> number <span class="red">==</span> <span class="purple">999</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'number равен 999'</span>) 
+					<br>
+					<span class="red">else</span>: 
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Оно тебе надо? Держи лучше котика ≧(◕ ‿‿ ◕)≦'</span>) 
+					<br>
+					<span class="grey"># Оно тебе надо? Держи лучше котика ≧(◕ ‿‿ ◕)≦</span>
+				</code>
+				<p class="text">Можно и без <code>else</code></p>
+				<code class="code">
+					mood<span class="red"> = </span><span class="yellow">'happy'</span>
+					<br>
+					<span class="red">if</span> mood <span class="red">==</span> <span class="yellow">'happy'</span>:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'(◕‿◕)♡'</span>)
+					<br>
+					<span class="red">elif</span> mood <span class="red">==</span> <span class="yellow">'sad'</span>:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Не грусти (づ｡◕‿‿◕｡)づ'</span>)
+					<br>
+					<span class="grey"># (◕‿◕)♡</span>
+				</code>
+				<h2 class="subtitle">Коротенькие примерчики</h2>
+				<p class="text">Напишем небольшой скрипт, который определяет является ли вве&shy;ден&shy;ное число четным:</p>
+				<code class="code">
+					number<span class="red"> = </span>int(<span class="blue">input</span>(<span class="yellow">'Введите число: '</span>))
+					<br>
+					<span class="red">if</span> number <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Вы ввели четное число'</span>)
+					<br>
+					<span class="red">else</span>:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Вы ввели нечетное число'</span>)
+				</code>
+				<p class="text">Еще один примерчик: програм&shy;ма, опреде&shy;ляющая является ли введен&shy;ное число поло&shy;житель&shy;ным:</p>
+				<code class="code">
+					number<span class="red"> = </span>int(<span class="blue">input</span>(<span class="yellow">'Введите число: '</span>))
+					<br>
+					<span class="red">if</span> number > <span class="purple">0</span>:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Вы ввели положительное число'</span>)
+					<br>
+					<span class="red">elif</span> number <span class="red">==</span> <span class="purple">0</span>:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Вы ввели ноль!'</span>)
+					<br>
+					<span class="red">else</span>:
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Вы ввели отрицательное число'</span>)
+				</code>
+			</div>
+		</main>
+		<script src='js/smoothscroll.js'></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var name = 'Условный оператор',
+					text = document.getElementById('text');
+				
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500);
+				
+				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
+			});
+
+			
+		</script>
+	</body>
+</html>

@@ -16,7 +16,7 @@
 	<body>
 		<header id='header'>
 			<div class="overlay"></div>
-			<h1 id="text"></h1>
+			<p id="text"></p>
 			<button id="down">﹀</button>
 		</header>
 		<main>
@@ -344,25 +344,9 @@
 				var name = 'Списки в Python',
 					text = document.getElementById('text');
 				
-				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500);
 				
-				down.addEventListener('click', function() {	 
-
-					// if   
-					document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}) 
-					// var currentPos = window.scrollY || window.screenTop,
-					// 	pos = document.querySelector('main').offsetTop,
-					// 	id = setInterval(frame, 10),
-					// 	step = (pos - currentPos) / 40;
-					// function frame() {
-					// 	if (currentPos > pos)
-					// 		clearInterval(id);
-					// 	else {
-					// 		currentPos+=step;
-					// 		window.scrollTo(0, currentPos)
-					// 	}
-					// }
-				})
+				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
 			});
 
 			
