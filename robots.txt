@@ -3,3 +3,6 @@ Disallow: /js/
 Disallow: /img/
 Disallow: /README.md
 Disallow: /*.css
+
+Sitemap: https://pymanual.github.io/sitemap.xml
+Host: https://pymanual.github.io
