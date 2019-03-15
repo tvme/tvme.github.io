@@ -1,6 +1,7 @@
 User-agent: *
-Disallow: /js/
-Disallow: /img/
+Disallow: /js/*.js
+Disallow: /img/*.jpg
+Disallow: /img/*.jpeg
 Disallow: /README.md
 Disallow: /*.css
 
