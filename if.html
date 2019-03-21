@@ -27,8 +27,8 @@
 	<body>
 		<header id='header'>
 			<div class="overlay"></div>
-			<p id="text"></p>
-			<button id="down">﹀</button>
+			<p id="text" data-lax-scale="0 1, vh 0.1" data-lax-translate-y="0 0, vh 1000" data-lax-opacity="0 1, (vh*0.5) 0" style="backface-visibility: hidden; transform: scale(1) translateY(0px); opacity: 1;"></p>
+			<button id="down" data-lax-opacity="0 1, (vh*0.1) 0" data-lax-scale="0 1, (vh*0.1) 0"><img src="down2.png" alt=""></button>
 		</header>
 		<main>
 			<div class="screen">
@@ -214,14 +214,30 @@
 			</div>
 		</main>
 		<script src='js/smoothscroll.js'></script>
+		<script src="lax.js"></script>
+
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				var name = 'Условный оператор',
 					text = document.getElementById('text');
 				
-				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500);
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 100*index)),500);
 				
 				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
+				lax.setup()
+		        
+				document.addEventListener('scroll', function(x) {
+					lax.update(window.scrollY)
+				}, false)
+
+				let w = window.innerWidth
+				window.addEventListener("resize", function() {
+					if(w !== window.innerWidth) {
+				  		lax.populateElements()
+					}
+				});
+
+				lax.update(window.scrollY)
 			});
 
 			
