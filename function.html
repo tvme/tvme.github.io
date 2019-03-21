@@ -242,15 +242,33 @@
 			</div>
 		</main>
 		<script src='js/smoothscroll.js' async></script>
+				<script src="lax.js"></script>
+
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				var name = 'Функции в Python',
 					text = document.getElementById('text');
 				
-				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500);
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 100*index)),500);
 				
 				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
+				lax.setup()
+		        
+				document.addEventListener('scroll', function(x) {
+					lax.update(window.scrollY)
+				}, false)
+
+				let w = window.innerWidth
+				window.addEventListener("resize", function() {
+					if(w !== window.innerWidth) {
+				  		lax.populateElements()
+					}
+				});
+
+				lax.update(window.scrollY)
 			});
+
+			
 		</script>
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript" >
