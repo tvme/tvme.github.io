@@ -138,6 +138,120 @@
 					<br>
 					<span class="grey"># 1</span>
 				</code>
+				<h2 class="subtitle">Операции сравнения в python</h2>
+				<p class="text">Операции сравнения в отличие от арифметические имеют всего два результата: <code>True</code> и <code>False</code>. Чаще всего такие операции используются в условии циклов, условных оператов, а также в некоторых функциях, например, <code>filter</code>.</p>
+				<code class="code">
+					<span class="grey"># Операция равенства: True, если X равен Y</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">10</span> <span class="red">==</span> <span class="purple">10</span>)
+					<br>
+					<span class="grey"># True</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">666</span> <span class="red">==</span> <span class="purple">661</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<br>
+					<span class="grey"># Операция неравенства: True, если X не равен Y</span>				
+					<br>
+					<span class="blue">print</span>(<span class="purple">666</span> <span class="red">!=</span> <span class="purple">661</span>)
+					<br>
+					<span class="grey"># True</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">666</span> <span class="red">!=</span> <span class="purple">666</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<br>
+					<span class="grey"># Операция больше: True, если X больше Y</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">120</span> <span class="red">></span> <span class="purple">2</span>)
+					<br>
+					<span class="grey"># True</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">1000</span> <span class="red">></span> <span class="purple">1999</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<br>
+					<span class="grey"># Операция меньше: True, если X меньше Y</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">121</span> <span class="red"><</span> <span class="purple">120</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">0</span> <span class="red"><</span> <span class="purple">1</span>)
+					<br>
+					<span class="grey"># True</span>
+					<br>
+					<br>
+					<span class="grey"># Операция меньше или равно: True, если X меньше или равен Y</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">6</span> <span class="red"><=</span> <span class="purple">6</span>)
+					<br>
+					<span class="grey"># True</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">5</span> <span class="red"><=</span> <span class="purple">2</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<br>
+					<span class="grey"># Операция больше или равно: True, если X больше или равен Y</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">1000</span> <span class="red">>=</span> <span class="purple">10000</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">9999</span> <span class="red">>=</span> <span class="purple">9999</span>)
+					<br>
+					<span class="grey"># False</span>
+
+				</code>
+				<h2 class="subtitle">Логические операции в python</h2>
+				<p class="text">Логические операции, как и операции сравнения, имеют всего два возможных результата:  <code>True</code> и <code>False</code>. Используются для объединения операций сравнения в условиях циклов, условных оператов, а также в некоторых функциях, например, <code>filter</code>.</p>
+				<code class="code">
+					<span class="grey"># Оператор "and" или конъюнкция.</span>
+					<br>
+					<span class="grey"># True, если и выражение X, и выражение Y равны True</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">10</span> <span class="red">==</span> <span class="purple">10</span> <span class="red">and</span> <span class="purple">10</span> <span class="red">></span> <span class="purple">2</span>)
+					<br>
+					<span class="grey"># True</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">666</span> <span class="red">==</span> <span class="purple">661</span> <span class="red">and</span> <span class="purple">9</span> <span class="red">></span> <span class="purple">0</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<br>
+					<span class="grey"># Оператор "or" или дизъюнкция.</span>
+					<br>
+					<span class="grey"># True, если или выражение X, или выражение Y равны True</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">666</span> <span class="red">==</span> <span class="purple">661</span> <span class="red">or</span> <span class="purple">9</span> <span class="red">></span> <span class="purple">0</span>)
+					<br>
+					<span class="grey"># True</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">666</span> <span class="red">==</span> <span class="purple">661</span> <span class="red">or</span> <span class="purple">9</span> <span class="red"><</span> <span class="purple">0</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<br>
+					<span class="grey"># Оператор "not" или инверсия меняет значение на противоположное.</span>
+					<br>
+					<span class="grey"># True, если выражение X равно False</span>
+					<br>
+					<span class="blue">print</span>(<span class="red">not</span> <span class="purple">120</span> <span class="red">></span> <span class="purple">2</span>)
+					<br>
+					<span class="grey"># False</span>
+					<br>
+					<span class="blue">print</span>(<span class="red">not</span> <span class="purple">1000</span> <span class="red"><</span> <span class="purple">999</span>)
+					<br>
+					<span class="grey"># True</span>
+					<br>
+					<span class="blue">print</span>(<span class="red">not</span> (<span class="purple">121</span> <span class="red"><</span> <span class="purple">121</span> <span class="red">and</span> <span class="purple">10</span> <span class="red">==</span> <span class="purple">2</span>))
+					<br>
+					<span class="grey"># True</span>
+				</code>
 				<h2 class="subtitle">Округление чисел в python</h2>
 				<p class="text">Всё дело в округлении! В <code>python</code> есть несколько замечательных функций, которые округляют число до указанного знака. Одной из таких функций является <code>round</code>:</p>
 				<code class="code">

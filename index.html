@@ -14,35 +14,23 @@
 		<meta name="yandex-verification" content="9ac4fb38cc221824" />
 		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
 		<link rel="stylesheet" href="main.css">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136347703-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-136347703-1');
-		</script>
-
 	</head>
 	<body>
 		<header id='header'>
 			<div class="overlay"></div>
-			<p id="text" 
-					data-lax-scale="0 1, (document.body.offsetHeight) 0.8" 
-					data-lax-translate-y="0 0, (document.body.offsetHeight) 200" 
-					data-lax-opacity="0 1, (document.body.offsetHeight*0.8) 0" 
-				style="backface-visibility: hidden; transform: scale(1) translateY(0px); opacity: 1;"></p>
-			<button id="down" data-lax-opacity="0 1, (document.body.offsetHeight*0.5) 0"  data-lax-scale="0 1, (document.body.offsetHeight*0.5) 0"><img src="down2.png" alt=""></button>
+			<p id="text"></p>
+			<button id="down">﹀</button>
 		</header>
 		<main>
 			<h1>Онлайн-учебник по программи&shy;рованию на языке Python</h1>
 			<p class="text">Приветствую вас на сайте, посвященном изучению <code>python</code>! Сегодня <code>python</code> — это один из самых популярных языков программирования! Огромное сообщество, к которому всегда обратиться с вопросом, простой и понятный синтаксис, широкие возможности для применения — всё это есть у <code>python</code>. От вас, решившихся познать его, требуется лишь немного терпения и безграничная тяга к знаниям. Научиться программировать может каждый. Так почему бы не начать прямо сейчас?</p>
-			<h2 class="subtitle">Что можно почитать?</h2>
-			<a href="if.html" target='_blank' class="code link blue">1. Как готовить if..else?</a>
-			<a href="list.html" target='_blank' class="code link green">2. Что такое список?</a>
-			<a href="list_methods.html" target='_blank' class="code link orange">3. Методы для работы со списками</a>
-			<a href="function.html" target='_blank' class="code link yellow">4. Для чего нужны функции?</a>
+			<h2 class="subtitle">Топовые статьи про <code>python</code></h2>
+			<p class="text">Прочитай их все!</p>
+			<a href="operations.html" target='_blank' class="code link yellow ">1. Всё, что вы боялись спросить о вычислениях в python</a>
+			<a href="if.html" target='_blank' class="code link blue">2. Коротенько об if..else</a>
+			<a href="list.html" target='_blank' class="code link green">3. Что такое список?</a>
+			<a href="list_methods.html" target='_blank' class="code link orange">4. Методы для работы со списками</a>
+			<a href="function.html" target='_blank' class="code link yellow">5. Для чего нужны функции?</a>
 			<h2 class="subtitle" >Почему нужно научиться про&shy;грам&shy;мировать?</h2>
 			<br>
 			<code class="code"><span class="yellow">Во-первых</span>, программирование - это топ! (♡‿♡)</code>
@@ -55,33 +43,15 @@
 
 		</main>
 		<script src='js/smoothscroll.js'></script>
-		<script src="lax.js"></script>
-
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				var name = 'Учебник Python',
 					text = document.getElementById('text');
 				
-				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 100*index)),500);
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 150*index)),500)
 				
-				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
-				lax.setup()
-		        
-				document.addEventListener('scroll', function(x) {
-					lax.update(window.scrollY)
-				}, false)
-
-				let w = window.innerWidth
-				window.addEventListener("resize", function() {
-					if(w !== window.innerWidth) {
-				  		lax.populateElements()
-					}
-				});
-
-				lax.update(window.scrollY)
+				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}) )
 			});
-
-			
 		</script>
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript" >
