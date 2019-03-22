@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Вычисления в Python</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name="yandex-verification" content="9ac4fb38cc221824" />
+		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header id='header'>
+			<div class="overlay"></div>
+				<p id="text" 
+					data-lax-scale="0 1, (document.body.offsetHeight) 0.8" 
+					data-lax-translate-y="0 0, (document.body.offsetHeight) 200" 
+					data-lax-opacity="0 1, (document.body.offsetHeight*0.8) 0" 
+				style="backface-visibility: hidden; transform: scale(1) translateY(0px); opacity: 1;"></p>
+				<button id="down" data-lax-opacity="0 1, (document.body.offsetHeight*0.5) 0"  data-lax-scale="0 1, (document.body.offsetHeight*0.5) 0"><img src="down2.png" alt=""></button>
+		</header>
+		<main>
+			<!-- data-lax-translate-x="(document.body.offsetHeight) -200, (document.body.offsetHeight*0.7) 0"  -->
+			<div class="screen">
+				<h1 style='margin-bottom: 0;' >Вычисления в python</h1>
+				<p class="text">Хорошего дня! Сегодня мы научимся умножать, делить, вычитать... В каком смысле ты это уже умеешь?! А ты в этом уверен? В любом случае, повторение - это мать учения, так что устраивайся по-удобнее, мы начинаем.</p>
+				<h2 style='margin-top: 0.5em;' class="subtitle">Арифметические операции в python</h2>
+				<p class="text">Вы считаете, что арифметические операции - это просто? Пересчитайте. На самом деле, всё не так страшно, но расслабляться не стоит.</p>
+				<p class="text">Начнём со всем знакомой четверки:</p>
+				<code class="code">
+					<span class="blue">print</span>(<span class="purple">10</span> <span class="red">+</span> <span class="purple">10</span>)
+					<br>
+					<span class="grey"># 10</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">10</span> <span class="red">-</span> <span class="purple">5</span>)
+					<br>
+					<span class="grey"># 5</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">11</span> <span class="red">*</span> <span class="purple">7</span>)
+					<br>
+					<span class="grey"># 77</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">10</span> <span class="red">/</span> <span class="purple">2</span>)
+					<br>
+					<span class="grey"># 5.0</span>
+				</code>
+				<p class="text">Никаких неожиданностей, правда? Не совсем, посмотрите внимательно на операцию деления. Заметили? Мы разделили целое число на его делитель, но несмотря на это, результат имеет тип <code>float</code>. Взглянем на операцию деления чуть более пристально:</p>
+				<code class="code">
+					<span class="blue">print</span>(<span class="purple">10</span><span class="red"> / </span><span class="purple">2</span>)
+					<br>
+					<span class="grey"># 5.0</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">100</span><span class="red"> / </span><span class="purple">3</span>)
+					<br>
+					<span class="grey"># 33.333333333333336</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">21</span><span class="red"> / </span><span class="purple">4</span>)
+					<br>
+					<span class="grey"># 5.25</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">23</span><span class="red"> / </span><span class="purple">7</span>)
+					<br>
+					<span class="grey"># 3.2857142857142856</span>
+				</code>
+				<br>
+				<p class="text">Обратите внимание на деление <code><span class="purple">100</span><span class="red"> / </span><span class="purple">3</span></code>. Выполнив эту операцию, мы получили очень интересный результат <code>33.333333333333336</code>. На конце <code>6</code>?! Вспомним перевод числа в двоичную систему счисления. То есть мы можем представить любое число в виде ноликов и единичек, например, <code>37 = 2^5 + 2^2 + 2^0 = 100101</code>. А как обстоит дело с дробями? Точно также:</p>
+
+				<code class="code">
+					0.75 = 0.5 + 0.25 = 1/2 + 1/4 = 0.11
+				</code>
+				<p class="text">Возникает вопрос, как перевести в двоичную систему такие дроби: 1/3</p>
+				<code class="code">1/3 = 1/4 + 1/8 + 1/16 + 1/32 + ...</code>
+				<p class="text">Это может продолжаться бесконечно долго. Поэтому <code>python</code> прерывает выполнение таких вычислений и часто выдает такие приколы: </p>
+				<code class="code">
+					<span class="blue">print</span>(<span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span>)
+					<br>
+					<span class="grey"># 0.7999999999999999</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.2</span>)
+					<br>
+					<span class="grey"># 0.30000000000000004</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">7</span><span class="red"> / </span><span class="purple">3</span>)
+					<br>
+					<span class="grey"># 2.3333333333333335</span>
+				</code>
+				<p class="text">Еще немного математики. Математика в каждый дом!</p>
+				<code class="code">
+					<span class="grey"># Возведение в степень</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">10</span> <span class="red"><span class="red">*</span><span class="red">*</span></span> <span class="purple">2</span>)
+					<br>
+					<span class="grey"># 100</span>	
+					<br>
+					<span class="blue">print</span>(<span class="purple">2</span> <span class="red"><span class="red">*</span><span class="red">*</span></span> <span class="purple">4</span>)
+					<br>
+					<span class="grey"># 16</span>	
+					<br>
+					<span class="blue">print</span>(<span class="purple">3</span> <span class="red"><span class="red">*</span><span class="red">*</span></span> <span class="purple">0.5</span>)
+					<br>
+					<span class="grey"># 1.7320508075688772</span>	
+					<br>
+					<span class="blue">print</span>(<span class="purple">3</span> <span class="red"><span class="red">*</span><span class="red">*</span></span> <span class="red">-</span><span class="purple">2</span>)
+					<br>
+					<span class="grey"># 0.1111111111111111</span>	
+					<br>
+					<br>
+					<span class="grey"># Остаток от деления</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">11</span> <span class="red">%</span> <span class="purple">4</span>)
+					<br>
+					<span class="grey"># 3</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">101</span> <span class="red">%</span> <span class="purple">7</span>)
+					<br>
+					<span class="grey"># 3</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">34</span> <span class="red">%</span> <span class="purple">5</span>)
+					<br>
+					<span class="grey"># 4</span>
+					<br>
+					<br>
+					<span class="grey"># Деление нацело</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">20</span> <span class="red">//</span> <span class="purple">4</span>)
+					<br>
+					<span class="grey"># 5</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">129</span> <span class="red">//</span> <span class="purple">11</span>)
+					<br>
+					<span class="grey"># 11</span>
+					<br>
+					<span class="blue">print</span>(<span class="purple">100</span> <span class="red">//</span> <span class="purple">61</span>)
+					<br>
+					<span class="grey"># 1</span>
+				</code>
+				<h2 class="subtitle">Округление чисел в python</h2>
+				<p class="text">Всё дело в округлении! В <code>python</code> есть несколько замечательных функций, которые округляют число до указанного знака. Одной из таких функций является <code>round</code>:</p>
+				<code class="code">
+					pi<span class="red"> = </span><span class="purple">3.14159265358979323846264338327</span> 
+					<br>
+					<span class="blue">print</span>(round(pi, <span class="purple">1</span>))
+					<br>
+					<span class="grey"># 3.1</span>
+					<br>
+					<span class="blue">print</span>(round(pi, <span class="purple">2</span>))
+					<br>
+					<span class="grey"># 3.14</span>
+					<br>
+					<span class="blue">print</span>(round(pi, <span class="purple">3</span>))
+					<br>
+					<span class="grey"># 3.12</span>
+					<br>
+					<span class="blue">print</span>(round(pi, <span class="purple">4</span>))
+					<br>
+					<span class="grey"># 3.1416</span>
+					<br>
+					<span class="blue">print</span>(round(pi, <span class="purple">10</span>))
+					<br>
+					<span class="grey"># 3.1415926536</span>
+					<br>
+					<span class="blue">print</span>(round(pi, <span class="purple">15</span>))
+					<br>
+					<span class="grey"># 3.141592653589793</span>
+				</code>
+				<p class="text">Рассмотрим любопытный пример:</p>
+				<code class="code">
+					<span class="blue">print</span>(round(<span class="purple">2.5</span>))
+					<br>
+					<span class="grey"># 2</span>	
+					<br>
+					<span class="blue">print</span>(round(<span class="purple">3.5</span>))
+					<br>
+					<span class="grey"># 4</span>	
+				</code>
+				<p class="text">Если на вашем лице застыл немой вопрос: "почему?", то я вас понимаю. В школе нас учили, что дроби <code>1.1, 1.2, 1.3, 1.4</code> округляются до единицы, а <code>1.5, ..., 1.9</code> до двойки. Но <code>python</code> думает по-другому. Есть два типа округления: арифметическое и банковское. Именно арифметическому округлению вас учили в школе. <code>Python</code> использует как раз-таки банковское округление, его еще называют округлением до ближайшего четного. Приведу еще несколько примеров:</p>
+				<code class="code">
+					<span class="blue">print</span>(round(<span class="purple">10.51213</span>))
+					<br>
+					<span class="grey"># 11</span>	
+					<br>
+					<span class="blue">print</span>(round(<span class="purple">23.5</span>))
+					<br>
+					<span class="grey"># 24</span>	
+					<br>
+					<span class="blue">print</span>(round(<span class="purple">22.5</span>))
+					<br>
+					<span class="grey"># 22</span>	
+				</code>
+				<h2 class="subtitle">Модуль math</h2>
+				<p class="text">Модуль math представляет собой набор математических формул. Рассмотрим несколько примеров:</p>
+				<code class="code">
+					<span class="red">import </span>math
+					<br>
+
+					<br>
+					<span class="blue">print</span>(<span class="blue">dir</span>(math))
+					<br>
+					<span class="grey">['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', <br>'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', <br>'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', <br>'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot',<br> 'inf', 'isclose', 'isfinite', 'isinf', 'isnan',  'ldexp', 'lgamma', 'log',<br> 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'remainder',<br> 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']</span>
+				</code>
+				<br>
+				<code class="code">
+					<span class="red">import </span>math
+					<br>
+					<br>
+					<span class="grey"># Синус 3.14 радиан</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">sin</span>(<span class="purple">3.14</span>))
+					<br>
+					<span class="grey"># 0.0015926529164868282</span>
+					<br>
+					<br>
+					<span class="grey"># Косинус 1.1 радиан</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">cos</span>(<span class="purple">1.1</span>))
+					<br>
+					<span class="grey"># 0.4535961214255773</span>
+					<br>
+					<br>
+					<span class="grey"># Возведение экспоненты в 3 степень</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">exp</span>(<span class="purple">3</span>))
+					<br>
+					<span class="grey"># 20.085536923187668</span>	
+					<br>
+					<br>
+					<span class="grey"># Натуральный логарифм 61</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">log</span>(<span class="purple">61</span>))
+					<br>
+					<span class="grey"># 4.110873864173311</span>
+					<br>
+					<br>
+					<span class="grey"># Факториал четырех</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">factorial</span>(<span class="purple">4</span>))
+					<br>
+					<span class="grey"># 24</span>
+					<br>
+					<br>
+					<span class="grey"># Извлечение квадратного корня</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">sqrt</span>(<span class="purple">9</span>))
+					<br>
+					<span class="grey"># 3.0</span>
+					<br>
+					<br>
+					<span class="grey"># Алгоритм Евклида для чисел 20 и 19</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">gcd</span>(<span class="purple">20</span>, <span class="purple">19</span>))
+					<br>
+					<span class="grey"># 1</span>
+					<br>
+					<br>
+					<span class="grey"># Вычисление гипотенузы треугольника с катетами 3 и 4</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">hypot</span>(<span class="purple">3</span>,<span class="purple">4</span>))
+					<br>
+					<span class="grey"># 5.0</span>
+					<br>
+					<br>
+					<span class="grey"># Перевод радиан в градусы</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">degrees</span>(<span class="purple">1.572</span>))
+					<br>
+					<span class="grey"># 90.06896539456541</span>
+					<br>
+					<br>
+					<span class="grey"># Факториал четырех</span>
+					<br>
+					<span class="blue">print</span>(math.<span class="blue">fmod</span>(<span class="purple">20</span>, <span class="purple">3</span>))
+					<br>
+					<span class="grey"># 24</span>
+				</code>
+				<p class="text">И это далеко не всё! Остальные функции я предлагаю вам протестировать самостоятельно : )</p>
+			</div>
+		</main>
+		<script src='js/smoothscroll.js'></script>
+		<script src="lax.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var name = 'Вычисления',
+					text = document.getElementById('text'),
+					height = document.body.offsetHeight / 100;
+				console.log(height);
+				
+				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 100*index)),500);
+				
+				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
+				lax.setup()
+		        
+				document.addEventListener('scroll', function(x) {
+					lax.update(window.scrollY)
+				}, false)
+
+				let w = window.innerWidth
+				window.addEventListener("resize", function() {
+					if(w !== window.innerWidth) {
+				  		lax.populateElements()
+					}
+				});
+
+				lax.update(window.scrollY)
+			});
+
+			
+		</script>
+	</body>
+</html>
