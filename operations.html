@@ -26,11 +26,11 @@
 		<main>
 			<!-- data-lax-translate-x="(document.body.offsetHeight) -200, (document.body.offsetHeight*0.7) 0"  -->
 			<div class="screen">
-				<h1 style='margin-bottom: 0;' >Вычисления в python</h1>
-				<p class="text">Хорошего дня! Сегодня мы научимся умножать, делить, вычитать... В каком смысле ты это уже умеешь?! А ты в этом уверен? В любом случае, повторение - это мать учения, так что устраивайся по-удобнее, мы начинаем.</p>
-				<h2 style='margin-top: 0.5em;' class="subtitle">Арифметические операции в python</h2>
-				<p class="text">Вы считаете, что арифметические операции - это просто? Пересчитайте. На самом деле, всё не так страшно, но расслабляться не стоит.</p>
-				<p class="text">Начнём со всем знакомой четверки:</p>
+				<h1 style='margin-bottom: 0;' >Вычисле&shy;ния в python</h1>
+				<p class="text">Хорошего дня! Сегодня мы научимся умножать, делить, вычитать... В каком смысле ты это уже умеешь?! А ты в этом уверен? В любом случае, повто&shy;рение - это мать учения, так что устраивайся по-удобнее, мы начинаем.</p>
+				<h2 style='margin-top: 0.5em;' class="subtitle">Арифмети&shy;ческие операции в python</h2>
+				<p class="text">Вы считаете, что арифме&shy;тиче&shy;ские операции - это просто? Пересчитайте. На самом деле, всё не так страшно, но рас&shy;слабляться не стоит.</p>
+				<p class="text">Начнём со всем знакомой чет&shy;вер&shy;ки:</p>
 				<code class="code">
 					<span class="blue">print</span>(<span class="purple">10</span> <span class="red">+</span> <span class="purple">10</span>)
 					<br>
@@ -48,7 +48,7 @@
 					<br>
 					<span class="grey"># 5.0</span>
 				</code>
-				<p class="text">Никаких неожиданностей, правда? Не совсем, посмотрите внимательно на операцию деления. Заметили? Мы разделили целое число на его делитель, но несмотря на это, результат имеет тип <code>float</code>. Взглянем на операцию деления чуть более пристально:</p>
+				<p class="text">Никаких неожиданностей, правда? Не совсем, посмотрите внимательно на операцию деле&shy;ния. Заметили? Мы разделили целое число на его делитель, но несмотря на это, результат имеет тип <code>float</code>. Взглянем на операцию деления чуть более пристально:</p>
 				<code class="code">
 					<span class="blue">print</span>(<span class="purple">10</span><span class="red"> / </span><span class="purple">2</span>)
 					<br>
@@ -67,14 +67,16 @@
 					<span class="grey"># 3.2857142857142856</span>
 				</code>
 				<br>
-				<p class="text">Обратите внимание на деление <code><span class="purple">100</span><span class="red"> / </span><span class="purple">3</span></code>. Выполнив эту операцию, мы получили очень интересный результат <code>33.333333333333336</code>. На конце <code>6</code>?! Вспомним перевод числа в двоичную систему счисления. То есть мы можем представить любое число в виде ноликов и единичек, например, <code>37 = 2^5 + 2^2 + 2^0 = 100101</code>. А как обстоит дело с дробями? Точно также:</p>
+				<p class="text">Обратите внимание на деление <code><span class="purple">100</span><span class="red"> / </span><span class="purple">3</span></code>. Выполнив эту операцию, мы получили очень интересный результат <code>33.333333333333336</code>. На конце <code>6</code>?! Вспомним перевод числа в двоичную систему счисления. То есть мы можем представить любое число в виде ноликов и единичек, например:</p> 
+				<code class='code'>37 = 2^5 + 2^2 + 2^0 = 100101</code>. 
+				<p class="text">А как обстоит дело с дробями? Точно также:</p>
 
 				<code class="code">
 					0.75 = 0.5 + 0.25 = 1/2 + 1/4 = 0.11
 				</code>
-				<p class="text">Возникает вопрос, как перевести в двоичную систему такие дроби: 1/3</p>
+				<p class="text">Возникает вопрос, как пере&shy;вес&shy;ти в двоичную систему такие дроби: 1/3</p>
 				<code class="code">1/3 = 1/4 + 1/8 + 1/16 + 1/32 + ...</code>
-				<p class="text">Это может продолжаться бесконечно долго. Поэтому <code>python</code> прерывает выполнение таких вычислений и часто выдает такие приколы: </p>
+				<p class="text">Это может продолжаться беско&shy;неч&shy;но долго. Поэтому <code>python</code> прерывает выполнение таких вычислений и часто выдает такие приколы: </p>
 				<code class="code">
 					<span class="blue">print</span>(<span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span> <span class="red">+</span> <span class="purple">0.1</span>)
 					<br>
@@ -253,7 +255,7 @@
 					<span class="grey"># True</span>
 				</code>
 				<h2 class="subtitle">Округление чисел в python</h2>
-				<p class="text">Всё дело в округлении! В <code>python</code> есть несколько замечательных функций, которые округляют число до указанного знака. Одной из таких функций является <code>round</code>:</p>
+				<p class="text">Всё дело в округлении! В <code>python</code> есть несколько заме&shy;ча&shy;тель&shy;ных функций, которые округ&shy;ляют число до указанного знака. Одной из таких функций является <code>round</code>:</p>
 				<code class="code">
 					pi<span class="red"> = </span><span class="purple">3.14159265358979323846264338327</span> 
 					<br>
