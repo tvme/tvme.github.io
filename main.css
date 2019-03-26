@@ -59,12 +59,12 @@ body,html {
     text-shadow: 3px 3px 0 #000
 }
 
-#down,#tg-link {
+#down, .button {
     position: absolute;
     color: #fff
 }
 
-#tg-link {
+.button {
     height: 56px;
     right: 0;
     text-decoration: none;
@@ -77,7 +77,11 @@ body,html {
     margin-bottom: 40px;
     background-color: #2c292d;
     padding: 0 25px;
-    transition: .3s
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
 }
 
 svg {
@@ -112,7 +116,7 @@ h1 {
     line-height: 1.5
 }
 
-#tg-link,.text,code {
+.button,.text,code {
     font-size: 18px
 }
 
@@ -213,27 +217,40 @@ code {
     white-space: pre-wrap
 }
 
+.left {
+    right: auto;
+    left: 0;
+}
+
+.non-abs {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.none {
+    display: none;
+}
+
 @media all and (pointer:fine) {
     .link:hover {
         transform: scale(1.048)
     }
 
-    #tg-link:hover {
+    .button:hover {
         background-color: #00658b
     }
 
-    #tg-link:hover svg {
+    .button:hover svg {
         transform: rotate(360deg)
     }
 }
 
 @media all and (max-width:768px) {
 
-    #tg-link {
+    .button {
         position: relative;
-
     }
-        
+
     h1 {
         width: 100%;
     }
