@@ -12,80 +12,43 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 		<link rel="manifest" href="img/site.webmanifest">
 		<meta name="yandex-verification" content="9ac4fb38cc221824" />
-		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
-		<link rel="stylesheet" href="min.css">
+<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
-		<header id='header'>
-			<div class="overlay"></div>
-			<p id="text" 
-					data-lax-scale="0 1, (document.body.offsetHeight) 0.8" 
-					data-lax-translate-y="0 0, (document.body.offsetHeight) 200" 
-					data-lax-opacity="0 1, (document.body.offsetHeight*0.8) 0" 
-				style="backface-visibility: hidden; transform: scale(1) translateY(0px); opacity: 1;"></p>
-			<button id="down" data-lax-opacity="0 1, (document.body.offsetHeight*0.5) 0"  data-lax-scale="0 1, (document.body.offsetHeight*0.5) 0"><img src="down2.png" alt=""></button>
-		</header>
-		<main>
-                <a id="tg-link" class='button' href="tg://resolve?domain=codewithmaximka">
-                    <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="256" cy="256" r="256" fill="#41B4E6" />
-                        <path d="m512 256c0-6.238-0.235-12.419-0.673-18.546l-106.1-106.1-298.46 117.4 114.19 114.19 1.498 5.392 1.939-1.955 8e-3 8e-3 -1.947 1.947 126.32 126.32c95.52-37.16 163.22-130 163.22-238.66z" fill="#0091C8" />
-                        <polygon points="231.14 293.3 346.83 380.65 405.23 131.36 106.77 248.76 197.59 278.84 363.33 167.66" fill="#fff" />
-                        <polygon points="197.59 278.84 222.46 368.34 231.14 293.3 363.33 167.66" fill="#D2D2D7" />
-                        <polygon points="268.74 321.69 222.46 368.34 231.14 293.3" fill="#B9B9BE" />
-                    </svg>
-                    Telegram
-                </a>
-			<h1>Онлайн-учебник по программи&shy;рованию на языке Python</h1>
-			<p class="text">Приветствую вас на сайте, посвященном изучению <code>python</code>! Сегодня <code>python</code> — это один из самых популярных языков программирования! Огромное сообщество, к которому всегда обратиться с вопросом, простой и понятный синтаксис, широкие возможности для применения — всё это есть у <code>python</code>. От вас, решившихся познать его, требуется лишь немного терпения и безграничная тяга к знаниям. Научиться программировать может каждый. Так почему бы не начать прямо сейчас?</p>
-			<h2 class="subtitle">Топовые статьи про <code>python</code></h2>
-			<p class="text">Прочитай их все!</p>
-			<a href="operations.html" target='_blank' class="code link yellow ">1. Всё, что вы боялись спросить о вычислениях в python</a>
-			<a href="if.html" target='_blank' class="code link blue">2. Коротенько об if..else</a>
-			<a href="list.html" target='_blank' class="code link green">3. Что такое список?</a>
-			<a href="list_methods.html" target='_blank' class="code link orange">4. Методы для работы со списками</a>
-			<a href="function.html" target='_blank' class="code link yellow">5. Для чего нужны функции?</a>
-			<h2 class="subtitle" >Почему нужно научиться про&shy;грам&shy;мировать?</h2>
-			<br>
-			<code class="code"><span class="yellow">Во-первых</span>, программирование - это топ! (♡‿♡)</code>
-			<br>
-			<code class="code"><span class="blue">Во-вторых</span>, смотри первый пункт ( ͡° ͜ʖ ͡°) </code>
-			<br>
-			<code class="code"><span class="red">В-третьих</span>, можно всем говорить, что ты - программист 《 / 》</code>
-			<br>
-			<code class="code"><span class="green">В-четвертых</span>, ты же этого всегда хотел, не так ли?</code>
+		<main class='container'>
+            <a id="tg-link" class='button' href="tg://resolve?domain=codewithmaximka">
+                <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="256" cy="256" r="256" fill="#41B4E6" />
+                    <path d="m512 256c0-6.238-0.235-12.419-0.673-18.546l-106.1-106.1-298.46 117.4 114.19 114.19 1.498 5.392 1.939-1.955 8e-3 8e-3 -1.947 1.947 126.32 126.32c95.52-37.16 163.22-130 163.22-238.66z" fill="#0091C8" />
+                    <polygon points="231.14 293.3 346.83 380.65 405.23 131.36 106.77 248.76 197.59 278.84 363.33 167.66" fill="#fff" />
+                    <polygon points="197.59 278.84 222.46 368.34 231.14 293.3 363.33 167.66" fill="#D2D2D7" />
+                    <polygon points="268.74 321.69 222.46 368.34 231.14 293.3" fill="#B9B9BE" />
+                </svg>
+                Telegram
+            </a>
+			<h1 class='big-title'>Python</h1>
+			<p class="link-box"><a href="operations.html" target='_blank' class=" link  "><span class="num">1. </span>Вычисления</a></p>
+			<p class="link-box"><a href="if.html" target='_blank' class=" link "><span class="num">2. </span>Условный оператор</a></p>
+			<p class="link-box"><a href="for.html" target='_blank' class=" link "><span class="num">3. </span>Цикл for</a></p>
+			<p class="link-box"><a href="list.html" target='_blank' class=" link "><span class="num">4. </span>Что такое список?</a></p>
+			<p class="link-box"><a href="list_methods.html" target='_blank' class=" link "><span class="num">5. </span>Методы для работы со списками</a></p>
+			<p class="link-box"><a href="function.html" target='_blank' class=" link "><span class="num">6. </span>Для чего нужны функции?</a></p>
+			<div class="box">
+				<p class="text">На сегодняшний день Python - это один из самых популярных и быстрорастущих языков программирования. Главная особенность python - это краткость и предельная простота кода. Я написал все это, чтобы заполнить пустоту после заголовка, все равно это никто не читает. Или нет? Во любом случае приведу несколько любопытных фактов об этом прекрасном языке программирования:</p>
+				<p class="text"><span class="num">1. </span>Python был создан Гвидо ван Россумом 20 февраля 1991</p>
+				<p class="text"><span class="num">2. </span>Напишите в интерпретаторе <span class="high">import this</span></p>
+				<p class="text"><span class="num">3. </span>А теперь - import antigravity</p>
+				<p class="text"><span class="num">4. </span>Большая часть ютуба написана на Python</p>
+				<p class="text"><span class="num">5. </span>Создатель языка, Гвидо ван Россум, был поклонником Британского комедийного шоу «Летающий цирк Монти Пайтона». Вот и (Monty Python)» язык назвался Python.</p>
+				<p class="text"><span class="num">6. </span><a href="https://www.python.org/about/success/">Я говорил о том, что Python - очень многофункциональный язык?</a></p>
+			</div>
 
+			
 		</main>
 		<script src='js/smoothscroll.js'></script>
 		
-		<script src="lax.js"></script>
 
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				var name = 'Учебник Python',
-					text = document.getElementById('text');
-				
-				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 100*index)),500);
-				
-				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
-				lax.setup()
-		        
-				document.addEventListener('scroll', function(x) {
-					lax.update(window.scrollY)
-				}, false)
-
-				let w = window.innerWidth
-				window.addEventListener("resize", function() {
-					if(w !== window.innerWidth) {
-				  		lax.populateElements()
-					}
-				});
-
-				lax.update(window.scrollY)
-			});
-
-			
-		</script>
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript" >
 		   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
