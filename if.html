@@ -11,9 +11,9 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 		<link rel="manifest" href="img/site.webmanifest">
 		<meta name="yandex-verification" content="9ac4fb38cc221824" />
-		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
 		
-		<link rel="stylesheet" href="min.css">
+		<link rel="stylesheet" href="main.css">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136347703-1"></script>
 		<script>
@@ -25,18 +25,10 @@
 		</script>
 	</head>
 	<body>
-		<header id='header'>
-			<div class="overlay"></div>
-			<p id="text" 
-					data-lax-scale="0 1, (document.body.offsetHeight) 0.8" 
-					data-lax-translate-y="0 0, (document.body.offsetHeight) 200" 
-					data-lax-opacity="0 1, (document.body.offsetHeight*0.8) 0" 
-				style="backface-visibility: hidden; transform: scale(1) translateY(0px); opacity: 1;"></p>
-			<button id="down" data-lax-opacity="0 1, (document.body.offsetHeight*0.5) 0"  data-lax-scale="0 1, (document.body.offsetHeight*0.5) 0"><img src="down2.png" alt=""></button>
-		</header>
-		<main>
+		
+		<main class='container'>
 			<div class="screen">
-                <a id="tg-link" class='button' href="tg://resolve?domain=codewithmaximka">
+                <!-- <a id="tg-link" class='button' href="tg://resolve?domain=codewithmaximka">
                     <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="256" cy="256" r="256" fill="#41B4E6" />
                         <path d="m512 256c0-6.238-0.235-12.419-0.673-18.546l-106.1-106.1-298.46 117.4 114.19 114.19 1.498 5.392 1.939-1.955 8e-3 8e-3 -1.947 1.947 126.32 126.32c95.52-37.16 163.22-130 163.22-238.66z" fill="#0091C8" />
@@ -45,9 +37,10 @@
                         <polygon points="268.74 321.69 222.46 368.34 231.14 293.3" fill="#B9B9BE" />
                     </svg>
                     Telegram
-                </a>
-				<h1 style='margin-bottom: 0;'>Условный оператор</h1>
-				<h2 style='margin-top: 0.5em;' class="subtitle">Что такое условный оператор и с чем его едят?</h2>
+                </a> -->
+				<h1 class='main-title'>Условный оператор</h1>
+				<a href="index.html" class="link special">Назад в начало</a>
+				<h2 class='title' class="subtitle">Что такое условный оператор и с чем его едят?</h2>
 				<p class="text">Всем привет! В этой статье мы позна&shy;комимся с такой чудесной штукой, как условный оператор <code>if...else</code>. Представим себе такую ситуацию:</p>
 				<code class="code multiline">Вы сидите дома и хотите пойти погулять. Будучи разумным человеком вы решаете перед выходом по&shy;смот&shy;реть прогноз по&shy;го&shy;ды, чтобы не прогадать с выбором предметов одеж&shy;ды. Погодная сводка пу&shy;гает вас дождем и по&shy;ры&shy;ва&shy;ми ветра до 20 метров в секунду. Вы решаете надеть куртку и взять с собой зонт.</code>
 				<p class="text">В примере выше, вы решаете, какую одежду стоит надеть, основываясь на внешних факторах. <code>если</code> на улице холодно и идет дождь, <code>то</code> я надену теплую одежду и возьму зонт, <code>иначе</code> сделаю выбор в пользу футболки и новеньких шорт.</p> 
@@ -125,7 +118,7 @@
 					<br>
 					<span class="grey"># </span>
 				</code>
-				<h2 class="subtitle">Было у царя три сына...</h2>
+				<h2 class='title'>Было у царя три сына...</h2>
 				<p class="text">У <code>if</code> и <code>else</code> есть братик - <code>elif</code>. Всё сложнее и сложнее, зачем нам нужен <code>elif</code>? Конструкция <code>if...else</code> пред&shy;став&shy;ляет собой логические выражения вида:</p>
 				<code class='code'>если условие истинно, то делаем <span class="orange">действие1</span>, иначе <span class="orange">действие2</span></code>
 				<p class="text">А что если у нас несколько ва&shy;риан&shy;тов? Для этого и нужен <code>elif</code></p>
@@ -196,7 +189,7 @@
 					<br>
 					<span class="grey"># (◕‿◕)♡</span>
 				</code>
-				<h2 class="subtitle">Коротенькие примерчики</h2>
+				<h2 class='title'>Коротенькие примерчики</h2>
 				<p class="text">Напишем небольшой скрипт, который определяет является ли вве&shy;ден&shy;ное число четным:</p>
 				<code class="code">
 					number<span class="red"> = </span>int(<span class="blue">input</span>(<span class="yellow">'Введите число: '</span>))
@@ -228,33 +221,7 @@
 			</div>
 		</main>
 		<script src='js/smoothscroll.js'></script>
-		<script src="lax.js"></script>
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				var name = 'Условный оператор',
-					text = document.getElementById('text');
-				
-				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 100*index)),500);
-				
-				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
-				lax.setup()
-		        
-				document.addEventListener('scroll', function(x) {
-					lax.update(window.scrollY)
-				}, false)
-
-				let w = window.innerWidth
-				window.addEventListener("resize", function() {
-					if(w !== window.innerWidth) {
-				  		lax.populateElements()
-					}
-				});
-
-				lax.update(window.scrollY)
-			});
-
-			
+		
 		</script>
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript" >

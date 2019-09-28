@@ -31,8 +31,9 @@ html,body {
 }
 
 .title {
-    font-size: 2.5rem;
-    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    margin: 1rem 0;
+    line-height: 1.2;
     
 }
 
@@ -198,16 +199,25 @@ svg {
 
 @media (max-width: 768px) {
     html {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.4;
     }
-
+    .main-title {
+        line-height: 1;
+        margin: 2rem 0;
+    }
+    
+    .title { 
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
     .text {
-        text-align: justify;
+
     }
     .link-box .num {
-	font-size: 30px;
-}
+    	font-size: 30px;
+    }
 }
 
 @media all and (pointer:fine) {
@@ -255,6 +265,18 @@ svg {
 	.link:hover:after {
 		box-shadow: none;
 	}
+
+    .special {
+        border: none; display: inline-block;
+        padding: 10px;
+    }
+
+    .special:after {
+        background-color: #ff6189!important;
+        height: 50%;
+       
+
+    }
 }
 
 @media all and (max-width:480px) {
