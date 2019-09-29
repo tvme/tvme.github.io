@@ -43,6 +43,7 @@ html,body {
 
 .text {
     font-size: 1rem;
+    
 }
 
 .tasks {
@@ -164,7 +165,7 @@ svg {
 	position: absolute;
 	bottom: 0px;
 	left: 0;
-	height: 45%;
+	height: 15px;
 	
 	background-color: red;
 	opacity: 0.3;
@@ -188,6 +189,19 @@ svg {
 .link-box:nth-child(6) .link:after {
 	background-color: #a9a9a9;
 }
+.link-box:nth-child(7) .link:after {
+    background-color: aqua;
+}
+.link-box:nth-child(8) .link:after {
+    background-color: darkorange;
+}
+
+.link-box:nth-child(9) .link:after {
+    background-color: dodgerblue;
+}
+.link-box:nth-child(10) .link:after {
+    background-color: tomato;
+}
 
 .box {
 	margin-top: 40px;
@@ -195,6 +209,14 @@ svg {
 
  .link-box .num {
 	font-size: 24px;
+}
+
+.special { 
+    font-size: 1rem;
+    padding: 0;
+    position: relative;
+    padding: 0 10px;
+    line-height: 1.7;
 }
 
 @media (max-width: 768px) {
