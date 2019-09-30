@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name='viewport' content="width=device-width, initial-scale=1">
+		<title>Домашнее задание 1 (JS)</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="main-title">Ввод и вывод данных</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
+			<h2 class="title">Переменные и типы данных</h2>
+			<p class="text">Переменной в программировании называется именованный контейнер для некоторого значения. Представьте себе ящик с наклееным на него стикером. Вы кладете что-нибудь в ящик и пишете на стикере короткое имя без пробелов и знаков препинания, начинающееся с буквы английского алфавита, примерно так же работает переменная в программировании.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">10</span>
+				<br>
+				A<span class="red"> = </span><span class="purple">20</span>
+			</p>
+			<p class="text">a и А - это разные переменные, регистр ввода имеет значение</p>
+			<h2 class="title">Типы данных</h2>
+			<p class="text">Информация получаемая нами с помощью различных органов чувств делится на зрительную, слуховую, обонятельную, осязательную и другие. В программировании так же есть свое разделение, разделение на типы данных. Примитивных типов данных в Python 4:</p>
+			<p class="text">int - целочисленный тип (1, 192, 781287)</p>
+			<p class="text">float - вещественный (дробный) (1.12312, 1231.12378718)</p>
+			<p class="text">str - строковый тип (обязательно пишется в кавычках) ('Hello world')</p>
+			<p class="text">bool - булевый тип (имеет всего два значения: True и False)</p>
+			<h2 class="title">Приведение типов</h2>
+			<p class="text">Приведением типов данных называется преобразование одного типа в другой, например, строку в число, число в строку, число в булеву переменную, строку в дробь и так далее.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">10</span>
+				<br>
+				b<span class="red"> = </span><span class="blue">str</span>(a) <span class="grey"># b - это строка</span>
+				<br>
+				с<span class="red"> = </span><span class="blue">int</span>(b) <span class="grey"># c - это снова число</span>
+				<br>
+				d<span class="red"> = </span><span class="purple">10.78</span>
+				<br>
+				e<span class="red"> = </span><span class="blue">int</span>(d) <span class="grey"># e равно 10</span>
+			</p>
+			<h2 class="title">Функция print</h2>
+			<p class="text">Функция print выводит переданные в неё аргументы в стандартный поток вывода. Что же такое стандартный поток вывода? Standart output или stdout называется потоком вывода, местом, куда мы выводим наш текстовый контент. По умолчанию стандартный поток вывода равен sys.stdout и поэтому вывод осуществляется в консоль.</p>
+			<p class="text">Функция print все переданные в неё аргументы в стандартный поток вывода. Например:</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">1</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello world!'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">False</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1.5</span>, <span class="purple">2.0</span>, <span class="purple">10</span>, <span class="purple">True</span>, <span class="yellow">'username'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello'</span> <span class="red">+ </span><span class="yellow">' '</span> <span class="red">+ </span><span class="yellow">'world'</span> <span class="red">+ </span><span class="yellow">'!'</span>)
+				<br>
+				<span class="grey"># 1</span>
+				<br>
+				<span class="grey"># Hello world!</span>
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="grey"># 1.5 2.0 10 True username</span>
+				<br>
+				<span class="grey"># Hello world!</span>
+			</p>
+			<p class="text">На этом тривиальном примере мы видим две вещи. Во-первых, каждый print переносит поток вывода на новую строчку. Во-вторых, аргументы, переданные в функцию print выводятся через пробел.</p>
+			<p class="code">
+				<span class="grey"># Во-первых:</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span>)
+				<br>
+				<span class="grey"># 1</span>
+				<br>
+				<span class="grey"># 2</span>
+				<br>
+				<span class="grey"># Во-вторых:</span>
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello'</span>, <span class="yellow">'world'</span>)
+				<br>
+				<span class="grey"># Hello world</span>
+			</p>
+			<p class="text">В обоих случаях мы можем изменить стандартное поведение. Рассмотрим первый параметр функции print — end, в него передается строка, которая напечатается после всех аргументов функции print.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">' '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">' '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">' '</span>)
+				<br>
+				<span class="grey"># 1 2 3</span>
+			</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">''</span>-<span class="yellow">''</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">'-'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">''</span>-<span class="yellow">''</span>)
+				<br>
+				<span class="grey"># 1-2-3-</span>
+			</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">'-я выведусь после первого print-'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">'-a я после второго-'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">'-я выведусь после третьего-'</span>)
+				<br>
+				<span class="grey"># 1-я выведусь после первого print-2-a я после второго-3-я выведусь после третьего-</span>
+			</p>
+			<p class="text">Рассмотрим второй параметр функции print — sep, sep от английского separator (разделитель). По умолчанию параметр sep равен ' '. Время для экспериментов ╰(▔∀▔)╯.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="orange">sep</span><span class="red">=</span><span class="yellow">'+++'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="orange">sep</span><span class="red">=</span><span class="yellow">'разделитель'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="orange">sep</span><span class="red">=</span><span class="yellow">'(◕‿◕)'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="orange">sep</span><span class="red">=</span><span class="yellow">'(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧'</span>)
+				<br>
+				<span class="grey"># 1 2 3 4</span>
+				<br>
+				<span class="grey"># 1+++2+++3+++4</span>
+				<br>
+				<span class="grey"># 1разделитель2разделитель3разделитель4</span>
+				<br>
+				<span class="grey"># 1(◕‿◕)2(◕‿◕)3(◕‿◕)4</span>
+				<br>
+				<span class="grey"># 1(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧2(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧3(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧4</span>
+			</p>
+			<h2 class="title">Функция input</h2>
+			<p class="text">Функция input является функцией стандартного ввода (stdin). Ее главная задача - это передача введенных пользователем данных в функцию.</p>
+			<p class="code">
+				name<span class="red"> = </span><span class="blue">input</span>()
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello, '</span> <span class="red">+ </span>name)
+			</p>
+			<p class="text">Функция input может принимать всего лишь один аргумент - строку, которая выведется перед кареткой ввода</p>
+			<p class="code">
+				name<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Enter your name: '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello, '</span> <span class="red">+ </span>name)
+			</p>
+			<p class="text">Функция input возвращает строковый тип данных</p>
+			<p class="text">Строки можно складывать друг с другом - это называется конкатенацией или объединением</p>
+			<p class="code">
+				number<span class="red"> = </span><span class="blue">input</span>()
+				<br>
+				<span class="blue">print</span>(type(number))
+				<br>
+				<span class="grey"># <class 'int'></span>
+			</p>
+			<p class="text">Поэтому если мы напишем такой код, то он будет работать некорректно:</p>
+			<p class="code">
+				number1<span class="red"> = </span><span class="blue">input</span>()
+				<br>
+				number2<span class="red"> = </span><span class="blue">input</span>()
+				<br>
+				<span class="blue">print</span>(number1 <span class="red">+ </span>number2)
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="grey"># 1</span>
+				<br>
+				<span class="grey"># 2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="grey"># 12</span>
+			</p>
+			<p class="text">Поэтому необходимо преобразовать строковый тип в целочисленный (str в int) </p>
+			<p class="code">
+				number1<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>())
+				<br>
+				number2<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>())
+				<br>
+				<span class="blue">print</span>(number1 <span class="red">+ </span>number2)
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="grey"># 1</span>
+				<br>
+				<span class="grey"># 2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="grey"># 3</span>
+			</p>
+			<p class="text">Всегда проверяйте тип полученных данных, это поможет вам избежать большого количества ошибок. К слову, если вы что-то напутали с типами переменных, то Python выдаст ошибку TypeError (ошибка типа)</p>
+			<h2 class="title">Решение задач</h2>
+			<p class="text"><span class="num">1. </span>Поэкспериментируйте с переводом в различные типы данных</p>
+			<p class="text"><span class="num">2. </span>Пользователь вводит свое имя и фамилию. Выведите:</p>
+			<p class="code">
+				Hello, имя фамилия
+				<br>
+				<span class="grey"># На месте слов с % должны быть введенные данные</span>
+			</p>
+			<p class="text"><span class="num">3. </span>Посчитайте сумму трех введенных целых чисел</p>
+			<p class="text"><span class="num">4. </span>Посчитайте сумму трех введенных дробных чисел. Подумайте в какой тип данных нужно преобразовать значение, возвращенное функцией input</p>
+			<p class="text"><span class="num">5. </span>Дано число, выведите предыдущее и следущее за ним числа в таком формате:</p>
+			<p class="code">
+				<span class="grey"># Число равно 10</span>
+				<br>
+				Число предшествующее числу <span class="purple">10</span> равно <span class="purple">9</span>
+				<br>
+				Число следующее за числом <span class="purple">10</span> равно <span class="purple">11</span>
+			</p>
+			<p class="text"><span class="num">6. </span>Вводятся имя и возраст. Выведите, где введенное имя = Максим, а возраст = 20</p>
+			<p class="code">
+				Привет, Максим! Ваш возраст равен <span class="purple">20</span>!
+			</p>
+
+		</div>
+	</body>
+</html>
