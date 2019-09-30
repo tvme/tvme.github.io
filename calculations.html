@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name='viewport' content="width=device-width, initial-scale=1">
+		<title>Домашнее задание 1 (JS)</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="main-title">Вычисления</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
+			<h2 class="title">Арифметические операции</h2>
+			<p class="text">Вы считаете, что арифме&shy;тиче&shy;ские операции - это просто? Пересчитайте. На самом деле, всё не так страшно, но рас&shy;слабляться не стоит. Начнём со всем знакомой чет&shy;вер&shy;ки:</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">+ </span><span class="purple">10</span>)
+				<br>
+				<span class="grey"># 10</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">- </span><span class="purple">5</span>)
+				<br>
+				<span class="grey"># 5</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">11</span> <span class="red">* </span><span class="purple">7</span>)
+				<br>
+				<span class="grey"># 77</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span><span class="red"> / </span><span class="purple">2</span>)
+				<br>
+				<span class="grey"># 5.0</span>
+			</p>
+			<p class="text">Никаких неожиданностей, правда? Не совсем, посмотрите внимательно на операцию деле­ния. Заметили? Мы разделили целое число на его делитель, но несмотря на это, результат имеет тип float. Взглянем на операцию деления чуть более пристально:</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">10</span><span class="red"> / </span><span class="purple">2</span>)
+				<br>
+				<span class="grey"># 5.0</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">100</span><span class="red"> / </span><span class="purple">3</span>)
+				<br>
+				<span class="grey"># 33.333333333333336</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">21</span><span class="red"> / </span><span class="purple">4</span>)
+				<br>
+				<span class="grey"># 5.25</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">23</span><span class="red"> / </span><span class="purple">7</span>)
+				<br>
+				<span class="grey"># 3.2857142857142856</span>
+			</p>
+			<p class="text">Иногда можно увидеть такие приколы:</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">0.1</span> <span class="red">+ </span><span class="purple">0.1</span> <span class="red">+ </span><span class="purple">0.1</span> <span class="red">+ </span><span class="purple">0.1</span> <span class="red">+ </span><span class="purple">0.1</span> <span class="red">+ </span><span class="purple">0.1</span> <span class="red">+ </span><span class="purple">0.1</span> <span class="red">+ </span><span class="purple">0.1</span>)
+				<br>
+				<span class="grey"># 0.7999999999999999</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">0.1</span> <span class="red">+ </span><span class="purple">0.2</span>)
+				<br>
+				<span class="grey"># 0.30000000000000004</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">7</span><span class="red"> / </span><span class="purple">3</span>)
+				<br>
+				<span class="grey"># 2.3333333333333335</span>
+			</p>
+			<p class="text">Еще немного математики. Математика в каждый дом!</p>
+			<p class="code">
+				<span class="grey"># Возведение в степень</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">*<span class="red">* </span></span><span class="purple">2</span>)
+				<br>
+				<span class="grey"># 100</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">4</span>)
+				<br>
+				<span class="grey"># 16</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span> <span class="red">*<span class="red">* </span></span><span class="purple">0.5</span>)
+				<br>
+				<span class="grey"># 1.7320508075688772</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span> <span class="red">*<span class="red">* </span></span><span class="purple">-2</span>)
+				<br>
+				<span class="grey"># 0.1111111111111111</span>
+				<br>
+				<span class="grey"># Остаток от деления</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">11</span> <span class="red">%</span> <span class="purple">4</span>)
+				<br>
+				<span class="grey"># 3</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">101</span> <span class="red">%</span> <span class="purple">7</span>)
+				<br>
+				<span class="grey"># 3</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">34</span> <span class="red">%</span> <span class="purple">5</span>)
+				<br>
+				<span class="grey"># 4</span>
+				<br>
+				<span class="grey"># Деление нацело</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">20</span> <span class="red">// </span><span class="purple">4</span>)
+				<br>
+				<span class="grey"># 5</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">129</span> <span class="red">// </span><span class="purple">11</span>)
+				<br>
+				<span class="grey"># 11</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">100</span> <span class="red">// </span><span class="purple">61</span>)
+				<br>
+				<span class="grey"># 1</span>
+			</p>
+			<h2 class="title">Операции сравнения в python</h2>
+			<p class="text">Операции сравнения в отличие от арифметические имеют всего два результата: True и False. Чаще всего такие операции используются в условии циклов, условных оператов, а также в некоторых функциях, например, filter.</p>
+			<p class="code">
+				<span class="grey"># Операция равенства: True, если X равен Y</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">==</span> <span class="purple">10</span>)
+				<br>
+				<span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">666</span> <span class="red">==</span> <span class="purple">661</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="grey"># Операция неравенства: True, если X не равен Y</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">666</span> <span class="red">!= </span><span class="purple">661</span>)
+				<br>
+				<span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">666</span> <span class="red">!= </span><span class="purple">666</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="grey"># Операция больше: True, если X больше Y</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">120</span><span class="red"> > </span><span class="purple">2</span>)
+				<br>
+				<span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">1000</span><span class="red"> > </span><span class="purple">1999</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="grey"># Операция меньше: True, если X меньше Y</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">121</span><span class="red"> < </span><span class="purple">120</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">0</span><span class="red"> < </span><span class="purple">1</span>)
+				<br>
+				<span class="grey"># True</span>
+				<br>
+				<span class="grey"># Операция меньше или равно: True, если X меньше или равен Y</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">6</span> <span class="red"><= </span><span class="purple">6</span>)
+				<br>
+				<span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">5</span> <span class="red"><= </span><span class="purple">2</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="grey"># Операция больше или равно: True, если X больше или равен Y</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">1000</span> <span class="red">>= </span><span class="purple">10000</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">9999</span> <span class="red">>= </span><span class="purple">9999</span>)
+				<br>
+				<span class="grey"># False</span>
+			</p>
+			<h2 class="title">Логические операции</h2>
+			<p class="text">Логические операции, как и операции сравнения, имеют всего два возможных результата: True и False. Используются для объединения операций сравнения в условиях циклов и условных оператов</p>
+			<p class="code">
+				<span class="grey"># Оператор "and" или конъюнкция.</span>
+				<br>
+				<span class="grey"># True, если и выражение X, и выражение Y равны True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">==</span> <span class="purple">10</span> <span class="red">and </span><span class="purple">10</span><span class="red"> > </span><span class="purple">2</span>)
+				<br>
+				<span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">666</span> <span class="red">==</span> <span class="purple">661</span> <span class="red">and </span><span class="purple">9</span><span class="red"> > </span><span class="purple">0</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="grey"># Оператор "or" или дизъюнкция.</span>
+				<br>
+				<span class="grey"># True, если или выражение X, или выражение Y равны True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">666</span> <span class="red">==</span> <span class="purple">661</span> <span class="red">or </span><span class="purple">9</span><span class="red"> > </span><span class="purple">0</span>)
+				<br>
+				<span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">666</span> <span class="red">==</span> <span class="purple">661</span> <span class="red">or </span><span class="purple">9</span><span class="red"> < </span><span class="purple">0</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="grey"># Оператор "<span class="red">not</span>" или инверсия меняет значение на противоположное.</span>
+				<br>
+				<span class="grey"># True, если выражение X равно False</span>
+				<br>
+				<span class="blue">print</span>(<span class="red">not</span> <span class="purple">120</span><span class="red"> > </span><span class="purple">2</span>)
+				<br>
+				<span class="grey"># False</span>
+				<br>
+				<span class="blue">print</span>(<span class="red">not</span> <span class="purple">1000</span><span class="red"> < </span><span class="purple">999</span>)
+				<br>
+				<span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="red">not</span> (<span class="purple">121</span><span class="red"> < </span><span class="purple">121</span> <span class="red">and </span><span class="purple">10</span> <span class="red">==</span> <span class="purple">2</span>))
+				<br>
+				<span class="grey"># True</span>
+			</p>
+			<h2 class="title">Округление чисел в python</h2>
+			<p class="text">Всё дело в округлении! В python есть несколько заме­ча­тель­ных функций, которые округ­ляют число до указанного знака. Одной из таких функций является <span class='blue'>round</span>:</p>
+			<p class="code">
+				pi<span class="red"> = </span><span class="purple">3.14159265358979323846264338327</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(pi, <span class="purple">1</span>))
+				<br>
+				<span class="grey"># 3.1</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(pi, <span class="purple">2</span>))
+				<br>
+				<span class="grey"># 3.14</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(pi, <span class="purple">3</span>))
+				<br>
+				<span class="grey"># 3.12</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(pi, <span class="purple">4</span>))
+				<br>
+				<span class="grey"># 3.1416</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(pi, <span class="purple">10</span>))
+				<br>
+				<span class="grey"># 3.1415926536</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(pi, <span class="purple">15</span>))
+				<br>
+				<span class="grey"># 3.141592653589793</span>
+			</p>
+			<p class="text">Рассмотрим любопытный пример:</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class='blue'>round</span>(<span class="purple">2.5</span>))
+				<br>
+				<span class="grey"># 2</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(<span class="purple">3.5</span>))
+				<br>
+				<span class="grey"># 4</span>
+			</p>
+			<p class="text">Если на вашем лице застыл немой вопрос: "почему?", то я вас понимаю. В школе нас учили, что дроби 1.1, 1.2, 1.3, 1.4 округляются до единицы, а 1.5, ..., 1.9 до двойки. Но python думает по-другому. Есть два типа округления: арифметическое и банковское. Именно арифметическому округлению вас учили в школе. Python использует как раз-таки банковское округление, его еще называют округлением до ближайшего четного. Приведу еще несколько примеров:</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class='blue'>round</span>(<span class="purple">10.51213</span>))
+				<br>
+				<span class="grey"># 11</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(<span class="purple">23.5</span>))
+				<br>
+				<span class="grey"># 24</span>
+				<br>
+				<span class="blue">print</span>(<span class='blue'>round</span>(<span class="purple">22.5</span>))
+				<br>
+				<span class="grey"># 22</span>
+			</p>
+			<h2 class="title">Примеры решения задач</h2>
+			<p class="text">Есть N оранжевых конфет и K учеников, сколько достанется каждому из них, если разделить их поровну? Сколько конфет останется после дележа?</p>
+			<p class="code">
+				n<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите количество конфет: '</span>))
+				<br>
+				k<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите количество учеников: '</span>))
+				<br>
+				a<span class="red"> = </span>n <span class="red">// </span>k
+				<br>
+				b<span class="red"> = </span>n <span class="red">%</span> k
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Каждому по'</span>, a)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Осталось'</span>, b)
+			</p>
+			<p class="text">Даны стороны прямоугольника a и b. Вычислите периметр, площадь и диагональ прямоугольника.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите a: '</span>))
+				<br>
+				b<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите b: '</span>))
+				<br>
+				s<span class="red"> = </span>a <span class="red">* </span>b
+				<br>
+				p<span class="red"> = </span><span class="purple">2</span> <span class="red">* </span>(a <span class="red">+ </span>b)
+				<br>
+				d<span class="red"> = </span>(a <span class="red">*<span class="red">* </span></span><span class="purple">2</span> <span class="red">+ </span>b <span class="red">*<span class="red">* </span></span><span class="purple">2</span>) <span class="red">*<span class="red">* </span></span><span class="purple">0.5</span>
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Площадь:'</span>, a)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Периметр:'</span>, b)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Диагональ:'</span>, c)
+			</p>
+			<p class="text">Дано число секунд n на секундомере. Посчитайте прошедших минут и секунд.</p>
+			<p class="code">
+				n<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите n: '</span>))
+				<br>
+				m<span class="red"> = </span>n <span class="red">// </span><span class="purple">60</span>
+				<br>
+				s<span class="red"> = </span>n <span class="red">%</span> <span class="purple">60</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">str</span>(m) <span class="red">+ </span><span class="yellow">':'</span> <span class="red">+ </span><span class="blue">str</span>(s))
+			</p>
+			<h2 class="title">Решение задач</h2>
+			<p class="text"><span class="num">1. </span>Дано целое число A. Проверить истинность высказывания: "Число A является четным".</p>
+			<p class="text"><span class="num">2. </span>Дано целое число A. Проверить истинность высказывания: "Число A является нечетным".</p>
+			<p class="text"><span class="num">3. </span>Даны два целых числа: A, B. Проверить истинность высказывания: "Числа A и B имеют одинаковую четность".</p>
+			<p class="text"><span class="num">4. </span>Даны три целых числа: A, B, C. Проверить истинность высказывания: "Хотя бы одно из чисел A, B, C положительное".</p>
+			<p class="text"><span class="num">5. </span>Дано четырехзначное число. Проверить истинность высказывания: "Данное число читается одинаково слева направо и справа налево".</p>
+			<p class="text"><span class="num">6. </span>Дано число секунд n на часах. Посчитайте прошедших часов, минут и секунд.</p>
+			<p class="text"><span class="num">7. </span>Дано натуральное число. Выведите его последнюю цифру.</p>
+			<p class="text"><span class="num">8. </span>Дано положительное действительное число X. Выведите его дробную часть.</p>
+			<p class="text"><span class="num">9. </span>Дано положительное действительное число X. Выведите его первую цифру после десятичной точки.</p>
+			<p class="text"><span class="num">10. </span>Пирожок в столовой стоит a рублей и b копеек. Определите, сколько рублей и копеек нужно заплатить за n пирожков. Программа получает на вход три числа: a, b, n, и должна вывести два числа: стоимость покупки в рублях и копейках.</p>
+			<p class="text"><span class="num">11. </span>Дано натуральное число. Найдите число десятков в его десятичной записи.</p>
+			<p class="text"><span class="num">12. </span>Дано двузначное число. Найдите сумму его цифр.</p>
+			<p class="text"><span class="num">13. </span>Дано трехзначное число. Найдите сумму его цифр.</p>
+			<p class="text"><span class="num">14. </span>Дано трехзначное число. Проверить истинность высказывания: "Все цифры данного числа различны".</p>
+			<p class="text"><span class="num">15. </span>Дано трехзначное число. Проверить истинность высказывания: "Цифры данного числа образуют возрастающую или убывающую последовательность".</p>
+			<p class="text"><span class="num">16. </span>С начала суток прошло N секунд (N - целое). Найти количество</p>
+
+		</div>
+	</body>
+</html>
