@@ -20,6 +20,20 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(i)
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span>
+			</span></p>
+			<p class="code">
+				<span class="grey"># Вывод: </span>
+				<br>
+				<span class="red">>>></span> 0
+				<br>
+				<span class="red">>>></span> 1
+				<br>
+				<span class="red">>>></span> 2
+				<br>
+				<span class="red">>>></span> 3
+				<br>
+				<span class="red">>>></span> 4
+				
 			</p>
 			<p class="text">Цикл while и цикл for имеют схожую структуру, НО есть одно важное различие - цикл while может быть бесконечным.</p>
 			<p class="code">
@@ -30,6 +44,22 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(i)
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод: </span>
+				<br>
+				<span class="red">>>></span> 0
+				<br>
+				<span class="red">>>></span> 1
+				<br>
+				<span class="red">>>></span> 2
+				<br>
+				<span class="red">>>></span> 3
+				<br>
+				<span class="red">>>></span> 4
+				<br>
+				
+				<span class="grey"># Это может продолжаться долго... </span>
 			</p>
 			<p class="text">Код выше будет бесконечно печатать возрастаютщую последовательность чисел.</p>
 			<p class="text">Цикл while можно сравнить с цикличным условным оператором. </p>
@@ -43,6 +73,32 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(text[i])
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span>
+			</span></p>
+			<p class="code">
+				<span class="grey"># Вывод: </span>
+				<br>
+				<span class="red">>>></span> H
+				<br>
+				<span class="red">>>></span> e
+				<br>
+				<span class="red">>>></span> l
+				<br>
+				<span class="red">>>></span> l
+				<br>
+				<span class="red">>>></span> o
+				<br>
+				<span class="red">>>></span> 
+				<br>
+				<span class="red">>>></span> w
+				<br>
+				<span class="red">>>></span> o
+				<br>
+				<span class="red">>>></span> r
+				<br>
+				<span class="red">>>></span> l
+				<br>
+				<span class="red">>>></span> d
+				
 			</p>
 			<p class="text">Код, приведенный выше, печатает строку посимвольно. Приведу пример аналогичного цикла for:</p>
 			<p class="code">
@@ -51,6 +107,33 @@
 				<span class="red">for </span>i<span class="red"> in </span>text:
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(i)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод: </span>
+				<br>
+				<span class="red">>>></span> H
+				<br>
+				<span class="red">>>></span> e
+				<br>
+				<span class="red">>>></span> l
+				<br>
+				<span class="red">>>></span> l
+				<br>
+				<span class="red">>>></span> o
+				<br>
+				<span class="red">>>></span> 
+				<br>
+				<span class="red">>>></span> w
+				<br>
+				<span class="red">>>></span> o
+				<br>
+				<span class="red">>>></span> r
+				<br>
+				<span class="red">>>></span> l
+				<br>
+				<span class="red">>>></span> d
+				
+			</p>
 			</p>
 			<p class="text">Более того, я приведу даже два цикла for!</p>
 			<p class="code">
@@ -65,7 +148,7 @@
 			<p class="code">
 				j<span class="red"> = </span><span class="purple">0</span>
 				<br>
-				<span class="red">while </span>True:
+				<span class="red">while </span><span class='purple'>True</span>:
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>j <span class="red">== </span><span class="purple">3</span>:
 				<br>
@@ -77,12 +160,25 @@
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;j <span class="red">+= </span><span class="purple">1</span>
 			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>>></span> 0
+				<br>
+				<span class="red">>>></span> 1
+				<br>
+				<span class="red">>>></span> 2
+				<br>
+				<span class="red">>>></span> Выход из цикла
+			</p>
 			<p class="text">Конструкция break прерывает цикл. Она очень похожа на обычное условие после ключевого слова while.</p>
 			<p class="text">Так же есть еще одна управляющая конструкция - continue. С ее помощью мы можем не выпонять текущую итерацию (повторение) цикла и перейти сразу к следующему.</p>
 			<p class="code">
 				j<span class="red"> = </span><span class="purple">0</span>
 				<br>
 				<span class="red">while </span>j <span class="red"><</span> <span class="purple">5</span>:
+				<br>	
+				&nbsp;&nbsp;&nbsp;&nbsp;j <span class="red">+= </span><span class="purple">1</span>
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>j <span class="red">== </span><span class="purple">3</span>:
 				<br>
@@ -92,7 +188,19 @@
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(j)
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;j <span class="red">+= </span><span class="purple">1</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>>></span> 1
+				<br>
+				<span class="red">>>></span> 2
+				<br>
+				<span class="red">>>></span> Пропускаем j == 3
+				<br>
+				<span class="red">>>></span> 4
+				<br>
+				<span class="red">>>></span> 5
 			</p>
 			<p class="text">Как и для цикла for, для цикла while мы можем записать конструкцию else.</p>
 			<p class="code">
@@ -155,7 +263,7 @@
 			<p class="code">
 				i<span class="red"> = </span><span class="purple">0</span>
 				<br>
-				<span class="red">while </span>True:
+				<span class="red">while </span> <span class='purple'>True</span>:
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;n<span class="red"> = </span><span class="blue">input</span>()
 				<br>
@@ -177,7 +285,7 @@
 				<br>
 				summa<span class="red"> = </span><span class="purple">0</span>
 				<br>
-				<span class="red">while </span><span class="red">True</span>:
+				<span class="red">while </span><span class='purple'>True</span>:
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;n<span class="red"> = </span><span class="blue">input</span>()
 				<br>
@@ -197,31 +305,45 @@
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span>
 			</p>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			<h2 class="title">Решение задач</h2>
-			<p class="text"><span class="num">1. </span>Даны положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Не используя операции умножения и деления, найти длину незанятой части отрезка A.</p>
-			<p class="text"><span class="num">2. </span>Даны положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Не используя операции умножения и деления, найти количество отрезков B, размещенных на отрезке A.</p>
-			<p class="text"><span class="num">3. </span>Дано целое число N (> 0). Если оно является степенью числа 3, то вывести TRUE, если не является - вывести FALSE.</p>
-			<p class="text"><span class="num">4. </span>Дано целое число N (> 0). Найти двойной факториал N: <span class='high'>N!! = N * (N-2) * (N-4)* ...</span> (последний сомножитель равен 2, если N — четное, и 1, если N - нечетное). </p>
-			<p class="text"><span class="num">5. </span>Дано целое число N (> 0). Найти наименьшее целое положительное число K, квадрат которого превосходит N: K^2 > N. Функцию извлечения квадратного корня не использовать.</p>
-			<p class="text"><span class="num">6. </span>Дано целое число N (> 1). Найти наименьшее целое число K, при котором выполняется неравенство 3^K > N, где 3^K - это 3 в степени K или число 3, умноженное само на себя K раз. Например, <span class='high'>3^5 = 3*3*3*3*3</span>. Ответом в задаче будет первая степень числа 3, которая больше, чем заданное число N. Например, если N=38, распишем степени числа три: <span class='high'>3^1 = 3; 3^2 = 3*3 = 9; 3^3 = 3*3*3 = 27; 3^4 = 3*3*3*3 = 27 * 3 = 81;</span>. Таким образом, первая степень, в которую возвести число 3, превышающая число N - это 4</p>
-			<p class="text"><span class="num">7. </span>Спортсмен-лыжник начал тренировки, пробежав в первый день 10 км. Каждый следующий день он увеличивал длину пробега на P процентов от пробега предыдущего дня (P — вещественное, 0 < P < 50). По данному P определить, после какого дня суммарный пробег лыжника за все дни превысит 200 км, и вывести найденное количество дней K (целое) и суммарный пробег S (вещественное число).</p>
-			<p class="text"><span class="num">8. </span>Дано целое число N (> 0). Используя операции деления нацело и взятия остатка от деления, вывести все его цифры, начиная с самой правой (разряда единиц).</p>
-			<p class="text"><span class="num">9. </span>Даны целые положительные числа A и B. Найти их наибольший общий делитель (НОД), используя <a href='https://younglinux.info/algorithm/euclidean' class='link special'>алгоритм Евклида</a>: НОД(A, B) = НОД(B, A mod B), если B = 0; НОД(A, 0) = A.</p>
-			<p class="text"><span class="num">10. </span>Дано целое число N (> 1). Последовательность чисел Фибоначчи FK определяется следующим образом: <span class='high'>F(1) = 1, F(2) = 1, F(K) = F(K-2) + F(K-1), K = 3, 4, ...</span>. Проверить, является ли число N числом Фибоначчи. Если является, то вывести TRUE, если нет - вывести FALSE.</p>
-			<p class="text"><span class="num">11. </span>Даны положительные числа A, B, C. На прямоугольнике размера A x B размещено максимально возможное количество квадратов со стороной C (без наложений). Найти количество квадратов, размещенных на прямоугольнике. Операции умножения и деления не использовать.</p>
-			<p class="text"><span class="num">12. </span>Дано целое число N (> 1), являющееся числом Фибоначчи: N = F(K). Найти целое число K - порядковый номер числа Фибоначчи N.</p>
+			<p class="text"><span class="num">1. </span>Дано положительное число N. Вывести все числа от 0 до N с помощью цикла while.</p>
+			<p class="text"><span class="num">2. </span>Дано положительное число N. Вывести все числа от N до 0 с помощью цикла while. <span class="hig">Пример:</span></p>
+			<p class="code">
+				Ввод: N = 10
+				<br>
+				Вывод: 10
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+			</p>
+			<p class="text"><span class="num">3. </span>Даны два положительных числа K и N (K < N). Вывести все числа от K до N с помощью цикла while.</p>
+			<p class="text"><span class="num">4. </span>Даны положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Не используя операции умножения и деления, найти длину незанятой части отрезка A <span class="high">(взятие остатка A % B)</span></p>
+			<p class="text"><span class="num">5. </span>Даны положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Не используя операции умножения и деления, найти количество отрезков B, размещенных на отрезке A <span class="high">(деление нацело A // B)</span></p>
+			<p class="text"><span class="num">6. </span>Дано положительное число N. Найти сумму всех <span class="high">четных чисел</span> от 0 до N с помощью цикла while.</p>
+			<p class="text"><span class="num">7. </span>Даны два положительных числа K и N (K < N). Найти сумму всех <span class="high">нечетных чисел</span> от K до N с помощью цикла while.</p>
+			<p class="text"><span class="num">8. </span>Дано положительное число N. Найти факториал числа N. Факториалом числа называется произведение всех чисел от 1 до N. Например, факториал числа 5 равен <span class="high">5! = 1*2*3*4*5 = 120</span>, <span class="high">2! = 1*2 = 2</span>, <span class="high">9! = 1*2*3*4*5*6*7*8*9 = 362880</span>
+			<p class="text"><span class="num">9. </span>Дано целое число N (> 0). Если оно является степенью числа 3, то вывести YES, если не является - вывести NO.</p>
+			<p class="text"><span class="num">10. </span>Дано целое число N (> 0). Найти двойной факториал N: <span class='high'>N!! = N * (N-2) * (N-4)* ...</span>. Для решения этой задачи посмотрите на задачу <span class="high">2</span></p>
+			
+
+
+			<h2 class="title">Сложные задачи</h2>
+			<p class="text"><span class="num">1. </span>Дано целое число N (> 1). Найти наименьшее целое число K, при котором выполняется неравенство 3^K > N, где 3^K - это 3 в степени K или число 3, умноженное само на себя K раз. Например, <span class='high'>3^5 = 3*3*3*3*3</span>. Ответом в задаче будет первая степень числа 3, которая больше, чем заданное число N. Например, если N=41, распишем степени числа три: <span class='high'>3^1 = 3; 3^2 = 3*3 = 9; 3^3 = 3*3*3 = 27; 3^4 = 3*3*3*3 = 27 * 3 = 81;</span>. Таким образом, первая степень, в которую возвести число 3, превышающая число N - это 4. <br> В этой задаче нужно выполнять цикл while, пока остаток от деления на число три равен <span class="high">0</span></p>
+			<p class="text"><span class="num">2. </span>Дано целое число N (> 0). Используя операции деления нацело и взятия остатка от деления, вывести все его цифры, начиная с самой правой (разряда единиц). <br> Перед решением этой задачи вспомните, как найти сумму цифр трехначного числа.</p>
+			<p class="text"><span class="num">3. </span>Даны целые положительные числа A и B. Найти их наибольший общий делитель (НОД), используя <a href='https://younglinux.info/algorithm/euclidean' class='link special'>алгоритм Евклида</a>: НОД(A, B) = НОД(B, A mod B), если B = 0; НОД(A, 0) = A.</p>
+			<p class="text"><span class="num">4. </span>Спортсмен-лыжник начал тренировки, пробежав в первый день 10 км. Каждый следующий день он увеличивал длину пробега на P процентов от пробега предыдущего дня (P — вещественное, 0 < P < 50). По данному P определить, после какого дня суммарный пробег лыжника за все дни превысит 200 км, и вывести найденное количество дней K (целое) и суммарный пробег S (вещественное число).</p>
+			<p class="text"><span class="num">5. </span>Дано целое число N (> 1). Последовательность чисел Фибоначчи FK определяется следующим образом: <span class='high'>F(1) = 1, F(2) = 1, F(K) = F(K-2) + F(K-1), K = 3, 4, ...</span>. Проверить, является ли число N числом Фибоначчи. Если является, то вывести TRUE, если нет - вывести FALSE.</p>
+			<p class="text"><span class="num">6. </span>Даны положительные числа A, B, C. На прямоугольнике размера A x B размещено максимально возможное количество квадратов со стороной C (без наложений). Найти количество квадратов, размещенных на прямоугольнике. Операции умножения и деления не использовать.</p>
+			<p class="text"><span class="num">7. </span>Дано целое число N (> 1), являющееся числом Фибоначчи: N = F(K). Найти целое число K - порядковый номер числа Фибоначчи N.</p>
 
 		</div>
 	</body>
