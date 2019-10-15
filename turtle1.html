@@ -3,13 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width" name='viewport'>
-	<title>Цикл for</title>
-	<link rel="stylesheet" href="main.css">
+	<title>Графическая библиотека turtle (Часть 1)</title>
+	<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
 	<div class="container">
 			<h1 class="main-title">Графическая библиотека turtle (Часть 1)</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
 			<p class="text">Модуль turtle - это графическая библиотека для работы с 2D-графикой в Python. Сначала его нужно подключить к скрипту.</p>
 			<p class="code">
 				<span class="red">import </span>turtle
@@ -18,7 +19,7 @@
 			<p class="code">
 				<span class="red">import </span>turtle
 				<br>
-				pen<span class="red"> = </span>turtle.Pen()
+				pen<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
 			</p>
 			<p class="text">Команда forward() чертит прямую линию. Она принимает в качестве аргумента длину линии в пикселях.</p>
 			<p class="code">
@@ -26,23 +27,27 @@
 				<br>
 				pen<span class="red"> = </span>turtle.Pen()
 				<br>
-				pen.<span class="blue">forward</span>(<span class="purple">100</span>) # Прямая линия длиной в <span class="purple">100</span> пикселей
+				<br>
+				pen.<span class="blue">forward</span>(<span class="purple">100</span>) <span class="grey"># Прямая линия длиной в 100 пикселей</span>
 			</p>
 			<p class="text">Команда left() и right() поворачивает курсор. Они принимают в качестве аргумента угол поворота. </p>
 			<p class="code">
 				<span class="red">import </span>turtle
 				<br>
-				pen<span class="red"> = </span>turtle.Pen()
+				pen<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
 				<br>
-				pen.<span class="blue">forward</span>(<span class="purple">200</span>) # Прямая линия длиной в <span class="purple">200</span> пикселей
 				<br>
-				pen.<span class="blue">left</span>(<span class="purple">135</span>) # Поворачиваем на <span class="purple">135</span> градусов влево
+				pen.<span class="blue">forward</span>(<span class="purple">200</span>) <span class="grey"># Прямая линия длиной в 200 пикселей</span>
 				<br>
-				pen.<span class="blue">forward</span>(<span class="purple">200</span>) # Прямая линия длиной в <span class="purple">200</span> пикселей
+				pen.<span class="blue">left</span>(<span class="purple">135</span>) <span class="grey"># Поворачиваем на 135 градусов влево</span>
 				<br>
-				pen.<span class="blue">right</span>(<span class="purple">135</span>) # Поворачиваем на <span class="purple">135</span> градусов вправо
 				<br>
-				pen.<span class="blue">forward</span>(<span class="purple">200</span>) # Прямая линия длиной в <span class="purple">200</span> пикселей
+				pen.<span class="blue">forward</span>(<span class="purple">200</span>) <span class="grey"># Прямая линия длиной в 200 пикселей</span>
+				<br>
+				pen.<span class="blue">right</span>(<span class="purple">135</span>) <span class="grey"># Поворачиваем на 135 градусов вправо</span>
+				<br>
+				<br>
+				pen.<span class="blue">forward</span>(<span class="purple">200</span>) <span class="grey"># Прямая линия длиной в 200 пикселей</span>
 			</p>
 			<p class="text">Мы можем перемещать перо без начертания линий. Для этого нужно сначала поднять перо с помощью команды penup(), затем переместить его в нужную точку с помощью команды setpos(x, y), где x и y - это координаты точки, в которую мы перемещаем наше перо. После всех проделанных манипуляций необходимо опустить перо с помощью команды pendown(). </p>
 			<p class="text">Подведем итог. Для того чтобы переместить перо в другую точку нужно:</p>
@@ -52,9 +57,10 @@
 			<p class="code">
 				<span class="red">import </span>turtle
 				<br>
-				pen<span class="red"> = </span>turtle.Pen()
+				pen<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
 				<br>
-				# Первая линия
+				<br>
+				<span class="grey"># Первая линия</span>
 				<br>
 				pen.<span class="blue">forward</span>(<span class="purple">200</span>)
 				<br>
@@ -64,7 +70,8 @@
 				<br>
 				pen.<span class="blue">pendown</span>()
 				<br>
-				# Вторая линия
+				<br>
+				<span class="grey"># Вторая линия</span>
 				<br>
 				pen.<span class="blue">forward</span>(<span class="purple">200</span>)
 				<br>
@@ -74,7 +81,8 @@
 				<br>
 				pen.<span class="blue">pendown</span>()
 				<br>
-				# Третья линия
+				<br>
+				<span class="grey"># Третья линия</span>
 				<br>
 				pen.<span class="blue">forward</span>(<span class="purple">200</span>)
 				<br>
@@ -90,11 +98,13 @@
 			<p class="code">
 				<span class="red">import </span>turtle
 				<br>
-				pen<span class="red"> = </span>turtle.Pen()
+				pen<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
 				<br>
 				pen.<span class="blue">color</span>(<span class="yellow">'red'</span>)
 				<br>
+				<br>
 				pen.<span class="blue">forward</span>(<span class="purple">200</span>)
+				<br>
 				<br>
 				pen.<span class="blue">penup</span>()
 				<br>
@@ -102,27 +112,40 @@
 				<br>
 				pen.<span class="blue">pendown</span>()
 				<br>
+				<br>
 				pen.<span class="blue">color</span>(<span class="yellow">'blue'</span>)
+				<br>
 				<br>
 				pen.<span class="blue">forward</span>(<span class="purple">200</span>)
 			</p>
 			<p class="text">Экспериментируйте! Вот доступные цвета:</p>
-			<p class="text">red</p>
-			<p class="text">blue</p>
-			<p class="text">green</p>
-			<p class="text">yellow</p>
-			<p class="text">orange</p>
-			<p class="text">purple</p>
-			<p class="text">pink</p>
-			<p class="text">violet</p>
-			<p class="text">И еще много других цветов здесь</p>
+			
+				<span style='font-weight: bold; font-size: 1.6rem;text-shadow: 1px 1px 0px rgba(0,0,0,0.4); color:red'>red</span>
+				<br>	
+				<span style='font-weight: bold; font-size: 1.6rem;text-shadow: 1px 1px 0px rgba(0,0,0,0.4); color:blue'>blue</span>
+				<br>	
+				<span style='font-weight: bold; font-size: 1.6rem;text-shadow: 1px 1px 0px rgba(0,0,0,0.4); color:green'>green</span>
+				<br>	
+				<span style='font-weight: bold; font-size: 1.6rem;text-shadow: 1px 1px 0px rgba(0,0,0,0.4); color:yellow'>yellow</span>
+				<br>	
+				<span style='font-weight: bold; font-size: 1.6rem;text-shadow: 1px 1px 0px rgba(0,0,0,0.4); color:orange'>orange</span>
+				<br>	
+				<span style='font-weight: bold; font-size: 1.6rem;text-shadow: 1px 1px 0px rgba(0,0,0,0.4); color:purple'>purple</span>
+				<br>	
+				<span style='font-weight: bold; font-size: 1.6rem;text-shadow: 1px 1px 0px rgba(0,0,0,0.4); color:pink'>pink</span>
+				<br>	
+				<span style='font-weight: bold; font-size: 1.6rem;text-shadow: 1px 1px 0px rgba(0,0,0,0.4); color:violet'>violet</span>
+				<br>	
+				<span>И еще много других цветов <a href="https://www.color-hex.com/" target="_blank" class="special link">здесь</a>
+			</p>
+
 			<h2 class="title">Задачи</h2>
-			<p class="text">1. Нарисуйте квадрат</p>
-			<p class="text">2. Нарисуйте квадрат, у которого каждая сторона имеет свой цвет</p>
-			<p class="text">3. Нарисуйте треугольник</p>
-			<p class="text">4. Разноцветный треугольник</p>
-			<p class="text">5. Много-много параллельных линий</p>
-			<p class="text">6. Проявите фантазию, создайте свое неповторимое произведение</p>
+			<p class="text"><span class="num">1.</span> Нарисуйте квадрат</p>
+			<p class="text"><span class="num">2.</span> Нарисуйте квадрат, у которого каждая сторона имеет свой цвет</p>
+			<p class="text"><span class="num">3.</span> Нарисуйте треугольник</p>
+			<p class="text"><span class="num">4.</span> Разноцветный треугольник</p>
+			<p class="text"><span class="num">5.</span> Много-много параллельных линий</p>
+			<p class="text"><span class="num">6.</span> Проявите фантазию, создайте свое неповторимое произведение</p>
 
 		</div>
 	</body>
