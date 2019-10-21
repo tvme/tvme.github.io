@@ -1,315 +1,674 @@
 <!DOCTYPE html>
-<html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<title>Списки в языке программирования Python</title>
-		<meta name="description" content="Спиcок в python - это изменяемый последовательный контейнер для хранения различных элементов. В языке программирования python списки являются самым популярным ссылочным типом данных. Сегодня мы рассмотрим способы создания списка и некоторые тонкости работы с ним." />
-		<meta name="keywords" content="списки в питоне, python list, питон, python, длина списков в питоне, срезы в питоне, индексирование, индекс элемента, обход списка, язык программирования python, изучение python">
-		<meta name='viewport' content='width=device-width, initial-scale=1'>
-		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-		<link rel="manifest" href="img/site.webmanifest">
-		<meta name="yandex-verification" content="9ac4fb38cc221824" />
-		<link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
-		
-		<link rel="stylesheet" href="min.css">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136347703-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Списки в Python</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/site.webmanifest">
+	<meta name="yandex-verification" content="9ac4fb38cc221824" />
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Список</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
+			<p class="text">Список - это непрерывная динамическая коллекция элементов. Каждому элементу списка присваивается порядковый номер - его индекс. Первый индекс равен нулю, второй - единице и так далее. Основные операции для работы со списками - это индексирование, срезы, добавление и удаление элементов, а также проверка на наличие элемента в последовательности.</p>
+			<p class="text">Создание пустого списка выглядит так:</p>
+			<p class="code">
+				empty_list<span class="red"> = </span>[]
+			</p>
+			<p class="text">Создадим список, состоящий из нескольких чисел:</p>
+			<p class="code">
+				numbers<span class="red"> = </span>[<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>, <span class="purple">11</span>, <span class="purple">5</span>]
+			</p>
+			<p class="text">Настало время строковых переменных:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+			</p>
+			<p class="text">Не будем забывать и о дробях:</p>
+			<p class="code">
+				fractions<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">2.72</span>, <span class="purple">1.41</span>, <span class="purple">1.73</span>, <span class="purple">17.9</span>]
+			</p>
+			<p class="text">Мы можем создать список, состоящий из различных типов данных:</p>
+			<p class="code">
+				values<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">10</span>, <span class="yellow">'Hello world!'</span>, False, <span class="yellow">'Python is the best'</span>]
+			</p>
+			<p class="text">И такое возможно (⊙_⊙)</p>
+			<p class="code">
+				list_of_lists<span class="red"> = </span>[[<span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">0</span>], [<span class="purple">11</span>, <span class="purple">2</span>, <span class="purple">10</span>], [<span class="purple">0</span>, <span class="purple">19</span>, <span class="purple">27</span>]]
+			</p>
+			<h2 class="title">Индексирование</h2>
+			<p class="text">Что же такое индексирование? Это загадочное слово обозначает операцию обращения к элементу по его порядковому номеру ( ( ･ω･)ア напоминаю, что нумерация начинается с нуля). Проиллюстрируем это на примере:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">0</span>])
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">1</span>])
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">4</span>])
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>Apple
+				<br>
+				<span class="red">>>> </span>Grape
+				<br>
+				<span class="red">>>> </span>Orange
+			</p>
+			<p class="text">Списки в Python являются изме­няемым типом данных. Мы можем изменять содер­жимое каждой из ячеек:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				fruits[<span class="purple">0</span>]<span class="red"> = </span><span class="yellow">'Watermelon'</span>
+				<br>
+				fruits[<span class="purple">3</span>]<span class="red"> = </span><span class="yellow">'Lemon'</span>
+				<br>
+				<span class="blue">print</span>(fruits)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Watermelon'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Lemon'</span>, <span class="yellow">'Orange'</span>]
+			</p>
+			<p class="text">Индексирование работает и в обратную сторону. Как такое возможно? Всё просто, мы обра­щаемся к элементу списка по отрица­тельному индексу. Индекс с номе­ром -1 дает нам доступ к после­днему элементу, -2 к предпоследнему и так далее.</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">-1</span>])
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">-2</span>])
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">-3</span>])
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">-4</span>])
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>Orange
+				<br>
+				<span class="red">>>> </span>Banan
+				<br>
+				<span class="red">>>> </span>Peach
+				<br>
+				<span class="red">>>> </span>Grape
+			</p>
+			<h2 class="title">Создание списка с помощью list()</h2>
+			<p class="text">Переходим к способам создания списка. Самый простой из них был приведен выше. Еще раз для закрепления:</p>
+			<p class="code">
+				smiles<span class="red"> = </span>[<span class="yellow">'(ಠ_ಠ)'</span>, <span class="yellow">'(￣﹃￣)'</span>, <span class="yellow">'( ͡° ͜ʖ ͡°)'</span>, <span class="yellow">'(╮°-°)╮'</span>]
+			</p>
+			<p class="text">А есть еще способы? Да, есть. Один из них — создание списка с помощью функции list() В неё мы можем передать любой итерируемый объект (да-да, тот самый по которому можно запустить цикл (• ᵕ •) )</p>
+			<p class="text">Рассмотрим несколько примеров:</p>
+			<p class="code">
+				letters<span class="red"> = </span><span class="blue">list</span>(<span class="yellow">'abcdef'</span>)
+				<br>
+				numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">10</span>))
+				<br>
+				even_numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>, <span class="purple">10</span>, <span class="purple">2</span>))
+				<br>
+				<span class="blue">print</span>(letters)
+				<br>
+				<span class="blue">print</span>(numbers)
+				<br>
+				<span class="blue">print</span>(even_numbers)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'a'</span>, <span class="yellow">'b'</span>, <span class="yellow">'c'</span>, <span class="yellow">'d'</span>, <span class="yellow">'e'</span>, <span class="yellow">'f'</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">0</span>, <span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>, <span class="purple">9</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="purple">0</span>, <span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">6</span>, <span class="purple">8</span>]
+			</p>
+			<h2 class="title">Длина списка</h2>
+			<p class="text">С созданием списка вроде ра­зобрались. Следующий вопрос: как узнать длину списка? Можно, конечно, просто посчитать количество элементов... (⊙_⊙) Но есть способ получше! Функция len() возвращает длину любой итерируемой переменной, переменной, по которой можно запустить цикл. Рассмотрим пример:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="blue">print</span>(<span class="blue">len</span>(fruits))
+			</p>
+			<p class="code">
+				<span class="red">>>> </span><span class="purple">5</span>
+			</p>
+			<p class="code">
+				numbers<span class="red"> = </span>[<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>]
+				<br>
+				<span class="blue">print</span>(<span class="blue">len</span>(numbers))
+			</p>
+			<p class="code">
+				<span class="red">>>> </span><span class="purple">3</span>
+			</p>
+			<p class="text">"...любой итерируемой", а это значит:</p>
+			<p class="code">
+				string<span class="red"> = </span><span class="yellow">'Hello world'</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">len</span>(string))
+				<br>
+				<span class="grey"># 11</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span><span class="purple">11</span>
+			</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="blue">len</span>(<span class="blue">range</span>(<span class="purple">10</span>))
+			</p>
+			<p class="code">
+				<span class="red">>>> </span><span class="purple">10</span>
+			</p>
+			<h2 class="title">Срезы</h2>
+			<p class="text">В начале статьи что-то гово­рилось о "срезах". Давайте разберем подробнее, что это такое. Срезом называется неко­торая подпос­ледователь­ность. Принцип действия срезов очень прост: мы "отре­заем" кусок от исходной последова­тель­ности элемента, не меняя её при этом. Я сказал "последо­вательность", а не "спи­сок", потому что срезы работают и с другими итерируемыми типами данных, например, со строками.</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				part_of_fruits<span class="red"> = </span>fruits[<span class="purple">0</span>:3]
+				<br>
+				<span class="blue">print</span>(part_of_fruits)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>]
+			</p>
+			<p class="text">Детально рассмотрим синтаксис срезов:</p>
+			<p class="code">
+				итерируемая_переменная[начальный_индекс:конечный_индекс <span class="red">- </span><span class="purple">1</span>:длина_шага]
+			</p>
+			<p class="text">Обращаю ваше внимание, что мы делаем срез от начального индекса до конечного индекса - 1. То есть i = начальный_индекс и i < конечный индекс</p>
+			<p class="text">Больше примеров!</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">0</span>:1])
+				<br>
+				<span class="grey"># Если начальный индекс равен 0, то его можно опустить</span>
+				<br>
+				<span class="blue">print</span>(fruits[:<span class="purple">2</span>])
+				<br>
+				<span class="blue">print</span>(fruits[:<span class="purple">3</span>])
+				<br>
+				<span class="blue">print</span>(fruits[:<span class="purple">4</span>])
+				<br>
+				<span class="blue">print</span>(fruits[:<span class="purple">5</span>])
+				<br>
+				<span class="grey"># Если конечный индекс равен длине списка, то его тоже можно опустить</span>
+				<br>
+				<span class="blue">print</span>(fruits[:<span class="blue">len</span>(fruits)])
+				<br>
+				<span class="blue">print</span>(fruits[::])
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+			</p>
+			<p class="text">Самое время понять, что делает третий параметр среза - длина шага!</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="blue">print</span>(fruits[::<span class="purple">2</span>])
+				<br>
+				<span class="blue">print</span>(fruits[::<span class="purple">3</span>])
+				<br>
+				<span class="grey"># Длина шага тоже может быть отрицательной!</span>
+				<br>
+				<span class="blue">print</span>(fruits[::<span class="purple">-1</span>])
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">4</span>:2:<span class="purple">-1</span>])
+				<br>
+				<span class="blue">print</span>(fruits[<span class="purple">3</span>:1:<span class="purple">-1</span>])
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Banan'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Orange'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Apple'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Orange'</span>, <span class="yellow">'Banan'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Banan'</span>, <span class="yellow">'Peach'</span>]
+			</p>
+			<p class="text">А теперь вспоминаем всё, что мы знаем о циклах. В Python их целых два! Цикл for и цикл while Нас интересует цикл for, с его помощью мы можем перебирать зна­чения и индексы наших последовательностей. Начнем с перебора значений:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="red">f<span class="red">or </span></span>fruit<span class="red"> in </span>fruits:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fruit,<span class="orange"> end</span><span class="red">=</span><span class="yellow">' '</span>)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>Apple Grape Peach Banan Orange
+			</p>
+			<p class="text">Выглядит несложно, правда? В переменную fruit объявлен­ную в цикле по очереди записываются значения всех элементов списка fruits</p>
+			<p class="text">А что там с перебором индексов?</p>
+			<p class="code">
+				<span class="red">f<span class="red">or </span></span>index<span class="red"> in </span><span class="blue">range</span>(<span class="blue">len</span>(fruits)):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fruits[index],<span class="orange"> end</span><span class="red">=</span><span class="yellow">' '</span>)
+			</p>
+			<p class="text">Этот пример гораздо интереснее предыдущего! Что же здесь происходит? Для начала разбе­ремся, что делает функция range(len(fruits))</p>
+			<p class="text">Мы с вами знаем, что функция len() возвращает длину списка, а range() генерирует диапазон целых чисел от 0 до len()-1. </p>
+			<p class="text">Сложив 2+2, мы получим, что переменная index принимает значения в диапазоне от 0 до len()-1. Идем дальше, fruits[index] - это обращение по индексу к элементу с индексом index списка fruits. А так как переменная index принимает значения всех индексов списка fruits, то в цикле мы переберем значения всех элементов нашего списка!</p>
+			<h2 class="title">Операция in</h2>
+			<p class="text">С помощью in мы можем проверить наличие элемента в списке, строке и любой другой итерируемой переменной.</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="red">if </span><span class="yellow">'Apple'</span><span class="red"> in </span>fruits:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'В списке есть элемент Apple'</span>)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>В списке есть элемент Apple
+			</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="red">if </span><span class="yellow">'Lemon'</span><span class="red"> in </span>fruits:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'В списке есть элемент Lemon'</span>)
+				<br>
+				<span class="red">else</span>:'
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'В списке НЕТ элемента Lemon'</span>)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>В списке НЕТ элемента Lemon
+			</p>
+			<p class="text">Приведу более сложный пример:</p>
+			<p class="code">
+				all_fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				my_favorite_fruits<span class="red"> = </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
+				<br>
+				<span class="red">f<span class="red">or </span></span>item<span class="red"> in </span>all_fruits:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>item<span class="red"> in </span>my_favorite_fruits:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(item <span class="red">+ </span><span class="yellow">' is my favorite fruit'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'I do not like '</span> <span class="red">+ </span>item)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>Apple is my favorite fruit
+				<br>
+				<span class="red">>>> </span>I do not like Grape
+				<br>
+				<span class="red">>>> </span>I do not like Peach
+				<br>
+				<span class="red">>>> </span>Banan is my favorite fruit
+				<br>
+				<span class="red">>>> </span>Orange is my favorite fruit
+			</p>
+			<h2 class="title">Методы для работы со списками</h2>
+			<p class="text">Начнем с метода append(), который добавляет элемент в конец списка:</p>
+			<p class="code">
+				<span class="grey"># Создаем список, состоящий из четных чисел от 0 до 8 включительно</span>
+				<br>
+				numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>,10,<span class="purple">2</span>))
+				<br>
+				<span class="grey"># Добавляем число 200 в конец списка</span>
+				<br>
+				numbers.<span class="blue">append</span>(<span class="purple">200</span>)
+				<br>
+				numbers.<span class="blue">append</span>(<span class="purple">1</span>)
+				<br>
+				numbers.<span class="blue">append</span>(<span class="purple">2</span>)
+				<br>
+				numbers.<span class="blue">append</span>(<span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(numbers)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="purple">0</span>, <span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">6</span>, <span class="purple">8</span>, <span class="purple">200</span>, <span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>]
+			</p>
+			<p class="text">Мы можем передавать методу append() абсолютно любые значения:</p>
+			<p class="code">
+				all_types<span class="red"> = </span>[<span class="purple">10</span>, <span class="purple">3.14</span>, <span class="yellow">'Python'</span>, [<span class="yellow">'I'</span>, <span class="yellow">'am'</span>, <span class="yellow">'list'</span>]]
+				<br>
+				all_types.<span class="blue">append</span>(<span class="purple">1024</span>)
+				<br>
+				all_types.<span class="blue">append</span>(<span class="yellow">'Hello world!'</span>)
+				<br>
+				all_types.<span class="blue">append</span>([<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>])
+				<br>
+				<span class="blue">print</span>(all_types)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="purple">10</span>, <span class="purple">3.14</span>, <span class="yellow">'Python'</span>, [<span class="yellow">'I'</span>, <span class="yellow">'am'</span>, <span class="yellow">'list'</span>], <span class="purple">1024</span>, <span class="yellow">'Hello world!'</span>, [<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>]]
+			</p>
+			<p class="text">Метод append() отлично выпол­няет свою функцию. Но, что делать, если нам нужно добавить элемент в сере­дину списка? Это умеет метод insert(). Он добавляет элемент в список на произ­вольную позицию. insert() принимает в качестве первого аргу­мента позицию, на которую нужно вставить элемент, а вторым — сам элемент.</p>
+			<p class="code">
+				<span class="grey"># Создадим список чисел от 0 до 9</span>
+				<br>
+				numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">10</span>))
+				<br>
+				<span class="grey"># Добавление элемента 999 на позицию с индексом 0</span>
+				<br>
+				numbers.<span class="blue">insert</span>(<span class="purple">0</span>, <span class="purple">999</span>)
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># первый print</span>
+				<br>
+				numbers.<span class="blue">insert</span>(<span class="purple">2</span>, <span class="purple">1024</span>)
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># второй print</span>
+				<br>
+				numbers.<span class="blue">insert</span>(<span class="purple">5</span>, <span class="yellow">'Засланная строка-шпион'</span>)
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># третий print</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="purple">999</span>, <span class="purple">0</span>, <span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>, <span class="purple">9</span>] <span class="grey"># первый print</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">999</span>, <span class="purple">0</span>, <span class="purple">1024</span>, <span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>, <span class="purple">9</span>] <span class="grey"># второй print</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">999</span>, <span class="purple">0</span>, <span class="purple">1024</span>, <span class="purple">1</span>, <span class="purple">2</span>, <span class="yellow">'Засланная строка-шпион'</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>, <span class="purple">9</span>] <span class="grey"># третий print</span>
+			</p>
+			<p class="text">Отлично! Добавлять элементы в список мы научи­лись, осталось понять, как их из него удалять. Метод pop() удаляет эле­мент из списка по его индексу:</p>
+			<p class="code">
+				numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">10</span>))
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># 1</span>
+				<br>
+				<span class="grey"># Удаляем первый элемент</span>
+				<br>
+				numbers.<span class="blue">pop</span>(<span class="purple">0</span>)
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># 2</span>
+				<br>
+				numbers.<span class="blue">pop</span>(<span class="purple">0</span>)
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># 3</span>
+				<br>
+				numbers.<span class="blue">pop</span>(<span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># 4</span>
+				<br>
+				<span class="grey"># Чтобы удалить последний элемент, вызовем метод pop без аргументов</span>
+				<br>
+				numbers.<span class="blue">pop</span>()
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># 5</span>
+				<br>
+				numbers.<span class="blue">pop</span>()
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># 6</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="purple">0</span>, <span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>, <span class="purple">9</span>] <span class="grey"># 1</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>, <span class="purple">9</span>] <span class="grey"># 2</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>, <span class="purple">9</span>] <span class="grey"># 3</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>, <span class="purple">9</span>] <span class="grey"># 4</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>, <span class="purple">8</span>] <span class="grey"># 5</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>] <span class="grey"># 6</span>
+			</p>
+			<p class="text">Теперь мы знаем, как удалять элемент из списка по его инде­ксу. Но что, если мы не знаем индекса элемента, но знаем его значение? Для такого случая у нас есть метод remove(), кото­рый удаляет пер­вый найденный по значению элемент в списке.</p>
+			<p class="code">
+				all_types<span class="red"> = </span>[<span class="purple">10</span>, <span class="yellow">'Python'</span>, <span class="purple">10</span>, <span class="purple">3.14</span>, <span class="yellow">'Python'</span>, [<span class="yellow">'I'</span>, <span class="yellow">'am'</span>, <span class="yellow">'list'</span>]]
+				<br>
+				all_types.<span class="blue">remove</span>(<span class="purple">3.14</span>)
+				<br>
+				<span class="blue">print</span>(all_types) <span class="grey"># 1</span>
+				<br>
+				all_types.<span class="blue">remove</span>(<span class="purple">10</span>)
+				<br>
+				<span class="blue">print</span>(all_types) <span class="grey"># 2</span>
+				<br>
+				all_types.<span class="blue">remove</span>(<span class="yellow">'Python'</span>)
+				<br>
+				<span class="blue">print</span>(all_types) <span class="grey"># 3</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="purple">10</span>, <span class="yellow">'Python'</span>, <span class="purple">10</span>, <span class="yellow">'Python'</span>, [<span class="yellow">'I'</span>, <span class="yellow">'am'</span>, <span class="yellow">'list'</span>]] <span class="grey"># 1</span>
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Python'</span>, <span class="purple">10</span>, <span class="yellow">'Python'</span>, [<span class="yellow">'I'</span>, <span class="yellow">'am'</span>, <span class="yellow">'list'</span>]] <span class="grey"># 2</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">10</span>, <span class="yellow">'Python'</span>, [<span class="yellow">'I'</span>, <span class="yellow">'am'</span>, <span class="yellow">'list'</span>]] <span class="grey"># 3</span>
+			</p>
+			<p class="text">А сейчас немного посчитаем, посчитаем эле­менты списка с помощью метода count()</p>
+			<p class="code">
+				numbers<span class="red"> = </span>[<span class="purple">100</span>, <span class="purple">100</span>, <span class="purple">100</span>, <span class="purple">200</span>, <span class="purple">200</span>, <span class="purple">500</span>, <span class="purple">500</span>, <span class="purple">500</span>, <span class="purple">500</span>, <span class="purple">500</span>, <span class="purple">999</span>]
+				<br>
+				<span class="blue">print</span>(numbers.<span class="blue">count</span>(<span class="purple">100</span>)) <span class="grey"># 1</span>
+				<br>
+				<span class="blue">print</span>(numbers.<span class="blue">count</span>(<span class="purple">200</span>)) <span class="grey"># 2</span>
+				<br>
+				<span class="blue">print</span>(numbers.<span class="blue">count</span>(<span class="purple">500</span>)) <span class="grey"># 3</span>
+				<br>
+				<span class="blue">print</span>(numbers.<span class="blue">count</span>(<span class="purple">999</span>)) <span class="grey"># 4</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span><span class="purple">3</span> <span class="grey"># 1</span>
+				<br>
+				<span class="red">>>> </span><span class="purple">2</span> <span class="grey"># 2</span>
+				<br>
+				<span class="red">>>> </span><span class="purple">5</span> <span class="grey"># 3</span>
+				<br>
+				<span class="red">>>> </span><span class="purple">1</span> <span class="grey"># 4</span>
+			</p>
+			<p class="text">В программировании, как и в жизни, проще работать с упоря­доченными дан­ными, в них легче ори­енти­ро­ваться и что-либо искать. Метод sort() сорти­рует список по воз­раста­нию значений его элементов.</p>
+			<p class="code">
+				numbers<span class="red"> = </span>[<span class="purple">100</span>, <span class="purple">2</span>, <span class="purple">11</span>, <span class="purple">9</span>, <span class="purple">3</span>, <span class="purple">1024</span>, <span class="purple">567</span>, <span class="purple">78</span>]
+				<br>
+				numbers.<span class="blue">sort</span>()
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># 1</span>
+				<br>
+				fruits<span class="red"> = </span>[<span class="yellow">'Orange'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Apple'</span>]
+				<br>
+				fruits.<span class="blue">sort</span>()
+				<br>
+				<span class="blue">print</span>(fruits) <span class="grey"># 2</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="purple">2</span>, <span class="purple">3</span>, <span class="purple">9</span>, <span class="purple">11</span>, <span class="purple">78</span>, <span class="purple">100</span>, <span class="purple">567</span>, <span class="purple">1024</span>] <span class="grey"># 1</span>
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Orange'</span>, <span class="yellow">'Peach'</span>] <span class="grey"># 2</span>
+			</p>
+			<p class="text">Мы можем изменять порядок сортировки с помощью пара­метра reverse. По умол­чанию этот параметр равен False</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Orange'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Apple'</span>]
+				<br>
+				fruits.<span class="blue">sort</span>()
+				<br>
+				<span class="blue">print</span>(fruits) <span class="grey"># 1</span>
+				<br>
+				fruits.<span class="blue">sort</span>(reverse<span class="red">=</span>True)
+				<br>
+				<span class="blue">print</span>(fruits) <span class="grey"># 2</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Orange'</span>, <span class="yellow">'Peach'</span>] <span class="grey"># 1</span>
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Peach'</span>, <span class="yellow">'Orange'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Apple'</span>] <span class="grey"># 2</span>
+			</p>
+			<p class="text">Иногда нам нужно перевернуть список, не спраши­вайте меня зачем... Для этого в самом лучшем языке прог­рам­миро­вания на этой планете JavaScr..­Python есть метод reverse():</p>
+			<p class="code">
+				numbers<span class="red"> = </span>[<span class="purple">100</span>, <span class="purple">2</span>, <span class="purple">11</span>, <span class="purple">9</span>, <span class="purple">3</span>, <span class="purple">1024</span>, <span class="purple">567</span>, <span class="purple">78</span>]
+				<br>
+				numbers.<span class="blue">reverse</span>()
+				<br>
+				<span class="blue">print</span>(numbers) <span class="grey"># 1</span>
+				<br>
+				fruits<span class="red"> = </span>[<span class="yellow">'Orange'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Apple'</span>]
+				<br>
+				fruits.<span class="blue">reverse</span>()
+				<br>
+				<span class="blue">print</span>(fruits) <span class="grey"># 2</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="purple">78</span>, <span class="purple">567</span>, <span class="purple">1024</span>, <span class="purple">3</span>, <span class="purple">9</span>, <span class="purple">11</span>, <span class="purple">2</span>, <span class="purple">100</span>] <span class="grey"># 1</span>
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Apple'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Orange'</span>] <span class="grey"># 2</span>
+			</p>
+			<p class="text">Допустим, у нас есть два списка и нам нужно их объединить. Програм­мисты на C++ cразу же кинулись писать циклы for, но мы пишем на python, а в python у спис­ков есть полез­ный метод extend(). Этот метод вызы­вается для одного списка, а в качестве аргу­мента ему пере­дается другой список, extend() запи­сывает в конец первого из них начало вто­рого:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+				<br>
+				vegetables<span class="red"> = </span>[<span class="yellow">'Tomato'</span>, <span class="yellow">'Cucumber'</span>, <span class="yellow">'Potato'</span>, <span class="yellow">'Carrot'</span>]
+				<br>
+				fruits.<span class="blue">extend</span>(vegetables)
+				<br>
+				<span class="blue">print</span>(fruits)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Tomato'</span>, <span class="yellow">'Cucumber'</span>, <span class="yellow">'Potato'</span>, <span class="yellow">'Carrot'</span>]
+			</p>
+			<p class="text">В природе существует специ­аль­ный метод для очистки списка — clear()</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+				<br>
+				vegetables<span class="red"> = </span>[<span class="yellow">'Tomato'</span>, <span class="yellow">'Cucumber'</span>, <span class="yellow">'Potato'</span>, <span class="yellow">'Carrot'</span>]
+				<br>
+				fruits.<span class="blue">clear</span>()
+				<br>
+				vegetables.<span class="blue">clear</span>()
+				<br>
+				<span class="blue">print</span>(fruits)
+				<br>
+				<span class="blue">print</span>(vegetables)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[]
+				<br>
+				<span class="red">>>> </span>[]
+			</p>
+			<p class="text">Осталось совсем чуть-чуть всего лишь пара мето­дов, так что делаем последний рывок! Метод index() возв­ращает индекс эле­мента. Рабо­тает это так: вы пере­даете в качестве аргу­мента в index() значение элемента, а метод возв­ращает его индекс:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+				<br>
+				<span class="blue">print</span>(fruits.<span class="blue">index</span>(<span class="yellow">'Apple'</span>))
+				<br>
+				<span class="blue">print</span>(fruits.<span class="blue">index</span>(<span class="yellow">'Banana'</span>))
+				<br>
+				<span class="blue">print</span>(fruits.<span class="blue">index</span>(<span class="yellow">'Grape'</span>))
+			</p>
+			<p class="code">
+				<span class="red">>>> </span><span class="purple">1</span>
+				<br>
+				<span class="red">>>> </span><span class="purple">0</span>
+				<br>
+				<span class="red">>>> </span><span class="purple">2</span>
+			</p>
+			<p class="text">Финишная прямая! Метод copy(), только не падайте, копирует список и возвра­щает его брата-близнеца. Вообще, копи­ро­вание списков - это тема доста­точно инте­ресная, давай­те рас­смотрим её по-подробнее.</p>
+			<p class="text">Во-первых, если мы просто прис­воим уже сущест­вующий список новой пере­менной, то на первый взгляд всё выглядит неплохо:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+				<br>
+				new_fruits<span class="red"> = </span>fruits
+				<br>
+				<span class="blue">print</span>(fruits)
+				<br>
+				<span class="blue">print</span>(new_fruits)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+			</p>
+			<p class="text">Но есть одно маленькое "НО":</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+				<br>
+				new_fruits<span class="red"> = </span>fruits
+				<br>
+				fruits.<span class="blue">pop</span>()
+				<br>
+				<span class="blue">print</span>(fruits)
+				<br>
+				<span class="blue">print</span>(new_fruits)
+			</p>
+			<p class="code">
+				<span class="grey"># Внезапно, из списка new_fruits исчез последний элемент</span>
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>]
+			</p>
+			<p class="text">При прямом присваивании спис­ков копи­рования не проис­ходит. Обе пере­менные начи­нают ссылаться на один и тот же список! То есть если мы изме­ним один из них, то изме­нится и другой. Что же тогда делать? Пользоваться методом copy(), конечно:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+				<br>
+				new_fruits<span class="red"> = </span>fruits.<span class="blue">copy</span>()
+				<br>
+				fruits.<span class="blue">pop</span>()
+				<br>
+				<span class="blue">print</span>(fruits)
+				<br>
+				<span class="blue">print</span>(new_fruits)
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>]
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>]
+			</p>
+			<p class="text">Отлично! Но что если у нас список в списке? Скопируется ли внутренний список с помощью метода copy() — нет:</p>
+			<p class="code">
+				fruits<span class="red"> = </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, [<span class="yellow">'Orange'</span>,<span class="yellow">'Peach'</span>]]
+				<br>
+				new_fruits<span class="red"> = </span>fruits.<span class="blue">copy</span>()
+				<br>
+				fruits[<span class="purple">-1</span>].<span class="blue">pop</span>()
+				<br>
+				<span class="blue">print</span>(fruits) <span class="grey"># 1</span>
+				<br>
+				<span class="blue">print</span>(new_fruits) <span class="grey"># 2</span>
+			</p>
+			<p class="code">
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, [<span class="yellow">'Orange'</span>]] <span class="grey"># 1</span>
+				<br>
+				<span class="red">>>> </span>[<span class="yellow">'Banana'</span>, <span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, [<span class="yellow">'Orange'</span>]] <span class="grey"># 2</span>
+			</p>
+			<h2 class="title">Решение задач</h2>
+			<p class="text"><span class="num">1.</span> Создайте список из 10 четных чисел и выведите его с помощью цикла for</p>
+			<p class="text"><span class="num">2.</span> Создайте список из 5 элементов. Сделайте срез от второго индекса до четвертого</p>
+			<p class="text"><span class="num">3.</span> Создайте пустой список и добавьте в него 10 случайных чисел и выведите их. В данной задаче нужно использовать функцию randint. </p>
+			<p class="code">
+				<span class="red"><span class="red">from </span></span>random <span class="red">import </span>randint
+				<br>
+				n<span class="red"> = </span><span class="blue">randint</span>(<span class="purple">1</span>, <span class="purple">10</span>) <span class="grey"># Случайное число от 1 до 10</span>
+			</p>
+			<p class="text"><span class="num">4. </span>Удалите все элементы из списка, созданного в задании 3</p>
+			<p class="text"><span class="num">5. </span>Создайте список из введенной пользователем строки и удалите из него символы 'a', 'e', 'o'</p>
+			<p class="text"><span class="num">6. </span>Даны два списка, удалите все элементы первого списка из второго</p>
+			<p class="code">
+				a<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">3</span>, <span class="purple">4</span>, <span class="purple">5</span>]
+				<br>
+				b<span class="red"> = </span>[<span class="purple">4</span>, <span class="purple">5</span>, <span class="purple">6</span>, <span class="purple">7</span>]
+				<br>
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>>> </span>[<span class="purple">6</span>, <span class="purple">7</span>]
+			</p>
+			<p class="text"><span class="num">7. </span>Создайте список из случайных чисел и найдите наибольший элемент в нем. </p>
+			<p class="text"><span class="num">8. </span>Найдите наименьший элемент в списке из задания 7</p>
+			<p class="text"><span class="num">9. </span>Найдите сумму элементов списка из задания 7</p>
+			<p class="text"><span class="num">10.</span>Найдите среднее арифметическое элементов списка из задания 7</p>
+			<h2 class="title">Сложные задачи</h2>
+			<p class="text"><span class="num">1. </span>Создайте список из случайных чисел. Найдите номер его последнего локального максимума (локальный максимум — это элемент, который больше любого из своих соседей).</p>
+			<p class="text"><span class="num">2. </span>Создайте список из случайных чисел. Найдите максимальное количество его одинаковых элементов.</p>
+			<p class="text"><span class="num">3. </span>Создайте список из случайных чисел. Найдите второй максимум. </p>
+			<p class="code">
+				a<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>] <span class="grey"># Первый максимум == 3, второй == 2</span>
+			</p>
+			<p class="text"><span class="num">4. </span>Создайте список из случайных чисел. Найдите количество различных элементов в нем.</p>
 
-		  gtag('config', 'UA-136347703-1');
-		</script>
-	</head>
-	<body>
-		<header id='header'>
-			<div class="overlay"></div>
-			<p id="text" 
-					data-lax-scale="0 1, (document.body.offsetHeight) 0.8" 
-					data-lax-translate-y="0 0, (document.body.offsetHeight) 200" 
-					data-lax-opacity="0 1, (document.body.offsetHeight*0.8) 0" 
-				style="backface-visibility: hidden; transform: scale(1) translateY(0px); opacity: 1;"></p>
-			<button id="down" data-lax-opacity="0 1, (document.body.offsetHeight*0.5) 0"  data-lax-scale="0 1, (document.body.offsetHeight*0.5) 0"><img src="down2.png" alt=""></button>
-		</header>
-		<main>
-			<div class="screen">
-                <a id="tg-link" class='button' href="tg://resolve?domain=codewithmaximka">
-                    <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="256" cy="256" r="256" fill="#41B4E6" />
-                        <path d="m512 256c0-6.238-0.235-12.419-0.673-18.546l-106.1-106.1-298.46 117.4 114.19 114.19 1.498 5.392 1.939-1.955 8e-3 8e-3 -1.947 1.947 126.32 126.32c95.52-37.16 163.22-130 163.22-238.66z" fill="#0091C8" />
-                        <polygon points="231.14 293.3 346.83 380.65 405.23 131.36 106.77 248.76 197.59 278.84 363.33 167.66" fill="#fff" />
-                        <polygon points="197.59 278.84 222.46 368.34 231.14 293.3 363.33 167.66" fill="#D2D2D7" />
-                        <polygon points="268.74 321.69 222.46 368.34 231.14 293.3" fill="#B9B9BE" />
-                    </svg>
-                    Telegram
-                </a>
-				<h1 style='margin-bottom: 0;'>Списки в Python</h1>
-				<h2 style='margin-top: 0.5em;' class="subtitle">Часть 1</h2>
-				<p class="text">Список - это тип данных для хране&shy;ния последовательности элементов. Каждому элементу списка присваи&shy;вается поряд&shy;ковый номер - его индекс. Первый индекс равен нулю, второй - единице и так далее. Основные операции для работы со спис&shy;ками - это индексиро&shy;вание, срезы, добав&shy;ление и удаление элементов, а также проверка на наличие элемента в последо&shy;ватель&shy;ности.</p>
-				<h2 class="subtitle">Создание списка</h2>
-				<p class="text">Создание пустого списка выгля&shy;дит так:</p>
-				<code class='code'>empty_list <span class="red">=</span> []</code>
-				<p class="text">Создадим список, состоящий из несколь&shy;ких чисел:</p>
-				<code class='code'>numbers <span class="red">=</span> [<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>, <span class="purple">11</span>, <span class="purple">5</span>]</code>
-				<p class="text">Настало время строковых перемен&shy;ных:</p>
-				<code class='code'>fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]</code>
-				<p class="text">Не будем забывать и о дробях:</p>
-				<code class="code">fractions<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">2.72</span>, <span class="purple">1.41</span>, <span class="purple">1.73</span>, <span class="purple">17.9</span>]</code>
-				<p class="text">Мы можем создать список, состоящий из различных типов данных:</p>
-				<code class="code">
-					values<span class="red"> = </span>[<span class="purple">3.14</span>, <span class="purple">10</span>, <span class="yellow">'Hello world!'</span>, <span class="purple">False</span>, <span class="yellow">'Python is the best'</span>]
-				</code>
-				<p class="text">И такое возможно <code>(⊙_⊙)</code></p>
-				<code class="code">
-					list_of_lists<span class="red"> = </span>[[<span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">0</span>], [<span class="purple">11</span>, <span class="purple">2</span>, <span class="purple">10</span>], [<span class="purple">0</span>, <span class="purple">19</span>, <span class="purple">27</span>]]
-				</code>
-				<h2 class="subtitle">Индексирова&shy;ние</h2>
-				<p class="text">Что же такое индексирование? Это загадочное слово обозна&shy;чает операцию обращения к элементу по его поряд&shy;ковому номеру (&nbsp;<code>( ･ω･)ア</code> напоминаю, что нумерация начи&shy;нается с нуля). Проиллюстрируем это на примере:</p>
-				<code class="code">
-					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
-					<br>
-					fruits[<span class="purple">0</span>]
-					<br>
-					<span class="grey"># 'Apple'</span>
-					<br>
-					fruits[<span class="purple">1</span>]
-					<br>
-					<span class="grey"># 'Grape'</span>
-					<br>
-					fruits[<span class="purple">4</span>]
-					<br>
-					<span class="grey"># 'Orange'</span>
-				</code>
-				<p class="text">Списки в Python являются изме&shy;няемым типом данных. Мы можем изменять содер&shy;жимое каждой из ячеек:</p>
-				<code class="code">
-					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
-					<br>
-					fruits[<span class="purple">0</span>]<span class="red"> = </span><span class="yellow">'Watermelon'</span>
-					<br>
-					fruits[<span class="purple">3</span>]<span class="red"> = </span><span class="yellow">'Lemon'</span>
-					<br>
-					<span class="blue">print</span>(fruits)
-					<br>
-					<span class="grey"># ['Watermelon', 'Grape', 'Peach', 'Lemon', 'Orange']</span>
-				</code>
-				<p class="text">Индексирование работает и в обратную сторону. Как такое возможно? Всё просто, мы обра&shy;щаемся к элементу списка по отрица&shy;тельному индексу. Индекс с номе&shy;ром <code>-1</code> дает нам доступ к после&shy;днему элементу, <code>-2</code> к предпоследнему и так далее.</p>
-				<code class="code">
-					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
-					<br>
-					fruits[<span class="red">-</span><span class="purple">1</span>]
-					<br>
-					<span class="grey"># 'Orange'</span>
-					<br>
-					fruits[<span class="red">-</span><span class="purple">2</span>]
-					<br>
-					<span class="grey"># 'Banan'</span>
-					<br>
-					fruits[<span class="red">-</span><span class="purple">3</span>]
-					<br>
-					<span class="grey"># 'Peach'</span>
-					<br>
-					fruits[<span class="red">-</span><span class="purple">4</span>]
-					<br>
-					<span class="grey"># 'Grape'</span>
-				</code>
-				<h2 class="subtitle">Создание списка с помощью <code>list()</code></h2>
-				<p class="text">Переходим к способам создания списка. Самый простой из них был приведен выше. Еще раз для закреп&shy;ления:</p>
-				<code class='code'>smiles<span class="red"> = </span>[<span class="yellow">'(ಠ_ಠ)'</span>, <span class="yellow">'(￣﹃￣)'</span>, <span class="yellow">'( ͡° ͜ʖ ͡°)'</span>, <span class="yellow">'(╮°-°)╮'</span>]</code>
-				<p class="text">А есть еще способы? Да, есть. Один из них — создание списка с помощью функции <code>list()</code> В неё мы можем передать любой итерируемый объект (да-да, тот самый по которому можно запустить цикл <code>(• ᵕ •)</code> )</p>
-				<p class="text">Рассмотрим несколько примеров:</p>
-				<code class="code">
-					letters<span class="red"> = </span><span class="blue">list</span>(<span class="yellow">'abcdef'</span>)
-					<br>
-					numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">10</span>))
-					<br>
-					even_numbers<span class="red"> = </span><span class="blue">list</span>(<span class="blue">range</span>(<span class="purple">0</span>, <span class="purple">10</span>, <span class="purple">2</span>))
-					<br>
-					<span class="blue">print</span>(letters)
-					<br>
-					<span class="grey"># ['a', 'b', 'c', 'd', 'e', 'f']</span>
-					<br>
-					<span class="blue">print</span>(numbers)
-					<br>
-					<span class="grey"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
-					<br>
-					<span class="blue">print</span>(even_numbers)
-					<br>
-					<span class="grey"># [0, 2, 4, 6, 8]</span>
-				</code>
-				<h2 class="subtitle">Длина списка</h2>
-				<p class="text">С созданием списка вроде ра&shy;зобрались. Следующий вопрос: как узнать длину списка? Мож&shy;но, конечно, просто посчитать количество элементов... <code>(⊙_⊙)</code> Но есть способ получ&shy;ше! Функция <code>len()</code> возвращает длину любой итерируемой пере&shy;менной, переменной, по которой можно запустить цикл. Рас&shy;смотрим пример:</p>
-				<code class='code'>
-					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
-					<br>
-					<span class="blue">print</span>(<span class="blue">len</span>(fruits))
-					<br>
-					<span class="grey"># 5</span>
-					<br>
-					numbers <span class="red">=</span> [<span class="purple">40</span>, <span class="purple">20</span>, <span class="purple">90</span>]
-					<br>
-					<span class="blue">print</span>(<span class="blue">len</span>(numbers))
-					<br>
-					<span class="grey"># 3</span>
-				</code>
-				<p class="text">"...любой итерируемой", а это значит:</p>
-				<code class="code">
-					string<span class="red"> = </span><span class="yellow">'Hello world'</span>
-					<br>
-					<span class="blue">print</span>(<span class="blue">len</span>(string))
-					<br>
-					<span class="grey"># 11</span>
-					<br>
-					<span class="blue">print</span>(<span class="blue"><span class="blue">len</span>(range</span>(<span class="purple">10</span>))
-					<br>
-					<span class="grey"># 10</span>
-				</code>
-				<h2 class="subtitle">Срезы</h2>
-				<p class="text">В начале статьи что-то гово&shy;рилось о "срезах". Давайте разберем подробнее, что это такое. Срезом называется неко&shy;торая подпос&shy;ледователь&shy;ность. Принцип действия срезов очень прост: мы "отре&shy;заем" кусок от исходной последова&shy;тель&shy;ности элемента, не меняя её при этом. Я сказал "последо&shy;вательность", а не "спи&shy;сок", потому что срезы работают и с другими итерируемыми типами данных, например, со строками.</p>
-				<code class="code">
-					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
-					<br>
-					part_of_fruits<span class="red"> = </span>fruits[<span class="purple">0</span>:<span class="purple">3</span>]
-					<br>
-					<span class="blue">print</span>(part_of_fruits)
-					<br>
-					<span class="grey"># ['Apple', 'Grape', 'Peach']</span>
-				</code>
-				<p class="text">Детально рассмотрим синтаксис срезов:</p>
-				<code class="code">
-					</span>итерируемая_переменная[начальный_индекс:конечный_индекс - <span class="purple">1</span>:длина_шага]
-				</code>
-				<p class="text">Обращаю ваше внимание, что мы делаем срез от <code>начального индекса</code> до <code>конечного индекса - 1</code>. То есть <code>i = начальный_индекс</code> и <code>i < конечный индекс</code> </p>
-				<p class="text">Больше примеров!</p>
-				<code class="code">
-					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
-					<br>
-					<span class="blue">print</span>(fruits[<span class="purple">0</span>:<span class="purple">1</span>])
-					<br>
-					<span class="grey"># ['Apple']</span>
-					<br>
-					<span class="grey"># Если начальный индекс равен 0, то его можно опустить</span>
-					<br>
-					<span class="blue">print</span>(fruits[:<span class="purple">2</span>])
-					<br>
-					<span class="grey"># ['Apple', 'Grape']</span>
-					<br>
-					<span class="blue">print</span>(fruits[:<span class="purple">3</span>])
-					<br>
-					<span class="grey"># ['Apple', 'Grape', 'Peach']</span>
-					<br>
-					<span class="blue">print</span>(fruits[:<span class="purple">4</span>])
-					<br>
-					<span class="grey"># ['Apple', 'Grape', 'Peach', 'Banan']</span>
-					<br>
-					<span class="blue">print</span>(fruits[:<span class="purple">5</span>])
-					<br>
-					<span class="grey"># ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</span>
-					<br>
-					<span class="grey"># Если конечный индекс равен длине списка, то его тоже можно опустить</span>
-					<br>
-					<span class="blue">print</span>(fruits[:<span class="blue">len</span>(fruits)])
-					<br>
-					<span class="grey"># ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</span>
-					<br>
-					<span class="blue">print</span>(fruits[::])
-					<br>
-					<span class="grey"># ['Apple', 'Grape', 'Peach', 'Banan', 'Orange']</span>
-				</code>
-				<p class="text">Самое время понять, что делает третий параметр среза - длина шага!</p>
-				<code class="code">
-					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
-					<br>
-					<span class="blue">print</span>(fruits[::<span class="purple">2</span>])
-					<br>
-					<span class="grey"># ['Apple', 'Peach', 'Orange']</span>
-					<br>
-					<span class="blue">print</span>(fruits[::<span class="purple">3</span>])
-					<br>
-					<span class="grey"># ['Apple', 'Banan']</span>
-					<br>
-					<span class="grey"># Длина шага тоже может быть отрицательной!</span>
-					<br>
-					<span class="blue">print</span>(fruits[::<span class="purple">-1</span>])
-					<br>
-					<span class="grey"># ['Orange', 'Banan', 'Peach', 'Grape', 'Apple']</span>
-					<br>
-					<span class="blue">print</span>(fruits[<span class="purple">4</span>:<span class="purple">2</span>:<span class="purple">-1</span>])
-					<br>
-					<span class="grey"># ['Orange', 'Banan']</span>
-					<br>
-					<span class="blue">print</span>(fruits[<span class="purple">3</span>:<span class="purple">1</span>:<span class="purple">-1</span>])
-					<br>
-					<span class="grey"># ['Banan', 'Peach']</span>
-				</code>
-				<p class="text">А теперь вспоминаем всё, что мы знаем о циклах. В Python их целых два! Цикл <code>for</code> и цикл <code>while</code>&nbsp;Нас интересует цикл <code>for</code>, с его помощью мы можем перебирать зна&shy;чения и индексы наших после&shy;дователь&shy;ностей. Начнем с перебора значений:</p>
-				<code class='code'>
-					fruits <span class="red">=</span> [<span class="yellow">'Apple'</span>, <span class="yellow">'Grape'</span>, <span class="yellow">'Peach'</span>, <span class="yellow">'Banan'</span>, <span class="yellow">'Orange'</span>]
-					<br>
-					<span class="blue">for</span> fruit <span class="red">in</span> fruits:
-					<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fruit, end=<span class="yellow">' '</span>)
-					<br>
-					<span class="grey"># Apple Grape Peach Banan Orange</span>
-				</code>
-				<p class="text">Выглядит несложно, правда? В перемен&shy;ную <code>fruit</code> объявлен&shy;ную в цикле по оче&shy;реди записы&shy;ваются значения всех эле&shy;мен&shy;тов списка <code>fruits</code></p>
-				<p class="text">А что там с перебором индексов?</p>
-				<code class="code">
-					<span class="blue">for</span> index <span class="red">in</span> <span class="blue">range</span>(<span class="blue">len</span>(fruits)):
-					<br>
-					&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fruits[index], end=<span class="yellow">' '</span>)
-					<br>
-					<span class="grey"># Apple Grape Peach Banan Orange</span>
-				</code>
-				<p class="text">Этот пример гораздо интерес&shy;нее преды&shy;дущего! Что же здесь происходит? Для начала разбе&shy;ремся, что делает фун&shy;кция <code><span class="blue">range</span>(<span class="blue">len</span>(fruits))</code> Мы с вами знаем, что функция <code>len()</code> возвращает дли&shy;ну списка, а <code>range()</code> генерирует диапа&shy;зон целых чисел от <code>0</code> до <code>len()-1</code>. Сложив <code>2+2</code>, мы получим, что перемен&shy;ная <code>index</code> принимает значения в диапазоне от <code>0</code> до <code>len()-1</code>. Идем дальше, <code>fruits[index]</code> - это обраще&shy;ние по индексу к элементу с индексом <code>index</code> списка <code>fruits</code>. А так как переменная <code>index</code> принимает зна&shy;чения всех индексов списка <code>fruits</code>, то в цикле мы переберем значе&shy;ния всех эле&shy;ментов наше&shy;го спи&shy;ска!</p>
-
-			</div>
-		</main>
-		<script src='js/smoothscroll.js'></script>
-		<script src="lax.js"></script>
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				var name = 'Списки',
-					text = document.getElementById('text');
-				
-				setTimeout(() => name.split('').forEach((character, index) => setTimeout(() => text.innerHTML += character, 100*index)),500);
-				
-				down.addEventListener('click', () => document.querySelector('main').scrollIntoView({block: "start", behavior: "smooth"}));
-				lax.setup()
-		        
-				document.addEventListener('scroll', function(x) {
-					lax.update(window.scrollY)
-				}, false)
-
-				let w = window.innerWidth
-				window.addEventListener("resize", function() {
-					if(w !== window.innerWidth) {
-				  		lax.populateElements()
-					}
-				});
-
-				lax.update(window.scrollY)
-			});
-
-			
-		</script>
-		<!-- Yandex.Metrika counter -->
-		<script type="text/javascript" >
-		   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-		   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-		   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-		   ym(52805005, "init", {
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true,
-			webvisor:true
-		   });
-		</script>
-		<noscript><div><img src="https://mc.yandex.ru/watch/52805005" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-		<!-- /Yandex.Metrika counter -->
+		</div>
 	</body>
 </html>
