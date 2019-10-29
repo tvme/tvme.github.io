@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Графическая библиотека turtle (Часть 2)</title>
+	<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Графическая библиотека turtle</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
+			<p class="text">Несколько полезных методов для изменения внешнего вида:</p>
+			<p class="text">Метод bgcolor получает в качестве аргумента строковую переменную и изменяет цвет фона окна</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>) <span class="grey"># Цвет фона будет золотым</span>
+			</p>
+			<p class="text">Метод width изменяет толщину пера. Он принимает в качестве аргумента целое число.</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>) <span class="grey"># Толщина линий станет 5 пикселей</span>
+			</p>
+			<p class="text">Методы pu и pd позволяют поднять и опустить перо. Они используются, когда нам нужно переместить перо с помощью метода setpos.</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">forward</span>(<span class="purple">100</span>)
+				<br>
+				p.pu() <span class="grey"># Подняли перо</span>
+				<br>
+				p.setpos(<span class="purple">-100</span>, <span class="purple">-100</span>) <span class="grey"># Переместили перо в точку с координатами (-100, -100)</span>
+				<br>
+				p.pd() <span class="grey"># Опустили перо</span>
+			</p>
+			<p class="text">Метод cirle рисует окружность. Он принимает в качестве аргумента целое число - радиус окружности в пикселях.</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				p.circle(<span class="purple">100</span>) <span class="grey"># Окружность с радиусом 100 пикселей</span>
+			</p>
+			<h1 class="main-title">Циклы и рисование фигур</h1>
+			<p class="text">В прошлой статье мы рисовали квадрат с помощью последовательного перечисления операций. Это совсем неудобно. Есть способ сократить этот код. Для полного понимания прочтите статью про цикл for.</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(<span class="purple">4</span>): <span class="grey"># ОБРАТИТЕ ВНИМАНИЕ, КОМАНДА НА СЛЕДУЮЩЕЙ СТРОЧКЕ ПОСЛЕ</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">100</span>) <span class="grey"># ДВОЕТОЧИЯ ИМЕЕТ ОТСТУП В ЧЕТЫРЕ ПРОБЕЛА</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">left</span>(<span class="purple">90</span>)
+			</p>
+			<p class="text">В примере, приведенном выше я использовал цикл for для повторения двух команд четыре раза. Давайте нарисуем пятиугольник. Я добавлю дополнительную переменную в наш код, в которой буду сохранять количество сторон</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				number_sides<span class="red"> = </span><span class="purple">5</span> <span class="grey"># Количество сторон</span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides): <span class="grey"># Повторяем 5 раз</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">100</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">left</span>(<span class="purple">360</span><span class="red"> / </span>number_sides) <span class="grey"># Делаем поворот черепашки на 72 градуса</span>
+			</p>
+			<p class="text">Таким образом, мы можем нарисовать пятиугольник. Изменив всего одну переменную, получаем шестиугольник</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				number_sides<span class="red"> = </span><span class="purple">6</span> <span class="grey"># Поменяли на 6</span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">100</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">left</span>(<span class="purple">360</span><span class="red"> / </span>number_sides)
+			</p>
+			<p class="text">Поэкспериментируйте)</p>
+			<h1 class="main-title">Вложенные циклы </h1>
+			<p class="text">Мы можем выполнять один цикл в другом, например, нарисовать треугольник с тремя внешними треугольниками:</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				number_sides<span class="red"> = </span><span class="purple">3</span> <span class="grey"># Поменяли на 6</span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">100</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">left</span>(<span class="purple">360</span><span class="red"> / </span>number_sides)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides): <span class="grey"># ОБРАТИТЕ ВНИМАНИЕ, КОМАНДА НА СЛЕДУЮЩЕЙ СТРОЧКЕ ИМЕЕТ</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">50</span>) <span class="grey">#             ОТСТУП В ЧЕТЫРЕ ПРОБЕЛА</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">right</span>(<span class="purple">360</span><span class="red"> / </span>number_sides)
+			</p>
+			<p class="text">Треугольник с квадратами:</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				number_sides<span class="red"> = </span><span class="purple">3</span> <span class="grey"># Поменяли на 6</span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">100</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">right</span>(<span class="purple">360</span><span class="red"> / </span>number_sides)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(<span class="purple">4</span>): <span class="grey"># Меняем number_sides на 4</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">50</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">right</span>(<span class="purple">360</span><span class="red"> / </span><span class="purple">4</span>) <span class="grey"># Меняем number_sides на 4</span>
+			</p>
+			<p class="text">Больше вложенных циклов!!!!</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				number_sides<span class="red"> = </span><span class="purple">3</span> <span class="grey"># Поменяли на 6</span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">100</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">left</span>(<span class="purple">360</span><span class="red"> / </span>number_sides)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">50</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">right</span>(<span class="purple">360</span><span class="red"> / </span>number_sides)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">20</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">right</span>(<span class="purple">360</span><span class="red"> / </span>number_sides)
+			</p>
+			<p class="text">Прием количества сторон от пользователя:</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				number_sides<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>()) <span class="grey"># Приняли число от пользователя</span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(number_sides): <span class="grey"># ОБРАТИТЕ ВНИМАНИЕ, КОМАНДА НА СЛЕДУЮЩЕЙ СТРОЧКЕ ПОСЛЕ</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">100</span>) <span class="grey"># ДВОЕТОЧИЯ ИМЕЕТ ОТСТУП В ЧЕТЫРЕ ПРОБЕЛА</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">left</span>(<span class="purple">360</span><span class="red"> / </span>number_sides)
+			</p>
+			<p class="text">Задаем позиции для квадратиков:</p>
+			<p class="code">
+				<span class="red">import </span>turtle
+				<br>
+				p<span class="red"> = </span>turtle.<span class="blue">Pen</span>()
+				<br>
+				turtle.<span class="blue">bgcolor</span>(<span class="yellow">'gold'</span>)
+				<br>
+				p.<span class="blue">width</span>(<span class="purple">5</span>)
+				<br>
+				p.<span class="blue">color</span>(<span class="yellow">'dodgerblue'</span>)
+				<br>
+				squares<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите количество квадратиков: '</span>)) <span class="grey"># Приняли число от пользователя</span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(squares): <span class="grey"># Делаем цикл для рисования каждого квадрата</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;x<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите координату х: '</span>))
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;y<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите координату y: '</span>))
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.pu()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.setpos(x,y)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;p.pd()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>k<span class="red"> in </span><span class="blue">range</span>(<span class="purple">4</span>): <span class="grey"># ОБРАТИТЕ ВНИМАНИЕ, КОМАНДА НА СЛЕДУЮЩЕЙ СТРОЧКЕ ПОСЛЕ</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">forward</span>(<span class="purple">100</span>) <span class="grey"># ДВОЕТОЧИЯ ИМЕЕТ ОТСТУП В ЧЕТЫРЕ ПРОБЕЛА</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p.<span class="blue">left</span>(<span class="purple">90</span>)
+				<br>
+				
+			</p>
+			<h1 class="main-title">Задачи</h1>
+			<p class="text"><span class="num">1.</span> Напишите программу, которая принимает от пользователя длину стороны квадрата и рисует его</p>
+			<p class="text"><span class="num">2.</span> Напишите программу, которая рисует 5 разноцветных треугольников в различных местах окна (использовать перенос пера с помощью pu, setpos, pd)</p>
+			<p class="text"><span class="num">3.</span> Напишите программу, которая принимает от пользователя количество кругов для отрисовки и рисует эти круги в разных местах окна</p>
+			<p class="text"><span class="num">4.</span> Напишите программу, которая принимает количество сторон многоугольника, длину стороны многоугольника и рисует его.</p>
+			<p class="text"><span class="num">5.</span> Напишите программу, которая принимает количество сторон многоугольника, длину стороны многоугольника  и его позицию и рисует его.</p>
+			<p class="text"><span class="num">6.</span> Творческое задание: напишите две-три программы использующие максимальное количество полученной от статьи информации.</p>
+
+		</div>
+	</body>
+</html>
