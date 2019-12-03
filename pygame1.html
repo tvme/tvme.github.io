@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Функции в Python</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">pygame <br> Начало работы</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
+			<p class="text">pygame - это библиотека модулей для языка Python, созданная для разработки 2D игр. </p>
+			<p class="text">Для того чтобы установить pygame на свой компьютер необходимо открыть командную строку или терминал и написать команду </p>
+			<p class="code">
+				pip3 install pygame
+			</p>
+			<p class="text">После установки необходимо создать новый файл и импортировать модуль pygame и написать шаблон игры</p>
+			<p class="code">
+				<span class="grey"># Импортируем библиотеку pygame</span>
+				<br>
+				<span class="red">import </span>pygame
+				<br>
+				<span class="grey"># Импортируем системную функцию exit</span>
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				<span class="grey"># Инициализируем pygame</span>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				<span class="grey"># Создаем окошко 800 пикселей шириной</span>
+				<br>
+				<span class="grey"># и 600 пикселей высотой и записываем его</span>
+				<br>
+				<span class="grey"># в переменную display.</span>
+				<br>
+				<span class="grey"># Переменную display называют поверхностью.</span>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				<span class="grey"># Основной цикл игры</span>
+				<br>
+				<span class="red">while </span>True:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Ждем события (действия пользователя)</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Если нажали на крестик,</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># то закрываем окно</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Обновляем поверхность игры</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># на каждом шаге основного цикла игры</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+			</p>
+			<p class="text">Пользователь может взаимодействовать с нашей игрой. Каждое действие пользователя - это некоторое событие, которое мы можем обработать. Выражение pygame.event.get() - это список событий, произошедших в нашей игре. Обработанные события удаляются из очереди.</p>
+			<p class="text">Цикл for просто перебирает необработанные события. Каждое событие он присваивает переменной event (можно написать любую другую).</p>
+			<p class="text">Поговорим о цикле while, основном цикле игры. Как часто он выполняется? Очень и очень часто, это зависит от мощности компьютера. Для обновления экрана в играх часто используют 60 кадров в секунду. </p>
+			<p class="text">Ограничим количество выполнений цикла.</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span> <span class="grey"># Создаем переменную FPS</span>
+				<br>
+				clock<span class="red"> = </span>pg.time.<span class="blue">Clock</span>() <span class="grey"># Создаем счетчик для FPS</span>
+				<br>
+				<span class="red">while </span>True:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS) <span class="grey"># Замедляем цикл до 60 выполнений в секунду</span>
+			</p>
+			<p class="text">Методу tick() передается желаемое количество кадров в секунду. Задержку он вычисляет сам. На каждой итерации основного цикла игры секунда делится на 60 и на вычисленную величину выполняется задержка.</p>
+			<h1 class="main-title">Рисование фигур</h1>
+			<p class="text">В библиотеке pygame существует множество функций для рисования различных фигур.</p>
+			<p class="text">Функция polygon рисует произвольную фигуру. Она принимает 3 обязательных параметра (поверхность, цвет и кортеж координат) и 1 необязательный (толщину линий).</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				<span class="grey"># Рисуем полигон (да, получится квадратик)</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">255</span>, <span class="purple">0</span>, <span class="purple">0</span>) , ( (<span class="purple">0</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">0</span>, <span class="purple">100</span>) ) )
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span>
+				<br>
+				clock<span class="red"> = </span>pg.time.<span class="blue">Clock</span>()
+				<br>
+				<span class="red">while </span>True:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">display - наша поверхность </p>
+			<p class="text">(255, 0, 0) - красный цвет, почитайте про rgb</p>
+			<p class="text">( (0, 0), (100, 0), (100, 100), (0, 100) ) - координаты вершин квадрата. Возьмите листочек и нарисуйте его координатах (замените сотню на единицу).</p>
+			<p class="text">Давайте нарисуем треугольник</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				<span class="grey"># Рисуем квадратик</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">255</span>, <span class="purple">0</span>, <span class="purple">0</span>) , ( (<span class="purple">0</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">0</span>, <span class="purple">100</span>) ) )
+				<br>
+				<span class="grey"># Рисуем синий треугольник</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">255</span>) , ( (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">200</span>, <span class="purple">200</span>), (<span class="purple">100</span>, <span class="purple">200</span>) ) )
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span> <span class="grey"># Создаем переменную FPS</span>
+				<br>
+				clock<span class="red"> = </span>pg.time.<span class="blue">Clock</span>()
+				<br>
+				<span class="red">while </span>True:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">display - поверхность </p>
+			<p class="text">(0, 0, 255) - синий цвет</p>
+			<p class="text">( (100, 100), (200, 200), (100, 200)) - координаты вершин нашего треугольник.</p>
+			<h2 class="title">Самостоятельно нарисуйте пятиугольник (вам помогут карандаш и лист бумаги)</h2>
+			<h2 class="title">Рисование окружностей</h2>
+			<p class="text">Чтобы нарисовать окружность нужно вызвать метод circle из модуля draw. Команда выглядит так: pygame.draw.circle(display, color, position, radius). </p>
+			<p class="text">display - поверхность, на которой рисуем</p>
+			<p class="text">color - цвет, записанный в кортеже из трех чисел. (еще раз про rgb)</p>
+			<p class="text">position - координаты точки центра окружности (кортеж из двух чисел (x, y))</p>
+			<p class="text">radius - радиус окружности в пикселях</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				<span class="grey"># Рисуем квадратик</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">255</span>, <span class="purple">0</span>, <span class="purple">0</span>) , ( (<span class="purple">0</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">0</span>, <span class="purple">100</span>) ) )
+				<br>
+				<span class="grey"># Рисуем синию линию</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">255</span>) , ( (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">200</span>, <span class="purple">200</span>), (<span class="purple">100</span>, <span class="purple">200</span>) ) )
+				<br>
+				<span class="grey"># Рисуем желтую окружность с радиусом 100 пикселей</span>
+				<br>
+				pygame.draw.<span class="blue">circle</span>( display, (<span class="purple">255</span>, <span class="purple">255</span>, <span class="purple">0</span>) , (<span class="purple">400</span>,200), <span class="purple">100</span>)
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span>
+				<br>
+				clock<span class="red"> = </span>pg.time.<span class="blue">Clock</span>()
+				<br>
+				<span class="red">while </span>True:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">display - наша поверхнотсть для рисования</p>
+			<p class="text">(255, 255, 0) - желтый цвет</p>
+			<p class="text">(400, 200) - координаты точки центра (в нашем случае 400 пикселей от верхнего левого угла по горизонтали и 200 пикселей по вертикали)</p>
+			<p class="text">100 - радиус нашей окружности в пикселях</p>
+			<p class="text">Объявления переменных для цветов </p>
+			<p class="text">Для нашего с вами удобства давайте объявим несколько переменных, в которые сохраним используемые нами цвета</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				WHITE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">255</span>, <span class="purple">255</span>)
+				<br>
+				BLACK<span class="red"> = </span>(<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">0</span>)
+				<br>
+				PURPLE<span class="red"> = </span>(<span class="purple">156</span>, <span class="purple">39</span>, <span class="purple">176</span>)
+				<br>
+				INDIGO<span class="red"> = </span>(<span class="purple">63</span>, <span class="purple">81</span>, <span class="purple">181</span>)
+				<br>
+				BLUE<span class="red"> = </span>(<span class="purple">33</span>, <span class="purple">150</span>, <span class="purple">243</span>)
+				<br>
+				GREEN<span class="red"> = </span>(<span class="purple">76</span>, <span class="purple">175</span>, <span class="purple">80</span>)
+				<br>
+				YELLOW<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">235</span>, <span class="purple">59</span>)
+				<br>
+				ORANGE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">152</span>, <span class="purple">0</span>)
+				<br>
+				GREY<span class="red"> = </span>(<span class="purple">158</span>, <span class="purple">158</span>, <span class="purple">158</span>)
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				<span class="grey"># Рисуем квадратик</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">255</span>, <span class="purple">0</span>, <span class="purple">0</span>) , ( (<span class="purple">0</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">0</span>, <span class="purple">100</span>) ) )
+				<br>
+				<span class="grey"># Рисуем синию линию</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">255</span>) , ( (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">200</span>, <span class="purple">200</span>), (<span class="purple">100</span>, <span class="purple">200</span>) ) )
+				<br>
+				<span class="grey"># Рисуем желтую окружность с радиусом 100 пикселей</span>
+				<br>
+				pygame.draw.<span class="blue">circle</span>( display, (<span class="purple">255</span>, <span class="purple">255</span>, <span class="purple">0</span>) , (<span class="purple">400</span>,200), <span class="purple">100</span>)
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span>
+				<br>
+				clock<span class="red"> = </span>pg.time.<span class="blue">Clock</span>()
+				<br>
+				<span class="red">while </span>True:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<h2 class="title">Рисование прямоугольников</h2>
+			<p class="text">Для отрисовки прямоугольников можно использовать метод rect. </p>
+			<p class="text">pygame.draw.rect(display, color, (x, y, width, height) )</p>
+			<p class="text">color - цвет (теперь можно просто написать имя переменную)</p>
+			<p class="text">(x, y, width, height) - кортеж из четырех значений. Первые два значения - это координаты верхнего левого угла прямоугольника, а два последних - это ширина и высота.</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				WHITE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">255</span>, <span class="purple">255</span>)
+				<br>
+				BLACK<span class="red"> = </span>(<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">0</span>)
+				<br>
+				PURPLE<span class="red"> = </span>(<span class="purple">156</span>, <span class="purple">39</span>, <span class="purple">176</span>)
+				<br>
+				INDIGO<span class="red"> = </span>(<span class="purple">63</span>, <span class="purple">81</span>, <span class="purple">181</span>)
+				<br>
+				BLUE<span class="red"> = </span>(<span class="purple">33</span>, <span class="purple">150</span>, <span class="purple">243</span>)
+				<br>
+				GREEN<span class="red"> = </span>(<span class="purple">76</span>, <span class="purple">175</span>, <span class="purple">80</span>)
+				<br>
+				YELLOW<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">235</span>, <span class="purple">59</span>)
+				<br>
+				ORANGE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">152</span>, <span class="purple">0</span>)
+				<br>
+				GREY<span class="red"> = </span>(<span class="purple">158</span>, <span class="purple">158</span>, <span class="purple">158</span>)
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				<span class="grey"># Рисуем квадратик</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">255</span>, <span class="purple">0</span>, <span class="purple">0</span>) , ( (<span class="purple">0</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">0</span>), (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">0</span>, <span class="purple">100</span>) ) )
+				<br>
+				<span class="grey"># Рисуем синию линию</span>
+				<br>
+				pygame.draw.<span class="blue">polygon</span>( display, (<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">255</span>) , ( (<span class="purple">100</span>, <span class="purple">100</span>), (<span class="purple">200</span>, <span class="purple">200</span>), (<span class="purple">100</span>, <span class="purple">200</span>) ) )
+				<br>
+				<span class="grey"># Рисуем желтую окружность с радиусом 100 пикселей</span>
+				<br>
+				pygame.draw.<span class="blue">circle</span>( display, (<span class="purple">255</span>, <span class="purple">255</span>, <span class="purple">0</span>) , (<span class="purple">400</span>,200), <span class="purple">100</span>)
+				<br>
+				<span class="grey"># Рисуем фиолетовый прямоугольник 200х300</span>
+				<br>
+				pygame.draw.<span class="blue">rect</span>( display, PURPLE , (<span class="purple">600</span>, <span class="purple">300</span>, <span class="purple">200</span>, <span class="purple">300</span>))
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span>
+				<br>
+				clock<span class="red"> = </span>pg.time.<span class="blue">Clock</span>()
+				<br>
+				<span class="red">while </span>True:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">Если ваша творческая натура требует большего, то вот  <a href="https://www.pygame.org/docs/ref/draw.html" class="link">ссылка на документацию модулю draw</a> </p>
+			<p class="text">Там можно найти рисование линий, дуг, эллипсов.</p>
+			<h2 class="title">Большой пример (запусти его у себя на компьтере:</h2>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<span class="red"><span class="red">from </span></span>random <span class="red">import </span>randint
+				<br>
+				<span class="blue">def</span> <span class="green">randomGreen</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span><span class="blue">randint</span>(<span class="purple">0</span>, <span class="purple">100</span>), <span class="blue">randint</span>(<span class="purple">100</span>, <span class="purple">255</span>), <span class="blue">randint</span>(<span class="purple">0</span>,100)
+				<br>
+				<span class="blue">def</span> <span class="green">randomRed</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span><span class="blue">randint</span>(<span class="purple">100</span>, <span class="purple">255</span>), <span class="blue">randint</span>(<span class="purple">0</span>, <span class="purple">100</span>), <span class="blue">randint</span>(<span class="purple">0</span>,100)
+				<br>
+				
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">600</span>, <span class="purple">600</span>) )
+				<br>
+				display.fill((<span class="purple">255</span>,255,<span class="purple">255</span>))
+				<br>
+				x<span class="red"> = </span><span class="purple">100</span>
+				<br>
+				y<span class="red"> = </span><span class="purple">100</span>
+				<br>
+				<span class="red">while </span>y<span class="red"> < </span><span class="purple">500</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">while </span>x<span class="red"> < </span><span class="purple">500</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">rect</span>(display, randomGreen(), (x, y, <span class="purple">25</span>, <span class="purple">25</span>))
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">25</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">+= </span><span class="purple">25</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;x<span class="red"> = </span><span class="purple">100</span>
+				<br>
+				pygame.draw.<span class="blue">rect</span>(display, (<span class="purple">0</span>,0,<span class="purple">0</span>) , (<span class="purple">150</span>, <span class="purple">200</span>, <span class="purple">100</span>, <span class="purple">100</span>))
+				<br>
+				pygame.draw.<span class="blue">rect</span>(display, (<span class="purple">0</span>,0,<span class="purple">0</span>) , (<span class="purple">350</span>, <span class="purple">200</span>, <span class="purple">100</span>, <span class="purple">100</span>))
+				<br>
+				pygame.draw.<span class="blue">rect</span>(display, (<span class="purple">0</span>,0,<span class="purple">0</span>) , (<span class="purple">250</span>, <span class="purple">300</span>, <span class="purple">100</span>, <span class="purple">100</span>))
+				<br>
+				pygame.draw.<span class="blue">rect</span>(display, (<span class="purple">0</span>,0,<span class="purple">0</span>) , (<span class="purple">200</span>, <span class="purple">350</span>, <span class="purple">50</span>, <span class="purple">100</span>))
+				<br>
+				pygame.draw.<span class="blue">rect</span>(display, (<span class="purple">0</span>,0,<span class="purple">0</span>) , (<span class="purple">350</span>, <span class="purple">350</span>, <span class="purple">50</span>, <span class="purple">100</span>))
+				<br>
+				<br>
+				<span class="red">while </span>True:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+			</p>
+			<h2 class="title">Задание: </h2>
+				<p class="text">Напишите программу для рисования дерева из minecraft</p>
+		</div>
+	</body>
+</html>
