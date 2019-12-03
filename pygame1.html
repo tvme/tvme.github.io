@@ -398,9 +398,13 @@
 				<br>
 				<span class="red"><span class="red">from </span></span>random <span class="red">import </span>randint
 				<br>
+				<span class="grey"># Функция, возвращающая случайный оттенок зеленого цвета</span>
+				<br>
 				<span class="blue">def</span> <span class="green">randomGreen</span>():
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span><span class="blue">randint</span>(<span class="purple">0</span>, <span class="purple">100</span>), <span class="blue">randint</span>(<span class="purple">100</span>, <span class="purple">255</span>), <span class="blue">randint</span>(<span class="purple">0</span>,100)
+				<br>
+				<span class="grey"># Функция, возвращающая случайный оттенок красного цвета</span>
 				<br>
 				<span class="blue">def</span> <span class="green">randomRed</span>():
 				<br>
@@ -414,21 +418,31 @@
 				<br>
 				display.fill((<span class="purple">255</span>,255,<span class="purple">255</span>))
 				<br>
-				x<span class="red"> = </span><span class="purple">100</span>
+				x<span class="red"> = </span><span class="purple">100</span> <span class="grey"># начальная позиция по оси X</span>
 				<br>
-				y<span class="red"> = </span><span class="purple">100</span>
+				y<span class="red"> = </span><span class="purple">100</span> <span class="grey"># начальная позиция по оси Y</span>
 				<br>
-				<span class="red">while </span>y<span class="red"> < </span><span class="purple">500</span>:
+				<span class="red">while </span>y<span class="red"> < </span><span class="purple">500</span>: <span class="grey"># Пока мы не достигли точки с координатой y == 500</span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">while </span>x<span class="red"> < </span><span class="purple">500</span>:
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Вложенный цикл для рисования линии из квадратиков</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">while </span>x<span class="red"> < </span><span class="purple">500</span>: <span class="grey"># Пока мы не достигли точки с координатой x == 500</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Рисуем квадратик с координатами x, y</span>
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">rect</span>(display, randomGreen(), (x, y, <span class="purple">25</span>, <span class="purple">25</span>))
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">25</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">25</span> <span class="grey"># Смещаем позицию квадратика по оси X</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># По завершению вложенного цикла увеличиваем переменную y</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># для перехода на новую строчку</span>
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">+= </span><span class="purple">25</span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;x<span class="red"> = </span><span class="purple">100</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;x<span class="red"> = </span><span class="purple">100</span> <span class="grey"># Возвращаем позицию по оси X в начало строчки</span>
+				<br>
+				<span class="grey"># Рисуем "мордочку" крипера</span>
 				<br>
 				pygame.draw.<span class="blue">rect</span>(display, (<span class="purple">0</span>,0,<span class="purple">0</span>) , (<span class="purple">150</span>, <span class="purple">200</span>, <span class="purple">100</span>, <span class="purple">100</span>))
 				<br>
@@ -439,7 +453,6 @@
 				pygame.draw.<span class="blue">rect</span>(display, (<span class="purple">0</span>,0,<span class="purple">0</span>) , (<span class="purple">200</span>, <span class="purple">350</span>, <span class="purple">50</span>, <span class="purple">100</span>))
 				<br>
 				pygame.draw.<span class="blue">rect</span>(display, (<span class="purple">0</span>,0,<span class="purple">0</span>) , (<span class="purple">350</span>, <span class="purple">350</span>, <span class="purple">50</span>, <span class="purple">100</span>))
-				<br>
 				<br>
 				<span class="red">while </span>True:
 				<br>
@@ -453,8 +466,7 @@
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
 			</p>
-			<h2 class="title">Задание: </h2>
-				<p class="text">Напишите программу для рисования дерева из minecraft</p>
+
 		</div>
 	</body>
 </html>
