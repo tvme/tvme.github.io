@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Библиотека pygame (Часть 2)</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Библиотека pygame №2</h1>
+			<h2 class="title">Обработка нажатий клавиш клавиатуры</h2>
+			<p class="text">Создадим базовый шаблон для нашей игры (запомните его наизусть)</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				WHITE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">255</span>, <span class="purple">255</span>)
+				<br>
+				BLACK<span class="red"> = </span>(<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">0</span>)
+				<br>
+				PURPLE<span class="red"> = </span>(<span class="purple">156</span>, <span class="purple">39</span>, <span class="purple">176</span>)
+				<br>
+				INDIGO<span class="red"> = </span>(<span class="purple">63</span>, <span class="purple">81</span>, <span class="purple">181</span>)
+				<br>
+				BLUE<span class="red"> = </span>(<span class="purple">33</span>, <span class="purple">150</span>, <span class="purple">243</span>)
+				<br>
+				GREEN<span class="red"> = </span>(<span class="purple">76</span>, <span class="purple">175</span>, <span class="purple">80</span>)
+				<br>
+				YELLOW<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">235</span>, <span class="purple">59</span>)
+				<br>
+				ORANGE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">152</span>, <span class="purple">0</span>)
+				<br>
+				GREY<span class="red"> = </span>(<span class="purple">158</span>, <span class="purple">158</span>, <span class="purple">158</span>)
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span>
+				<br>
+				clock<span class="red"> = </span>pygame.time.<span class="blue">Clock</span>()
+				<br>
+				<span class="red">while </span><span class='purple'>True</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">pygame отслеживает все происходящие в игре события и позволяет нам их обрабатывать. При возникновении события создается экземпляр класса Event. Каждый экземпляр этого класса имеет определенный список свойств. <span class="important">Одно из этих свойств - это <span class="important">свойство</span> <span class="important">type</span>.</span> Именно оно позволяет нам понять, какое событие произошло. </p>
+			<p class="text"><span class="important">События клавиатуры имеют тип KEYDOWN.</span></p>
+			<p class="text">Еще одно важное свойство - это <span class="important">свойство key</span>. Для нас оно представляет интерес, когда мы обнаружили событие с типом <span class="important">KEYDOWN</span>. С помощью свойства <span class="important">key</span> мы можем узнать, какая клавиша была нажата.</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				WHITE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">255</span>, <span class="purple">255</span>)
+				<br>
+				BLACK<span class="red"> = </span>(<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">0</span>)
+				<br>
+				PURPLE<span class="red"> = </span>(<span class="purple">156</span>, <span class="purple">39</span>, <span class="purple">176</span>)
+				<br>
+				INDIGO<span class="red"> = </span>(<span class="purple">63</span>, <span class="purple">81</span>, <span class="purple">181</span>)
+				<br>
+				BLUE<span class="red"> = </span>(<span class="purple">33</span>, <span class="purple">150</span>, <span class="purple">243</span>)
+				<br>
+				GREEN<span class="red"> = </span>(<span class="purple">76</span>, <span class="purple">175</span>, <span class="purple">80</span>)
+				<br>
+				YELLOW<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">235</span>, <span class="purple">59</span>)
+				<br>
+				ORANGE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">152</span>, <span class="purple">0</span>)
+				<br>
+				GREY<span class="red"> = </span>(<span class="purple">158</span>, <span class="purple">158</span>, <span class="purple">158</span>)
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span>
+				<br>
+				clock<span class="red"> = </span>pygame.time.<span class="blue">Clock</span>()
+				<br>
+				<span class="red">while </span><span class='purple'>True</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.type <span class="red">==</span> pygame.KEYDOWN:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.key <span class="red">==</span> pygame.K_LEFT:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Левая стрелка'</span>)</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.key <span class="red">==</span> pygame.K_RIGHT:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Правая стрелка'</span>)</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.key <span class="red">==</span>pygame.K_UP:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вверх'</span>)</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.key <span class="red">==</span>pygame.K_DOWN:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вниз'</span>)</span>
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">После запуска скрипта при нажатии стрелок на клавиатуре в стандартный вывод будут выводится строки с информацией о нажатой клавише. </p>
+			<p class="text">Напишем код, который будет рисовать кружок</p>
+			<p class="code">
+				pygame.draw.<span class="blue">circle</span>(display, BLUE, (<span class="purple">400</span>, <span class="purple">300</span>), <span class="purple">5</span>)
+				<br>
+				<span class="grey"># Добавьте этот скрипт после цикла while</span>
+			</p>
+			<p class="text">Заставим кружок двигаться. Нужно объявить две переменные - <span class="important">x и y</span>. Эти переменные будут координатами нашего кружка. При нажатии клавиши мы будем изменять эти переменные. Если нажата стрелка вправо, увеличим переменную x на 10. Если - стрелка влево, уменьшим переменную x на 10. Проделаем то же самое с переменной y.</p>
+			<p class="code">
+				<span class="red">import </span>pygame
+				<br>
+				<span class="red"><span class="red">from </span></span>sys <span class="red">import </span>exit
+				<br>
+				<br>
+				pygame.<span class="blue">init</span>()
+				<br>
+				<br>
+				WHITE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">255</span>, <span class="purple">255</span>)
+				<br>
+				BLACK<span class="red"> = </span>(<span class="purple">0</span>, <span class="purple">0</span>, <span class="purple">0</span>)
+				<br>
+				PURPLE<span class="red"> = </span>(<span class="purple">156</span>, <span class="purple">39</span>, <span class="purple">176</span>)
+				<br>
+				INDIGO<span class="red"> = </span>(<span class="purple">63</span>, <span class="purple">81</span>, <span class="purple">181</span>)
+				<br>
+				BLUE<span class="red"> = </span>(<span class="purple">33</span>, <span class="purple">150</span>, <span class="purple">243</span>)
+				<br>
+				GREEN<span class="red"> = </span>(<span class="purple">76</span>, <span class="purple">175</span>, <span class="purple">80</span>)
+				<br>
+				YELLOW<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">235</span>, <span class="purple">59</span>)
+				<br>
+				ORANGE<span class="red"> = </span>(<span class="purple">255</span>, <span class="purple">152</span>, <span class="purple">0</span>)
+				<br>
+				GREY<span class="red"> = </span>(<span class="purple">158</span>, <span class="purple">158</span>, <span class="purple">158</span>)
+				<br>
+				<br>
+				display<span class="red"> = </span>pygame.display.<span class="blue">set_mode</span>( (<span class="purple">800</span>, <span class="purple">600</span>) )
+				<br>
+				<br>
+				FPS<span class="red"> = </span><span class="purple">60</span>
+				<br>
+				clock<span class="red"> = </span>pygame.time.<span class="blue">Clock</span>()
+				<br>
+				<br>
+				<span class="new_code">x<span class="red"> = </span><span class="purple">400</span> <span class="grey"># начальная координата по оси X</span></span>
+				<br>
+				<span class="new_code">y<span class="red"> = </span><span class="purple">300</span> <span class="grey"># начальная координата по оси Y</span></span>
+				<br>
+				<br>
+				<span class="red">while </span><span class='purple'>True</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Рисуем кружок в точке с координатами x,y</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, BLUE, (x, y), <span class="purple">5</span>)</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.type <span class="red">==</span> pygame.KEYDOWN:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.key <span class="red">==</span> pygame.K_LEFT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Левая стрелка'</span>)
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">-=</span> <span class="purple">10</span></span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.key <span class="red">==</span> pygame.K_RIGHT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Правая стрелка'</span>)
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">10</span></span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.key <span class="red">==</span> pygame.K_UP:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вверх'</span>)
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">-=</span> <span class="purple">10</span></span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.key <span class="red">==</span> pygame.K_DOWN:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вниз'</span>)
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">+= </span><span class="purple">10</span></span>
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">Есть один нюанс. Шарик перемещается только один раз при зажатии одной из клавиш. Немного изменим наш код для того, чтобы он обратывал зажатые клавиш.</p>
+			<p class="code">
+				<span class="grey"># ... Код выше без изменений</span>
+				<br>
+				<span class="red">while </span><span class='purple'>True</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, BLUE, (x, y), <span class="purple">5</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Найдите 10 отличий</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Удаляем elif с KEYDOWN</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;keys<span class="red"> = </span>pygame.key.get_pressed() <span class="grey"># Словарь всех нажатых клавиш</span></span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Обрабатываем каждую клавишу по отдельности</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_LEFT]:</span></span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">-=</span> <span class="purple">10</span></span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_RIGHT]:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">10</span></span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_UP]:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">-=</span> <span class="purple">10</span></span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_DOWN]:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">+= </span><span class="purple">10</span></span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<h2 class="title">События мыши</h2>
+			<p class="text">В pygame обрабатываются три типа событий мыши: нажатие кнопки 	(значение свойства type события соответствует <span class="important">MOUSEBUTTONDOWN</span>), отпускание кнопки (<span class="important">MOUSEBUTTONUP</span>), перемещение мыши (<span class="important">MOUSEMOTION</span>). Какая именно кнопка была нажата, записывается в другое <span class="important">свойство</span> <span class="important">события</span> <span class="important">-</span> <span class="important">button</span>. Для левой кнопки это число 1, для средней - 2, для правой - 3, для прокручивания вперед - 4, для прокручивания назад - 5.</p>
+			<p class="text">Другим атрибутом мышиных типов событий является <span class="important">свойство</span> <span class="important">pos</span>, в которое записываются координаты нажатия (кортеж из двух чисел).</p>
+			<p class="text">При нажатии левой кнопки мыши будем рисовать оранжевый кружок</p>
+			<p class="code">
+				<span class="grey"># Код выше без изменений...</span>
+				<br>
+				<span class="red">while </span><span class='purple'>True</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;display.<span class='blue'>fill</span>(BLACK)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, BLUE, (x, y), <span class="purple">5</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="red">el<span class="red">if </span></span>event.type <span class="red">==</span> pygame.MOUSEBUTTONDOWN:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.button <span class="red">==</span> <span class="purple">1</span>:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, ORANGE, (event.pos[<span class="purple">0</span>], event.pos[<span class="purple">1</span>]), <span class="purple">30</span>)</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;keys<span class="red"> = </span>pygame.key.get_pressed()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_LEFT]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Левая стрелка'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">-=</span> <span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_RIGHT]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Правая стрелка'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_UP]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вверх'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">-=</span> <span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_DOWN]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вниз'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">+= </span><span class="purple">10</span>
+				<br>
+				
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">Добавим появление белых кружков по нажатию правой кнопки мыши.</p>
+			<p class="code">
+				<span class="grey"># Код выше без изменений...</span>
+				<br>
+				<span class="red">while </span><span class='purple'>True</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;display.<span class='blue'>fill</span>(BLACK)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, BLUE, (x, y), <span class="purple">5</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="red">el<span class="red">if </span></span>event.type <span class="red">==</span> pygame.MOUSEBUTTONDOWN:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.button <span class="red">==</span> <span class="purple">1</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, ORANGE, (event.pos[<span class="purple">0</span>], event.pos[<span class="purple">1</span>]), <span class="purple">30</span>)
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.button <span class="red">==</span> <span class="purple">3</span>:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, WHITE, (event.pos[<span class="purple">0</span>], event.pos[<span class="purple">1</span>]), <span class="purple">30</span>)</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;keys<span class="red"> = </span>pygame.key.get_pressed()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_LEFT]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Левая стрелка'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">-=</span> <span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_RIGHT]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Правая стрелка'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_UP]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вверх'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">-=</span> <span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_DOWN]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вниз'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">+= </span><span class="purple">10</span>
+				<br>
+				
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<p class="text">Добавим очищение поверхности при скролле колесика мыши </p>
+			<p class="code">
+				<span class="grey"># Код выше без изменений...</span>
+				<br>
+				<span class="red">while </span><span class='purple'>True</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;display.<span class='blue'>fill</span>(BLACK)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, BLUE, (x, y), <span class="purple">5</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>event<span class="red"> in </span>pygame.event.<span class="blue">get</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.type <span class="red">==</span> pygame.QUIT:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.<span class="blue">quit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">exit</span>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="red">el<span class="red">if </span></span>event.type <span class="red">==</span> pygame.MOUSEBUTTONDOWN:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>event.button <span class="red">==</span> <span class="purple">1</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, ORANGE, (event.pos[<span class="purple">0</span>], event.pos[<span class="purple">1</span>]), <span class="purple">30</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.button <span class="red">==</span> <span class="purple">3</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pygame.draw.<span class="blue">circle</span>(display, WHITE, (event.pos[<span class="purple">0</span>], event.pos[<span class="purple">1</span>]), <span class="purple">30</span>)
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>event.button <span class="red">==</span> <span class="purple">5</span>:</span>
+				<br>
+				<span class="new_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display.<span class='blue'>fill</span>(BLACK)</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;keys<span class="red"> = </span>pygame.key.get_pressed()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_LEFT]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Левая стрелка'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">-=</span> <span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_RIGHT]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Правая стрелка'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_UP]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вверх'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">-=</span> <span class="purple">10</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>keys[pygame.K_DOWN]:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Стрелка вниз'</span>)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y <span class="red">+= </span><span class="purple">10</span>
+				<br>
+				
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;pygame.display.<span class="blue">update</span>()
+				<br>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;clock.<span class="blue">tick</span>(FPS)
+			</p>
+			<h2 class="title">Задание: </h2>
+			<p class="text">Создайте еще один перемещающийся объект, назначьте клавиши WASD для его перемещения. Ключи клавиш: W == K_w, A == K_a, D == K_d, S == K_s. Обратите внимание, что вам понадобятся новые переменные для координат, например, x1 и y1.</p>
+
+		</div>
+	</body>
+</html>
