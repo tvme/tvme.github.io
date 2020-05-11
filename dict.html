@@ -22,112 +22,112 @@
 			<p class="code">
 				<span class="grey"># Создание словаря c помощью функции dict()</span>
 				<br>
-				student<span class="red"> = </span><span class="blue">dict</span>(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
+				student<span class="red"> = </span>dict(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
 				<br>
-				credentials<span class="red"> = </span><span class="blue">dict</span>(email<span class="red">=</span><span class="yellow">'hacker1337@mail.ru'</span>, password<span class="red">=</span><span class="yellow">'123456'</span>)
+				credentials<span class="red"> = </span>dict(email<span class="red">=</span><span class="yellow">'hacker1337@mail.ru'</span>, password<span class="red">=</span><span class="yellow">'123456'</span>)
 			</p>
 			<p class="text">Для получения значения конкретного ключа используются квадратные скобки []. </p>
 			<p class="code">
 				<span class="grey"># Получаем значение с ключом 'name'</span>
 				<br>
-				student<span class="red"> = </span><span class="blue">dict</span>(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
+				student<span class="red"> = </span>dict(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
 				<br>
-				<span class="blue">print</span>(student[<span class="yellow">'name'</span>]) <span class="grey"># -> Ivan</span>
+				pr<span class="blue">int</span>(student[<span class="yellow">'name'</span>]) <span class="grey"># -> Ivan</span>
 			</p>
 			<p class="text">Обновление существующих значений происходит абсолютно также.</p>
 			<p class="code">
 				<span class="grey"># Получаем значение с ключом 'name'</span>
 				<br>
-				student<span class="red"> = </span><span class="blue">dict</span>(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
+				student<span class="red"> = </span>dict(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
 				<br>
 				student[<span class="yellow">'name'</span>]<span class="red"> = </span><span class="yellow">'Vasya'</span>
 				<br>
-				<span class="blue">print</span>(student[<span class="yellow">'name'</span>]) <span class="grey"># -> Vasya</span>
+				pr<span class="blue">int</span>(student[<span class="yellow">'name'</span>]) <span class="grey"># -> Vasya</span>
 			</p>
 			<p class="text">Для удаления ключа и соответствующего значения из словаря можно использовать del</p>
 			<p class="code">
 				<span class="grey"># Удаление ключа 'age'</span>
 				<br>
-				student<span class="red"> = </span><span class="blue">dict</span>(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
+				student<span class="red"> = </span>dict(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
 				<br>
 				del student[<span class="yellow">'age'</span>]
 				<br>
-				<span class="blue">print</span>(student) <span class="grey"># -> {'name': 'Ivan'}</span>
+				pr<span class="blue">int</span>(student) <span class="grey"># -> {'name': 'Ivan'}</span>
 			</p>
 			<p class="text">Метод get() возвращает значение по указанному ключу. Если указанного ключа не существует, метод вернёт None. Также можно указать значение по умолчанию, которое будет возвращено вместо None, если ключа в словаре не окажется.</p>
 			<p class="code">
 				<span class="grey"># Использование метода get()</span>
 				<br>
-				student<span class="red"> = </span><span class="blue">dict</span>(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
+				student<span class="red"> = </span>dict(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
 				<br>
-				<span class="blue">print</span>(student.<span class="blue">get</span>(<span class="yellow">'name'</span>))&nbsp;&nbsp;&nbsp;&nbsp; <span class="grey"># -> Ivan</span>
+				pr<span class="blue">int</span>(student.<span class="blue">get</span>(<span class="yellow">'name'</span>))&nbsp;&nbsp;&nbsp;&nbsp; <span class="grey"># -> Ivan</span>
 				<br>
-				<span class="blue">print</span>(student.<span class="blue">get</span>(<span class="yellow">'lastname'</span>)) <span class="grey"># -> None</span>
+				pr<span class="blue">int</span>(student.<span class="blue">get</span>(<span class="yellow">'lastname'</span>)) <span class="grey"># -> None</span>
 				<br>
-				<span class="blue">print</span>(student.<span class="blue">get</span>(<span class="yellow">'lastname'</span>, <span class="yellow">'No key'</span>)) <span class="grey"># -> No key</span>
+				pr<span class="blue">int</span>(student.<span class="blue">get</span>(<span class="yellow">'lastname'</span>, <span class="yellow">'No key'</span>)) <span class="grey"># -> No key</span>
 			</p>
 			<p class="text">Метод pop() удаляет ключ и возвращает соответствующее ему значение.</p>
 			<p class="code">
 				<span class="grey"># Использование метода pop()</span>
 				<br>
-				sneakers<span class="red"> = </span><span class="blue">dict</span>(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
+				sneakers<span class="red"> = </span>dict(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
 				<br>
 				model<span class="red"> = </span>sneakers.<span class="blue">pop</span>(<span class="yellow">'model'</span>)
 				<br>
-				<span class="blue">print</span>(sneakers) <span class="grey"># -> {'brand': 'Adidas', 'price': '9990 RUB'}</span>
+				pr<span class="blue">int</span>(sneakers) <span class="grey"># -> {'brand': 'Adidas', 'price': '9990 RUB'}</span>
 				<br>
-				<span class="blue">print</span>(model)&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># -> Nite Jogger</span>
+				pr<span class="blue">int</span>(model)&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># -> Nite Jogger</span>
 			</p>
 			<p class="text">Метод keys() возвращает специальную коллекцию ключей в словаре. </p>
 			<p class="code">
 				<span class="grey"># Использование метода keys()</span>
 				<br>
-				sneakers<span class="red"> = </span><span class="blue">dict</span>(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
+				sneakers<span class="red"> = </span>dict(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
 				<br>
-				<span class="blue">print</span>(sneakers.<span class="blue">keys</span>()) <span class="grey"># -> dict_keys(['brand', 'price', 'model'])</span>
+				pr<span class="blue">int</span>(sneakers.<span class="blue">keys</span>()) <span class="grey"># -> dict_keys(['brand', 'price', 'model'])</span>
 				<br>
 				<span class="grey"># dict_keys - это неизменяемая коллекция элементов.</span>
 				<br>
-				keys<span class="red"> = </span><span class="blue">list</span>(sneakers.<span class="blue">keys</span>())
+				keys<span class="red"> = </span>list(sneakers.<span class="blue">keys</span>())
 				<br>
-				<span class="blue">print</span>(keys) <span class="grey"># -> ['brand', 'price', 'model']</span>
+				pr<span class="blue">int</span>(keys) <span class="grey"># -> ['brand', 'price', 'model']</span>
 			</p>
 			<p class="text">Метод values() возвращает специальную коллекцию значений в словаре. </p>
 			<p class="code">
 				<span class="grey"># Использование метода values()</span>
 				<br>
-				sneakers<span class="red"> = </span><span class="blue">dict</span>(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
+				sneakers<span class="red"> = </span>dict(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
 				<br>
-				<span class="blue">print</span>(sneakers.<span class="blue">values</span>()) <span class="grey"># -> dict_values(['Adidas', '9990 RUB', 'Nite Jogger'])</span>
+				pr<span class="blue">int</span>(sneakers.<span class="blue">values</span>()) <span class="grey"># -> dict_values(['Adidas', '9990 RUB', 'Nite Jogger'])</span>
 				<br>
 				<span class="grey"># dict_values - это неизменяемая коллекция элементов.</span>
 				<br>
-				values<span class="red"> = </span><span class="blue">list</span>(sneakers.<span class="blue">values</span>())
+				values<span class="red"> = </span>list(sneakers.<span class="blue">values</span>())
 				<br>
-				<span class="blue">print</span>(values) <span class="grey"># -> ['Adidas', '9990 RUB', 'Nite Jogger']</span>
+				pr<span class="blue">int</span>(values) <span class="grey"># -> ['Adidas', '9990 RUB', 'Nite Jogger']</span>
 			</p>
 			<p class="text">Метод items() возвращает пары «ключ — значение» в формате кортежей.</p>
 			<p class="code">
 				<span class="grey"># Использование метода items()</span>
 				<br>
-				sneakers<span class="red"> = </span><span class="blue">dict</span>(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
+				sneakers<span class="red"> = </span>dict(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
 				<br>
-				<span class="blue">print</span>(sneakers.<span class="blue">items</span>()) <span class="grey"># -> dict_items([('brand', 'Adidas'), ('price', '9990 RUB'), ('model', 'Nite Jogger')])</span>
+				pr<span class="blue">int</span>(sneakers.<span class="blue">items</span>()) <span class="grey"># -> dict_items([('brand', 'Adidas'), ('price', '9990 RUB'), ('model', 'Nite Jogger')])</span>
 				<br>
 				<span class="grey"># dict_items - это неизменяемая коллекция элементов.</span>
 				<br>
-				items<span class="red"> = </span><span class="blue">list</span>(sneakers.<span class="blue">items</span>())
+				items<span class="red"> = </span>list(sneakers.<span class="blue">items</span>())
 				<br>
-				<span class="blue">print</span>(items) <span class="grey"># -> [('brand', 'Adidas'), ('price', '9990 RUB'), ('model', 'Nite Jogger')]</span>
+				pr<span class="blue">int</span>(items) <span class="grey"># -> [('brand', 'Adidas'), ('price', '9990 RUB'), ('model', 'Nite Jogger')]</span>
 			</p>
 			<p class="code">
-				sneakers<span class="red"> = </span><span class="blue">dict</span>(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
+				sneakers<span class="red"> = </span>dict(brand<span class="red">=</span><span class="yellow">'Adidas'</span>, price<span class="red">=</span><span class="yellow">'9990 RUB'</span>, model<span class="red">=</span><span class="yellow">'Nite Jogger'</span>)
 				<br>
 				<span class="grey"># Вывод ключей словаря с помощью цикла for</span>
 				<br>
 				<span class="red">f<span class="red">or </span></span>key<span class="red"> in </span>sneakers:
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(key)
+				&nbsp;&nbsp;&nbsp;&nbsp;pr<span class="blue">int</span>(key)
 				<br>
 				<span class="grey"># -> brand</span>
 				<br>
@@ -139,7 +139,7 @@
 				<br>
 				<span class="red">f<span class="red">or </span></span>value<span class="red"> in </span>sneakers.<span class="blue">values</span>():
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(value)
+				&nbsp;&nbsp;&nbsp;&nbsp;pr<span class="blue">int</span>(value)
 				<br>
 				<span class="grey"># -> Adidas</span>
 				<br>
@@ -151,7 +151,7 @@
 				<br>
 				<span class="red">f<span class="red">or </span></span>key, value<span class="red"> in </span>sneakers.<span class="blue">items</span>():
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(key, value)
+				&nbsp;&nbsp;&nbsp;&nbsp;pr<span class="blue">int</span>(key, value)
 				<br>
 				<span class="grey"># -> brand Adidas</span>
 				<br>
@@ -163,11 +163,129 @@
 			<p class="code">
 				<span class="grey"># Метод setdefault()</span>
 				<br>
-				student<span class="red"> = </span><span class="blue">dict</span>(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
+				student<span class="red"> = </span>dict(name<span class="red">=</span><span class="yellow">'Ivan'</span>, age<span class="red">=</span><span class="purple">12</span>)
 				<br>
 				student.<span class="blue">setdefault</span>(<span class="yellow">'lastname'</span>, <span class="yellow">'Ivanov'</span>)
 				<br>
-				<span class="blue">print</span>(student) <span class="grey"># -> {'name': 'Ivan', 'age': 12, 'lastname': 'Ivanov'}</span>
+				pr<span class="blue">int</span>(student) <span class="grey"># -> {'name': 'Ivan', 'age': 12, 'lastname': 'Ivanov'}</span>
+			</p>
+			<h1 class="main-title">Решение задач</h1>
+			<p class="code">
+				<span class="grey"># Пользователь вводит имя, фамилия, возраст. Создайте словарь user и запишите данные пользователя в него.</span>
+				<br>
+				firstname<span class="red"> = </span>input(<span class="yellow">'Enter your firstname: '</span>)
+				<br>
+				lastname <span class="red"> = </span>input(<span class="yellow">'Enter your lastname: '</span>)
+				<br>
+				age&nbsp;&nbsp;&nbsp;&nbsp;  <span class="red"> = </span>input(<span class="yellow">'Enter your age: '</span>)
+				<br>
+				user<span class="red"> = </span>dict(firstname<span class="red">=</span>firstname, lastname<span class="red">=</span>lastname, age<span class="red">=</span>age)
+				<br>
+				pr<span class="blue">int</span>(user)
+			</p>
+			<p class="code">
+				<span class="grey"># Выведите самое часто встречающееся слово в введенной строке.</span>
+				<br>
+				list_of_words<span class="red"> = </span>[<span class="yellow">'hello'</span>, <span class="yellow">'hello'</span>, <span class="yellow">'hi'</span>]
+				<br>
+				words<span class="red"> = </span>{}
+				<br>
+				<span class="red">f<span class="red">or </span></span>word<span class="red"> in </span>list_of_words:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;words[word]<span class="red"> = </span>words.<span class="blue">get</span>(word, <span class="purple">0</span>) <span class="red">+ </span><span class="purple">1</span>
+				<br>
+				<span class="grey"># Функция max может получать функцию в качестве второго аргумента</span>
+				<br>
+				freq_word<span class="red"> = </span>max(words, key<span class="red">=</span>words.get)
+				<br>
+				pr<span class="blue">int</span>(freq_word)
+			</p>
+			<h1 class="main-title">Задачи для самостоятельного решения</h1>
+			<span class="num">1. </span><p class="text">Пользователь вводит число K - количество фруктов. Затем он вводит K фруктов в формате ИМЯ_ФРУКТА и его количество. Добавьте все фрукты в словарь, где название фрукта - это ключ, а количество - значение. Например: </p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span> <span class="grey"># Количество фруктов</span>
+				<br>
+				<span class="red">>></span> Яблоко
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="red">>></span> Апельсин
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="red">>></span> Мандарин
+				<br>
+				<span class="red">>></span> <span class="purple">10</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> {<span class="yellow">'Яблоко'</span>: <span class="purple">3</span>, <span class="yellow">'Апельсин'</span>: <span class="purple">3</span>, <span class="yellow">'Мандарин'</span>: <span class="purple">10</span>}
+			</p>
+			<span class="num">2. </span><p class="text">Пользователь вводит число N. Затем он вводит личные данные (имя и возраст) своих N друзей. Создайте список friends и добавьте в него N словарей с ключами name и age. Найдите самого младшего из друзей и выведите его имя.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span> <span class="grey"># Количество друзей</span>
+				<br>
+				<span class="red">>></span> Иван
+				<br>
+				<span class="red">>></span> <span class="purple">11</span>
+				<br>
+				<span class="red">>></span> Саша
+				<br>
+				<span class="red">>></span> <span class="purple">12</span>
+				<br>
+				<span class="red">>></span> Леша
+				<br>
+				<span class="red">>></span> <span class="purple">10</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> Леша
+			</p>
+			<span class="num">3. </span><p class="text">Пользователь вводит число N. Затем он вводит личные данные (имя и возраст) своих N друзей. Создайте список friends и добавьте в него N словарей с ключами name и age. Выведите средний возраст всех друзей и самое длинное имя.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span> <span class="grey"># Количество друзей</span>
+				<br>
+				<span class="red">>></span> Иван
+				<br>
+				<span class="red">>></span> <span class="purple">12</span>
+				<br>
+				<span class="red">>></span> Иннокентий
+				<br>
+				<span class="red">>></span> <span class="purple">20</span>
+				<br>
+				<span class="red">>></span> Леша
+				<br>
+				<span class="red">>></span> <span class="purple">10</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">14</span>
+				<br>
+				<span class="red">>></span> Иннокентий
+			</p>
+			<span class="num">4. </span><p class="text">"Пора учить английский язык", - сказал себе Степа и решил написать программу для изучения английского языка. Программа получает на вход слово на английском языке и несколько его переводов на русском языке. Составьте словарь, в котором ключ - это английское слово, а значение - это список русских слов. В этой задаче нужно использовать строчный <a href="https://docs.python.org/3.7/library/stdtypes.html#str.split" class='link' style='font-size: 20px;padding:3px 10px;'>метод split().</a></p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">4</span> <span class="grey"># Количество слов</span>
+				<br>
+				<span class="red">>></span> apple <span class="red">- </span>яблоко
+				<br>
+				<span class="red">>></span> orange <span class="red">- </span>оранжевый, рыжий, апельсин
+				<br>
+				<span class="red">>></span> grape <span class="red">- </span>виноград, виноградный, гроздь
+				<br>
+				<span class="red">>></span> easy <span class="red">- </span>простой, легкий, нетрудный, удобный, несложный
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> {<span class="yellow">'apple'</span>: [<span class="yellow">'яблоко'</span>], <span class="yellow">'orange'</span>: [<span class="yellow">'оранжевый'</span>, <span class="yellow">'рыжий'</span>, <span class="yellow">'апельсин'</span>], <span class="yellow">'grape'</span>: [<span class="yellow">'виноград'</span>, <span class="yellow">'виноградный'</span>, <span class="yellow">'гроздь'</span>], <span class="yellow">'easy'</span>: [<span class="yellow">'простой'</span>, <span class="yellow">'легкий'</span>, <span class="yellow">'нетрудный'</span>, <span class="yellow">'удобный'</span>, <span class="yellow">'несложный'</span>]}
 			</p>
 
 		</div>
