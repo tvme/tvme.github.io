@@ -9,27 +9,44 @@
 </head>
 <body>
 	<div class="container">
-			<h1 class="main-title">Функции в языке Python</h1>
+			<h1 class="main-title">Функции в Python</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
 			<p class="text">Функция - это именованный блок кода, к которому можно обратиться из лю­бого места программы. У функции есть имя и список входных парамет­ров, а также воз­вращаемое значение.</p>
 			<p class="text">Функция позволяет использо­вать в про­грамме один и тот же фрагмент кода нес­колько раз. </p>
-			<p class="text">Объявление функции</p>
-			<p class="text">Рассмотрим синтаксис объявле­ния функции:</p>
+			<p class="text">Oбъявление функции в Python выглядит так:</p>
 			<p class="code">
-				<span class="blue">def</span> <span class="green">greeting</span>(name):
+				<span class="blue">def</span> <span class="green">function_name</span>(<span class="orange">argument1</span>, <span class="orange">argument2</span>, ...):
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Hello, '</span> <span class="red">+ </span>name)
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># код функции</span>
 				<br>
-				<span class="grey"># Вызываем функцию</span>
+				<span class="grey"># def - DEclare Function - "объявить функцию"</span>
 				<br>
-				greeting(<span class="yellow">'Max'</span>)
+				<span class="grey"># function_name - имя функции</span>
 				<br>
-				greeting(<span class="yellow">'Ivan'</span>)
+				<span class="grey"># (argument1, argument2, ...) - список аргументов, поступающих на вход функции при ее вызове</span>
 				<br>
-				greeting(<span class="yellow">'Alex'</span>)
-				<br>
-				greeting(<span class="yellow">'Kate'</span>)
+				<span class="grey"># тело функции - это весь код, который идет после двоеточия<br></span>
 			</p>
 			<p class="code">
+				<span class="grey"># Объявление функции<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">hello</span>(name):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Hello, '</span> <span class="red">+ </span>name)<br>
+				<br>
+				<span class="grey"># Вызовы функции <br></span>
+				<br>
+				<span class="blue">hello</span>(<span class="yellow">'Max'</span>)
+				<br>
+				<span class="blue">hello</span>(<span class="yellow">'Ivan'</span>)
+				<br>
+				<span class="blue">hello</span>(<span class="yellow">'Alex'</span>)
+				<br>
+				<span class="blue">hello</span>(<span class="yellow">'Kate'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод<br></span>
+				<br>
 				<span class="red">>></span> Hello, Max
 				<br>
 				<span class="red">>></span> Hello, Ivan
@@ -38,198 +55,309 @@
 				<br>
 				<span class="red">>></span> Hello, Kate
 			</p>
-			<p class="text">Перед объявлением имени функции greeting пишется служебное слово def, а после имени функции обяза­тельно записываются круглые скобки, в которые передается параметр name</p>
-			<p class="text">Типичное объявление функции в Python выглядит так:</p>
+			<p class="text">Оператор return возвращает значение из функции.</p>
+			<p class="text">Представьте себе обычный калькулятор. Вы вводите первое число, операцию и второе число. Калькулятор возвращает нам результат операции над этими числами. Всё просто, не так ли? Функции точно так же умеют возвращать значение с помощью специального оператора return.</p>
 			<p class="code">
-				<span class="blue">def</span> <span class="green">function_name</span>(argument1, argument2, ...):
+				<span class="grey"># Объявление функции<br></span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># код функции</span>
-			</p>
-			<p class="text">Представим себе работу обычного калькулятора. Мы вводим первое число, операцию и второе число. Калькулятор возвращает нам результат операции над этими числами. Всё просто, не так ли? Функции точно так же умеют возвращать значение с помощью служебного слова return.</p>
-			<p class="text">Проиллюстрируем это на примере функции сложения двух чисел:</p>
-			<p class="code">
-				<span class="blue">def</span> <span class="green">add</span>(a, b):
+				<span class="blue">def</span> <span class="green">sum2</span>(<span class="orange">a</span>, <span class="orange">b</span>):
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">+ </span>b
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">+ </span>b<br>
 				<br>
-				<span class="grey"># Вызовем нашу функцию</span>
+				<span class="grey"># Вызовы функции<br></span>
 				<br>
-				s1<span class="red"> = </span>add(<span class="purple">10</span>, <span class="purple">2</span>)
+				s1<span class="red"> = </span><span class="blue">sum2</span>(<span class="purple">10</span>, <span class="purple">2</span>)
 				<br>
-				s2<span class="red"> = </span>add(<span class="purple">108</span>, <span class="purple">100</span>)
+				s2<span class="red"> = </span><span class="blue">sum2</span>(<span class="purple">108</span>, <span class="purple">100</span>)
 				<br>
-				s3<span class="red"> = </span>add(<span class="purple">3</span>, <span class="purple">1</span>)
+				s3<span class="red"> = </span><span class="blue">sum2</span>(<span class="purple">3</span>, <span class="purple">1</span>)<br>
 				<br>
-				<span class="blue">print</span>(s1, s2, s3)
-			</p>
-			<p class="code">
-				<span class="red">>></span> <span class="purple">12</span> 208 <span class="purple">4</span>
-			</p>
-			<p class="text">Напишем функцию умножения двух чисел:</p>
-			<p class="code">
-				<span class="blue">def</span> <span class="green">mult</span>(a, b):
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'s1 = </span>{s1}<span class="yellow">'</span>)
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">* </span>b
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'s2 = </span>{s2}<span class="yellow">'</span>)
 				<br>
-				<span class="grey"># Вызовем нашу функцию</span>
-				<br>
-				m1<span class="red"> = </span>mult(<span class="purple">10</span>, <span class="purple">2</span>)
-				<br>
-				m2<span class="red"> = </span>mult(<span class="purple">108</span>, <span class="purple">100</span>)
-				<br>
-				m3<span class="red"> = </span>mult(<span class="purple">3</span>, <span class="purple">1</span>)
-				<br>
-				<span class="blue">print</span>(m1, m2, m3)
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'s3 = </span>{s3}<span class="yellow">'</span>)
 			</p>
 			<p class="code">
-				<span class="red">>></span> <span class="purple">20</span> 10800 <span class="purple">3</span>
-			</p>
-			<p class="text">Аргументы по умолчанию</p>
-			<p class="text">Рассмотрим еще раз функцию greeting. Перепишем её со служебным словом return</p>
-			<p class="code">
-				<span class="blue">def</span> <span class="green">greeting</span>(name):
+				<span class="red">>></span> s1<span class="red"> = </span><span class="purple">12</span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span><span class="yellow">'Hello, '</span> <span class="red">+ </span>name
+				<span class="red">>></span> s2<span class="red"> = </span><span class="purple">208</span>
 				<br>
-				<span class="blue">print</span>(greeting(<span class="yellow">'Alex'</span>))
+				<span class="red">>></span> s3<span class="red"> = </span><span class="purple">4</span>
 			</p>
 			<p class="code">
-				<span class="red">>></span> Hello, Alex
+				<span class="grey"># Функция умножения двух чисел<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">mult2</span>(<span class="orange">a</span>, <span class="orange">b</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">* </span>b<br>
+				<br>
+				<span class="grey"># Вызовем нашу функцию<br></span>
+				<br>
+				m1<span class="red"> = </span><span class="blue">mult2</span>(<span class="purple">10</span>, <span class="purple">2</span>)
+				<br>
+				m2<span class="red"> = </span><span class="blue">mult2</span>(<span class="purple">108</span>, <span class="purple">100</span>)
+				<br>
+				m3<span class="red"> = </span><span class="blue">mult2</span>(<span class="purple">3</span>, <span class="purple">1</span>) <br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'m1 = </span>{m1}<span class="yellow">'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'m2 = </span>{m2}<span class="yellow">'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'m3 = </span>{m3}<span class="yellow">'</span>)
 			</p>
-			<p class="text">Теперь функция greeting возвращает строковое значе­ние, которое мы можем прис­воить какой-нибудь переменной</p>
 			<p class="code">
-				helloMax<span class="red"> = </span>greeting(<span class="yellow">'Max'</span>)
+				<span class="red">>></span> m1<span class="red"> = </span><span class="purple">20</span>
 				<br>
-				<span class="blue">print</span>(helloMax)
+				<span class="red">>></span> m2<span class="red"> = </span><span class="purple">10800</span>
+				<br>
+				<span class="red">>></span> m3<span class="red"> = </span><span class="purple">3</span>
+			</p>
+			<p class="text">Для параметров функции можно указывать значения по умолчанию. Это дает возможность вызывать функцию с меньшим числом параметров.</p>
+			<p class="code">
+				<span class="grey"># Аргумент name по умолчанию равен 'world'<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">hello</span>(<span class="orange">name</span><span class="red">=</span><span class="yellow">'world'</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Hello, '</span> <span class="red">+ </span>name)<br>
+				<br>
+				<span class="blue">hello</span>()
+				<br>
+				<span class="blue">hello</span>(<span class="yellow">'Ivan'</span>)
 			</p>
 			<p class="code">
-				<span class="red">>></span> Hello, Max
+				<span class="red">>></span> Hello, world
+				<br>
+				<span class="red">>></span> Hello, Ivan
 			</p>
-			<p class="text">Но если мы приветствовать каждого пользователя по-своему? Тогда нам нужно пере­дать в greeting еще один аргумент</p>
+			<h1 class="main-title" style="margin-bottom: 0">Примеры</h1>
+			<span class="num">1.</span> <span class='task-title'>Квадрат</span>
 			<p class="code">
-				<span class="blue">def</span> <span class="green">greeting</span>(name, hello):
+				<span class="grey"># Написать функцию square(), вычисляющую квадрат числа.<br></span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>hello <span class="red">+ </span><span class="yellow">', '</span> <span class="red">+ </span>name
+				<span class="blue">def</span> <span class="green">square</span>(<span class="orange">number</span>):
 				<br>
-				<span class="blue">print</span>(greeting(<span class="yellow">'Alex'</span>,<span class="yellow">'Hello'</span>))
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>number <span class="red">* </span>number <span class="grey"># Возвращаем результат работы функции обратно в программу<br></span>
 				<br>
-				<span class="blue">print</span>(greeting(<span class="yellow">'Kate'</span>,<span class="yellow">'Salute'</span>))
-			</p>
-			<p class="code">
-				<span class="red">>></span> Hello, Alex
-				<br>
-				<span class="red">>></span> Salute, Kate
-			</p>
-			<p class="text">А что если пользователю неважно, как мы его попри­ветст­вуем? Тогда логично было бы по умолчанию использовать какое-то одно при­ветст­вие и иногда его изменять. В програм­мировании эта концепция назы­вается "аргумент по умол­чанию". Если в вызов функции не передали одного или нес­коль­ких аргументов, то будут использованы аргументы по умолчанию.</p>
-			<p class="code">
-				<span class="blue">def</span> <span class="green">greeting</span>(name, hello<span class="red">=</span><span class="yellow">'hello'</span>):
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>hello <span class="red">+ </span><span class="yellow">', '</span> <span class="red">+ </span>name
-				<br>
-				<span class="blue">print</span>(greeting(<span class="yellow">'Alex'</span>)
-				<br>
-				<span class="blue">print</span>(greeting(<span class="yellow">'Kate'</span>,<span class="yellow">'Salute'</span>))
-			</p>
-			<p class="text">Разбор задач</p>
-			<p class="text">Задача 1. Написать функцию power234(number), вычисляющую вторую, третью и четвертую степень числа </p>
-			<p class="code">
-				<span class="blue">def</span> <span class="green">power234</span>(number):
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;p2<span class="red"> = </span>number <span class="red">*<span class="red">* </span></span><span class="purple">2</span> <span class="grey"># Находим вторую степень</span>
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;p3<span class="red"> = </span>number <span class="red">*<span class="red">* </span></span><span class="purple">3</span> <span class="grey"># Находим третью степень</span>
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;p4<span class="red"> = </span>number <span class="red">*<span class="red">* </span></span><span class="purple">4</span> <span class="grey"># Находим четвертую степень</span>
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>p2, p3, p4 <span class="grey"># Возвращаем результат работы функции обратно в программу</span>
-			</p>
-			<p class="text">Вызовем функцию power234</p>
-			<p class="code">
-				a<span class="red"> = </span>power234(<span class="purple">2</span>)
+				a<span class="red"> = </span><span class="blue">square</span>(<span class="purple">2</span>)
 				<br>
 				<span class="blue">print</span>(a)
-				<br>
-				<span class="blue">print</span>(type(a))
 			</p>
 			<p class="code">
-				<span class="red">>></span> (<span class="purple">4</span>, <span class="purple">8</span>, <span class="purple">16</span>)
-				<br>
-				<span class="red">>></span> <span class="yellow">&#60;class 'tuple'></span>
+				<span class="red">>></span> <span class="purple">4</span>
 			</p>
-			<p class="text">Обратите внимание на тип возращаемого фукнцией значения. Таким образом, если мы возвращаем из функции несколько значений, то тип возвращаемого значения будет кортеж или tuple</p>
-			<p class="text">Предыдущий код можно сократить</p>
+			<span class="num">2.</span> <span class='task-title'>Периметр</span>
 			<p class="code">
-				<span class="blue">def</span> <span class="green">power234v2</span>(number):
+				<span class="grey"># Напишите функцию perimetr, вычисляющую периметр прямоугольника со сторонами a и b.<br></span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>number <span class="red">*<span class="red">* </span></span><span class="purple">2</span>, number <span class="red">*<span class="red">* </span></span><span class="purple">3</span>, number <span class="red">*<span class="red">* </span></span><span class="purple">4</span>
+				<span class="blue">def</span> <span class="green">perimetr</span>(<span class="orange">a</span>, <span class="orange">b</span>):
 				<br>
-				a<span class="red"> = </span>power234v2(<span class="purple">2</span>)
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span><span class="purple">2</span> <span class="red">* </span>(a <span class="red">+ </span>b)<br>
 				<br>
-				b<span class="red"> = </span>power234v2(<span class="purple">3</span>)
+				p<span class="red"> = </span><span class="blue">perimetr</span>(<span class="purple">4</span>, <span class="purple">3</span>)
 				<br>
-				<span class="blue">print</span>(a)
-				<br>
-				<span class="blue">print</span>(b)
+				<span class="blue">print</span>(p)
 			</p>
 			<p class="code">
-				<span class="red">>></span> (<span class="purple">4</span>, <span class="purple">8</span>, <span class="purple">16</span>)
-				<br>
-				<span class="red">>></span> (<span class="purple">9</span>, <span class="purple">27</span>, <span class="purple">81</span>)
+				<span class="red">>></span> <span class="purple">14</span>
 			</p>
-			<p class="text">Задача 2. Написать функцию сalc(a, b, oper), выполняющую одну из арифметических операций, где a и b - это целые числа, а oper - это одна из строк '-', '+', '*', '/'</p>
+			<span class="num">3.</span> <span class='task-title'>Четное число</span>
 			<p class="code">
-				<span class="blue">def</span> <span class="green">calc</span>(a, b, oper):
+				<span class="grey"># Напишите функцию isEven, возвращающую True, если число четное, и False, если - нечетное.<br></span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>oper <span class="red">==</span> <span class="yellow">'-'</span>:
+				<span class="blue">def</span> <span class="green">isEven</span>(<span class="orange">x</span>):
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">- </span>b
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>x <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span><br>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>oper <span class="red">==</span> <span class="yellow">'+'</span>:
+				<span class="blue">print</span>(<span class="blue">isEven</span>(<span class="purple">10</span>))
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">+ </span>b
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>oper <span class="red">==</span> <span class="yellow">'*'</span>:
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">* </span>b
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">el<span class="red">if </span></span>oper <span class="red">==</span> <span class="yellow">'/'</span>:
-				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a<span class="red"> / </span>b
-				<br>
-				result1<span class="red"> = </span>calc(<span class="purple">100</span>, <span class="purple">3</span>, <span class="yellow">'/'</span>)
-				<br>
-				result2<span class="red"> = </span>calc(<span class="purple">2</span>, <span class="purple">9</span>, <span class="yellow">'*'</span>)
-				<br>
-				result3<span class="red"> = </span>calc(<span class="purple">67</span>, <span class="purple">87</span>, <span class="yellow">'+'</span>)
+				<span class="blue">print</span>(<span class="blue">isEven</span>(<span class="purple">11</span>))
 			</p>
 			<p class="code">
-				<span class="red">>></span> <span class="purple">33.333333333333336</span>
+				<span class="red">>></span> True
 				<br>
-				<span class="red">>></span> <span class="purple">18</span>
-				<br>
-				<span class="red">>></span> <span class="purple">154</span>
+				<span class="red">>></span> False
 			</p>
-			<p class="text">Задача 3. Описать функцию fact(n), вычисляющую значение факториала n! = 1*2*...*n (n > 0 — параметр целого типа;). С помощью этой функции найти факториалы пяти данных целых чисел.</p>
+			<span class="num">4.</span> <span class='task-title'>Сумма списка</span>
 			<p class="code">
-				<span class="blue">def</span> <span class="green">fact</span>(n):
+				<span class="grey"># Напишите функцию amountList, которая возвращает сумму всех элементов списка.<br></span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;i<span class="red"> = </span><span class="purple">1</span>
+				<span class="blue">def</span> <span class="green">amountList</span>(<span class="orange">lst</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;amount<span class="red"> = </span><span class="purple">0</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span>lst:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount <span class="red">+= </span>x
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>amount<br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">amountList</span>([<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>]))<br>
+				<br>
+				mylist<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">8</span>, <span class="purple">16</span>]
+				<br>
+				s<span class="red"> = </span><span class="blue">amountList</span>(mylist)<br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'Сумма списка </span>{mylist}<span class="yellow"> равна </span>{s}<span class="yellow">'</span>)
+			</p>
+			<p class="code">
+				<span class="red">>></span> <span class="purple">6</span>
+				<br>
+				<span class="red">>></span> Сумма списка [<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">8</span>, <span class="purple">16</span>] равна <span class="purple">31</span>
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Фибоначчи</span>
+			<p class="code">
+				<span class="grey"># Напишите функцию fib, которая возвращает n-ное число Фибоначчи.</span>
+				<br>
+				<span class="grey"># Последовательность Фибоначчи выглядит так: 1 1 2 3 5 8 13 21 34<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">fib</span>(<span class="orange">n</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;a, b<span class="red"> = </span><span class="purple">0</span>, <span class="purple">1</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>n <span class="red">==</span> <span class="purple">0</span>: <span class="red">return </span><span class="purple">0</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(<span class="purple">1</span>, n):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a, b<span class="red"> = </span>b, a <span class="red">+ </span>b
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>b<br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">2</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">3</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">4</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">5</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">10</span>))
+			</p>
+			<p class="code">
+				<span class="red">>></span> <span class="purple">1</span>
+				<br>
+				<span class="red">>></span> <span class="purple">2</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="red">>></span> <span class="purple">5</span>
+				<br>
+				<span class="red">>></span> <span class="purple">55</span>
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Факториал</span>
+			<p class="code">
+				
+				<span class="grey"># Напишите функцию fact, вычисляющую значение факториала числа N.</span>
+				<br>
+				<span class="grey"># Факториал числа - это произведение всех чисел от 1 до N.</span>
+				<br>
+				<span class="grey"># Например, факториал числа 5 равен 120 (5! = 120).<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">fact</span>(<span class="orange">n</span>):
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;result<span class="red"> = </span><span class="purple">1</span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">while </span>i <span class="red"><= </span>n:
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">while </span>n<span class="red"> > </span><span class="purple">1</span>:
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result *= i
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result <span class="red">*=</span> n
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n <span class="red">-=</span> <span class="purple">1</span>
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>result
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>result<br>
 				<br>
-				<span class="blue">print</span>(fact(<span class="purple">4</span>)) <span class="grey"># Проверка</span>
+				<span class="blue">print</span>(<span class="blue">fact</span>(<span class="purple">2</span>))
 				<br>
-				f<span class="red">or </span>i<span class="red"> in </span><span class="blue">range</span>(<span class="purple">1</span>, <span class="purple">6</span>):
+				<span class="blue">print</span>(<span class="blue">fact</span>(<span class="purple">3</span>))
 				<br>
-				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(fact(i))
+				<span class="blue">print</span>(<span class="blue">fact</span>(<span class="purple">4</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fact</span>(<span class="purple">5</span>))
+			</p>
+			<p class="code">
+				<span class="red">>></span> <span class="purple">2</span>
+				<br>
+				<span class="red">>></span> <span class="purple">6</span>
+				<br>
+				<span class="red">>></span> <span class="purple">24</span>
+				<br>
+				<span class="red">>></span> <span class="purple">120</span>
+			</p>
+			<h1 class="main-title" style="margin-bottom: 0">Решение задач</h1>
+			<span class="num">1.</span> <span class='task-title'>Площадь круга</span>
+			<p class="text">Напишите функцию, которая получает в качестве аргумента радиус круга и находит его площадь. </p>
+			<p class="code">
+				<span class="grey"># Не забудьте написать функцию circle...<br></span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">circle</span>(<span class="purple">4</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">circle</span>(<span class="purple">1</span>))
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">50.24</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3.14</span>
+			</p>
+			<span class="num">2.</span> <span class='task-title'>На три</span>
+			<p class="text">Напишите функцию, которая возвращает True, если число делится на 3, и False, если - нет.</p>
+			<p class="code">
+				<span class="grey"># Не забудьте написать функцию three...<br></span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">three</span>(<span class="purple">4</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">three</span>(<span class="purple">3</span>))
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">False</span>
+				<br>
+				<span class="red">>></span> <span class="purple">True</span>
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Максимум в списке</span>
+			<p class="text">Напишите функцию, которая возвращает максимальный элемент из переданного в нее списка.</p>
+			<p class="code">
+				<span class="grey"># Напишите функцию maxList...</span>
+				<br>
+				mylist<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">3</span>, <span class="purple">2</span>]
+				<br>
+				<span class="blue">print</span>(<span class="blue">maxList</span>(mylist))
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+			</p>
+			<span class="num">4. </span> <span class='task-title'>Сколько четных</span>
+			<p class="text">Напишите функцию, которая возвращает количество четных элементов в списке.</p>
+			<p class="code">
+				<span class="grey"># Напишите функцию evenCounter...</span>
+				<br>
+				mylist<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">10</span>, <span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">6</span>]
+				<br>
+				evens<span class="red"> = </span><span class="blue">evenCounter</span>(mylist)
+				<br>
+				<span class="blue">print</span>(even)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">4</span>
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Уникальные</span>
+			<p class="text">Напишите функцию, которая возвращает количество уникальных (неповторяющихся) элементов в списке.</p>
+			<p class="code">
+				<span class="grey"># Напишите функцию unique...</span>
+				<br>
+				mylist<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">1</span>, <span class="purple">3</span>, <span class="purple">2</span>, <span class="purple">3</span>]
+				<br>
+				<span class="blue">print</span>(<span class="blue">unique</span>(mylist))
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> [<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>]
 			</p>
 
 		</div>
