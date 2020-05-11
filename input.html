@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Ввод и вывод данных</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Ввод и вывод данных</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
+			<p class="text">Переменная - это именованный контейнер для заданного значения.</p>
+			<p class="code">
+				<span class="grey"># Пример создания переменных<br></span>
+				<br>
+				age<span class="red"> = </span><span class="purple">19</span>
+				<br>
+				name<span class="red"> = </span><span class="yellow">'Ivan'</span>
+				<br>
+				isActive<span class="red"> = </span>True
+			</p>
+			<p class="code">
+				name<span class="red"> = </span><span class="yellow">'Petr'</span>
+				<br>
+				Name<span class="red"> = </span><span class="yellow">'Ivan'</span><br>
+				<br>
+				<span class="grey"># name и Name - это разные переменные</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Имена переменных не могут начинаться с цифры!</span>
+			</p>
+			<p class="text">В Python есть 4 примитивных типа данных:</p>
+			<p class="code">
+				<span class="grey"># int (целые числа)</span>
+				<br>
+				age<span class="red"> = </span><span class="purple">18</span><br>
+				<br>
+				<span class="grey"># float (дробные числа)</span>
+				<br>
+				fraction<span class="red"> = </span><span class="purple">2.5</span><br>
+				<br>
+				<span class="grey"># str (строки)</span>
+				<br>
+				fruit<span class="red"> = </span><span class="yellow">'apple'</span><br>
+				<br>
+				<span class="grey"># bool (правда или ложь)</span>
+				<br>
+				isReady<span class="red"> = </span>True <span class="grey"># всего два значения: True и False</span>
+			</p>
+			<p class="text">Мы можем преобразовывать один тип данных в другой с помощью одноименных функций. Например, число может стать строкой, строка - числом, дробное число - целым.</p>
+			<p class="code">
+				age<span class="red"> = </span><span class="yellow">'22'</span> <span class="grey"># str -> '22'</span>
+				<br>
+				age<span class="red"> = </span><span class="blue">int</span>(age) <span class="grey"># int -> 22</span>
+				<br>
+				age<span class="red"> = </span><span class="blue">float</span>(age) <span class="grey"># float -> 22.0</span>
+				<br>
+				age<span class="red"> = </span>bool(age) <span class="grey"># bool -> True</span>
+			</p>
+			<p class="text">Функция print() выводит данные на экран. </p>
+			<p class="code">
+				name<span class="red"> = </span><span class="yellow">'Alexey'</span>
+				<br>
+				<span class="grey"># В скобках записываются переданные в функцию параметры</span>
+				<br>
+				<span class="blue">print</span>(name)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> Alexey
+			</p>
+			<p class="text">Функция print() может принимать несколько входных параметров.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> <span class="purple">1</span> 2 <span class="purple">3</span>
+			</p>
+			<p class="text">Каждый print() выводит данные на новой строке. По умолчанию завершающий символ строки равен символу новой строки (\n).</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="yellow">'Hello'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'world'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> Hello
+				<br>
+				<span class="red">>></span> world
+			</p>
+			<p class="text">Завершающий символ строки в функции print() можно изменять. </p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="yellow">'Hello'</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">' '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'world'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> Hello world
+			</p>
+			<p class="text">Функция input() принимает пользовательский ввод данных.</p>
+			<p class="code">
+				name<span class="red"> = </span><span class="blue">input</span>()
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello '</span> <span class="red">+ </span>name)
+				<br>
+				<span class="grey"># После запуска скрипта Python будет ожидать ввода данных</span>
+			</p>
+			<p class="text">Функция input может принимать всего лишь один аргумент - строку, которая выведется перед входной строкой.</p>
+			<p class="code">
+				name<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Enter your name: '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello, '</span> <span class="red">+ </span>name)
+			</p>
+			<p class="text">Данные, полученные с помощью функции input(), имеют строковый тип данных (str).</p>
+			<p class="text">Строки можно складывать друг с другом, такое сложение называется их конкатенацией или объединением.</p>
+			<p class="code">
+				<span class="grey"># Сумма двух строчных чисел</span>
+				<br>
+				number1<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Введите число: '</span>)
+				<br>
+				number2<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Введите число: '</span>)
+				<br>
+				<span class="blue">print</span>(number1 <span class="red">+ </span>number2)
+			</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">1</span>
+				<br>
+				<span class="red">>></span> <span class="purple">2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">12</span>
+			</p>
+			<p class="text">Преобразуем строковый тип в целое число (str -> int).</p>
+			<p class="code">
+				<span class="grey"># Исправленная сумма двух чисел</span>
+				<br>
+				number1<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите число: '</span>))
+				<br>
+				number2<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите число: '</span>))
+				<br>
+				<span class="blue">print</span>(number1 <span class="red">+ </span>number2)
+			</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">1</span>
+				<br>
+				<span class="red">>></span> <span class="purple">2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+			</p>
+			<h1 class="main-title">Примеры</h1>
+			<span class="num">1.</span> <span class='task-title'>Произведение</span>
+			<p class="code">
+				<span class="grey"># Произведение двух введенных чисел</span>
+				<br>
+				a<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите число: '</span>))
+				<br>
+				b<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите число: '</span>))
+				<br>
+				<span class="blue">print</span>(a <span class="red">* </span>b)
+			</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">4</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">12</span>
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Приветствие</span>
+			<p class="code">
+				<span class="grey"># Приветствие пользователя по его имени</span>
+				<br>
+				firstname<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Введите свое имя: '</span>) <span class="grey"># здесь приводить к типу int не нужно</span>
+				<br>
+				lastname<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Введите свою фамилию: '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Здравствуйте, '</span> <span class="red">+ </span>firstname <span class="red">+ </span><span class="yellow">' '</span> <span class="red">+ </span>lastname) <span class="grey"># не забудьте про пробел между словами</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> Иван
+				<br>
+				<span class="red">>></span> Иванов
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> Здравствуйте, Иван Иванов
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Остаток</span>
+			<p class="code">
+				<span class="grey"># Операция % позволяет получить остаток от деления</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">%</span> <span class="purple">2</span>) <span class="grey"># 0, так как 10 делится на 2 нацело</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">%</span> <span class="purple">3</span>) <span class="grey"># 1, остаток равен 1</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">%</span> <span class="purple">4</span>) <span class="grey"># 2, остаток равен 2</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">0</span>
+				<br>
+				<span class="red">>></span> <span class="purple">1</span>
+				<br>
+				<span class="red">>></span> <span class="purple">2</span>
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Деление нацело</span>
+			<p class="code">
+				<span class="grey"># Операция // позволяет получить целую часть от деления</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">// </span><span class="purple">2</span>) <span class="grey"># 5</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">// </span><span class="purple">3</span>) <span class="grey"># 3</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">// </span><span class="purple">4</span>) <span class="grey"># 2</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">5</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="red">>></span> <span class="purple">2</span>
+			</p>
+			<h1 class="main-title">Решение задач</h1>
+			<span class="num">1.</span> <span class='task-title'>Сумма трех</span>
+			<p class="text">Посчитайте сумму трех введенных целых чисел</p>
+			<span class="num">2.</span> <span class='task-title'>Площадь</span>
+			<p class="text">Пользователь вводит стороны прямоугольника, выведите его площадь</p>
+			<span class="num">3.</span> <span class='task-title'>Периметр</span>
+			<p class="text">Пользователь вводит стороны прямоугольника, выведите его периметр</p>
+			<span class="num">4.</span> <span class='task-title'>Площадь круга</span>
+			<p class="text">Пользователь вводит радиус круга, выведите площадь круга</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">12.56</span>
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Сумма дробных</span>
+			<p class="text">Посчитайте сумму трех введенных дробных чисел.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">1.5</span>
+				<br>
+				<span class="red">>></span> <span class="purple">2.5</span>
+				<br>
+				<span class="red">>></span> <span class="purple">1.1</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">5.1</span>
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Школьники и яблоки</span>
+			<p class="text">n школьников делят k яблок поровну, неделящийся остаток остается в корзинке. Сколько яблок достанется каждому школьнику? Сколько яблок останется в корзинке?</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">10</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span> <span class="grey"># каждому</span>
+				<br>
+				<span class="red">>></span> <span class="purple">1</span> <span class="grey"># останется</span>
+			</p>
+		</div>
+	</body>
+</html>
