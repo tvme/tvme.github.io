@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Операторы в Python</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Операторы в Python</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
+			<p class="text">В языке программирования Python есть арифметические, логические и операторы сравнения. </p>
+			<p class="text">Сложение:</p>
+			<p class="code">
+				<span class="grey"># Cложение</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">+ </span><span class="purple">30</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 40
+			</p>
+			<p class="text">Вычитание:</p>
+			<p class="code">
+				<span class="grey"># Вычитание</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">30</span> <span class="red">- </span><span class="purple">20</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 10
+			</p>
+			<p class="text">Умножение:</p>
+			<p class="code">
+				<span class="grey"># Умножение</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">* </span><span class="purple">9</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 18
+			</p>
+			<p class="text">Деление:</p>
+			<p class="code">
+				<span class="grey"># Деление</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">100</span><span class="red"> / </span><span class="purple">25</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 4
+			</p>
+			<p class="text">Кроме всем знакомой четверки есть и несколько экзотических операторов: взятие остатка от деления, деление нацело, возведение в степень.</p>
+			<p class="text">Взятие остатка от деления:</p>
+			<p class="code">
+				<span class="grey"># Взятие остатка от деления на 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">0</span> <span class="red">%</span> <span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span> <span class="red">%</span> <span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">%</span> <span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span> <span class="red">%</span> <span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">4</span> <span class="red">%</span> <span class="purple">2</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 0 % 2</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 1 % 2</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 2 % 2</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 3 % 2</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 4 % 2</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Взятие остатка от деления на 3</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">0</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">4</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">5</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">6</span> <span class="red">%</span> <span class="purple">3</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 0 % 3</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 1 % 3</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># 2 % 3</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 3 % 3</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 4 % 3</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># 5 % 3</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 6 % 3</span>
+			</p>
+			<p class="text">Деление нацело:</p>
+			<p class="code">
+				<span class="grey"># Деление нацело на 10</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">91</span> <span class="red">// </span><span class="purple">10</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">85</span> <span class="red">// </span><span class="purple">10</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">16</span> <span class="red">// </span><span class="purple">10</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">8</span> <span class="red">// </span><span class="purple">10</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 9 <span class="grey"># 91 // 10</span>
+				<br>
+				<span class="red">>></span> 8 <span class="grey"># 85 // 10</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 16 // 10</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 8 // 10</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Деление нацело на 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">14</span> <span class="red">// </span><span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">15</span> <span class="red">// </span><span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">7</span> <span class="red">// </span><span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">6</span> <span class="red">// </span><span class="purple">2</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 7 <span class="grey"># 14 // 2</span>
+				<br>
+				<span class="red">>></span> 7 <span class="grey"># 15 // 2</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># 7 // 2</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># 6 // 2</span>
+			</p>
+			<p class="text">Возведение в степень:</p>
+			<p class="code">
+				<span class="grey"># Возведение в степень числа 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">0</span>) <span class="grey"># 1</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">1</span>) <span class="grey"># 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">2</span>) <span class="grey"># 2 * 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">3</span>) <span class="grey"># 2 * 2 * 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">4</span>) <span class="grey"># 2 * 2 * 2 * 2</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 8
+				<br>
+				<span class="red">>></span> 16
+			</p>
+			<p class="text">Операторы сравнения (╮°-°)╮ могут возвращать всего два результата: True и False.</p>
+			<p class="text">Оператор равенства == возвращает True, если числа равны, и False в противном случае.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">10</span>
+				<br>
+				b<span class="red"> = </span><span class="purple">10</span>
+				<br>
+				<span class="blue">print</span>(a <span class="red">==</span> b)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">8</span>
+				<br>
+				b<span class="red"> = </span><span class="purple">7</span>
+				<br>
+				<span class="blue">print</span>(a <span class="red">==</span> b)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<p class="text">Оператор неравенства != возвращает True, если числа не равны, и False в противном случае.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">8</span>
+				<br>
+				b<span class="red"> = </span><span class="purple">7</span>
+				<br>
+				<span class="blue">print</span>(a <span class="red">!= </span>b)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<p class="text">Оператор больше > возвращает True, если первое число больше второго, и False в противном случае.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">8</span>
+				<br>
+				b<span class="red"> = </span><span class="purple">7</span>
+				<br>
+				<span class="blue">print</span>(a<span class="red"> > </span>b)
+				<br>
+				<span class="blue">print</span>(b<span class="red"> > </span>a)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> True <span class="grey"># a > b</span>
+				<br>
+				<span class="red">>></span> False <span class="grey"># b > a</span>
+			</p>
+			<p class="text">Оператор меньше < возвращает True, если первое число меньше второго, и False в противном случае.</p>
+			<p class="code">
+				c<span class="red"> = </span><span class="purple">100</span>
+				<br>
+				d<span class="red"> = </span><span class="purple">200</span>
+				<br>
+				<span class="blue">print</span>(c<span class="red"> < </span>d)
+				<br>
+				<span class="blue">print</span>(d<span class="red"> < </span>c)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> True <span class="grey"># c < d</span>
+				<br>
+				<span class="red">>></span> False <span class="grey"># d < c</span>
+			</p>
+			<p class="text">Оператор меньше или равно <= возвращает True, если первое число меньше второго или равно ему, и False в противном случае.</p>
+			<p class="text">Оператор больше или равно >= возвращает True, если первое число больше второго или равно ему, и False в противном случае.</p>
+			<p class="code">
+				c<span class="red"> = </span><span class="purple">200</span>
+				<br>
+				d<span class="red"> = </span><span class="purple">200</span>
+				<br>
+				<span class="blue">print</span>(c <span class="red">>= </span>d)
+				<br>
+				<span class="blue">print</span>(d <span class="red"><= </span>c)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> True <span class="grey"># c >= d</span>
+				<br>
+				<span class="red">>></span> True <span class="grey"># d <= c</span>
+			</p>
+			<p class="text">Иногда требуются выполнение нескольких операторов сравнения сразу. Для таких целей существует оператор and (оператор логического умножения, конъюнкция).</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">10</span><span class="red"> > </span><span class="purple">0</span> <span class="red">and </span><span class="purple">5</span><span class="red"> > </span><span class="purple">0</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span> <span class="red">and </span><span class="purple">12</span> <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>) <span class="grey"># оба числа четные</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> True
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<p class="text">Если хотя бы один из операторов равен False, то результат оператора будет равен False. Конъюкция истинна в том случае, когда все условия истинны.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">10</span><span class="red"> > </span><span class="purple">100</span> <span class="red">and </span><span class="purple">5</span><span class="red"> > </span><span class="purple">0</span> <span class="red">and </span><span class="purple">10</span><span class="red"> > </span><span class="purple">0</span>) <span class="grey"># False</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<p class="text">Логическое сложение (дизъюнкция) или оператор or требует выполнения ХОТЯ БЫ одного условия.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">10</span><span class="red"> > </span><span class="purple">100</span> <span class="red">or </span><span class="purple">5</span><span class="red"> > </span><span class="purple">100</span> <span class="red">or </span><span class="purple">10</span><span class="red"> > </span><span class="purple">0</span>) <span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span> <span class="red">==</span> <span class="purple">0</span> <span class="red">or </span><span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>) <span class="grey"># False, оба условия ложны</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> True
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<p class="text">Последний из операторов - это оператор инверсии not. Оператор not изменяет (инвертирует) значение на противоположное.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="red">not </span>False) <span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="red">not </span>True) <span class="grey"># False</span>
+				<br>
+				<span class="blue">print</span>(<span class="red">not </span><span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>) <span class="grey"># True</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> True
+				<br>
+				<span class="red">>></span> False
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<p class="text">Оператор not выполняется в приоритете.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="red">not </span><span class="purple">1</span> <span class="red">==</span> <span class="purple">0</span> <span class="red">or </span><span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>) <span class="grey"># True, значение первого условия инвертировано</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<h1 class="main-title">Решение задач</h1>
+			<span class="num">1.</span> <span class='task-title'>Одинаковая четность</span>
+			<p class="text">Даны два целых числа: A, B. Проверить истинность высказывания: "Числа A и B имеют одинаковую четность".</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> False<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Одно положительное</span>
+			<p class="text">Даны три целых числа: A, B, C. Проверить истинность высказывания: "Хотя бы одно из чисел A, B, C положительное".</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> -1
+				<br>
+				<span class="red">>></span> -10
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> False<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> -1
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Последняя цифра</span>
+			<p class="text">Дано натуральное число. Выведите его последнюю цифру.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 2345678
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 8<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 19
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 9
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Цифры двузначного</span>
+			<p class="text">Дано двузначное число. Найдите сумму его цифр.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 22
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 4<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 99
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 18
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Цифры трехзначного</span>
+			<p class="text">Дано трехзначное число. Найдите сумму его цифр.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span>123
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 6<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 332
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 8
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Разные цифры</span>
+			<p class="text">Дано трехзначное число. Проверить истинность высказывания: "Все цифры данного числа различны".</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 123
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> True<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 332
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<span class="num">7.</span> <span class='task-title'>Часы (финальный босс)</span>
+			<p class="text">С начала суток прошло N секунд (N - целое). Найти количество часов, минут и секунд на электронных часах.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 1000
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 0 16 40<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 10000
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 2 46 40<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 85001
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> 23 36 41<br>
+			</p>
+
+		</div>
+	</body>
+</html>
