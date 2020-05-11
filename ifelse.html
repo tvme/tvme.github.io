@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Условный оператор в Python</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Условный оператор в Python</h1>
+			<a href="index.html" class="link special">Назад в начало</a>
+			<p class="text">Условный оператор выполняет некоторое действие, если указанное условие истинно (равно True). </p>
+			<p class="code">
+				<span class="grey"># Обратите внимание на отступ в четыре (4!) пробела</span>
+				<br>
+				<span class="grey"># или одну табуляцию (кнопочка TAB)</span>
+				<br>
+				<span class="red">if </span><span class="purple">True</span>: <span class="grey"># Обязательное двоеточие перед блоком кода</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Условие истинно, поэтому я напечатаюсь'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> Условие истинно, поэтому я напечатаюсь
+			</p>
+			<p class="text">В условии любой тип данных неявно приводится к bool. Пустая строка и ноль равны False.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="purple">1</span>)) <span class="grey"># -> True</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="purple">0</span>)) <span class="grey"># -> False</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="purple">10.2</span>)) <span class="grey"># -> True</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="yellow">''</span>)) <span class="grey"># -> False</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="yellow">'Hello'</span>)) <span class="grey"># -> True</span>
+			</p>
+			<p class="text">Если условие ложно, то код, находящийся под оператором if не выполнится.</p>
+			<p class="code">
+				<span class="red">if </span><span class="purple">0</span>: <span class="grey"># Обязательное двоеточие перед блоком кода</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Я никогда не напечатаюсь :('</span>)
+			</p>
+			<p class="text">Если условие в if ложно, то выполнится оператор под оператором else.</p>
+			<p class="code">
+				<span class="red">if </span><span class="purple">0</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Я никогда не напечатаюсь :('</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Оператор else вступает в игру'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> Оператор else вступает в игру
+			</p>
+			<p class="text">Иногда двух вариантов недостаточно, для этого существует оператор elif, а для все остального есть...</p>
+			<p class="code">
+				age<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>())
+				<br>
+				<span class="red">if </span>age<span class="red"> < </span><span class="purple">10</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ваш возраст - это одна цифра :)'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>age<span class="red"> < </span><span class="purple">15</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Удачи с геометрией :):):)'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Совсем взрослый уже :('</span>)
+			</p>
+			<p class="text">Если условие в операторе if ложно, то интерпретатор проверяет истинность условия операторов elif, всех по очереди. Если все условия ложны, то выполнится оператор else.</p>
+			<h1 class="main-title">Примеры</h1>
+			<span class="num">1.</span> <span class='task-title'>Четное-нечетное</span>
+			<p class="code">
+				<span class="grey"># Выведите строку 'четное', если введенное число четно, и строку 'нечетное', если число нечетно.</span>
+				<br>
+				a<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>())
+				<br>
+				<span class="red">if </span>a <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'четное'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'нечетное'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Ввод</span>
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> четное<br>
+				<br>
+				<span class="grey"># Ввод</span>
+				<br>
+				<span class="red">>></span> 11
+				<br>
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> нечетное
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Много elif'ов</span>
+			<p class="code">
+				<span class="grey"># Если в вашем коде больше трех elif значит что-то не так и стоит придумать новый алгоритм.</span>
+				<br>
+				<span class="grey"># Это сугубо академический пример, так писать не стоит.</span>
+				<br>
+				a<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите число от одного до 1 до 100'</span>))
+				<br>
+				<span class="red">if </span>a<span class="red"> < </span><span class="purple">10</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ваше число меньше 10'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">20</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ваше число меньше двадцатки'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">30</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'30 - это потолок'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">40</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ваше число меньше 40'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">50</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Много, но не больше полтинника'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">60</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Число меньше, чем шесть*десять'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">70</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ваше число расположено в восьмом десятке'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">80</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ваше число меньше 80'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">90</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ваше число находится в 9 десятке'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">100</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Сотня больше вашего числа'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Хитро, но меня не обманешь, число слишком большое'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Ввод</span>
+				<br>
+				<span class="red">>></span> 11
+				<br>
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> Ваше число меньше двадцатки<br>
+				<br>
+				<span class="grey"># Ввод</span>
+				<br>
+				<span class="red">>></span> 91
+				<br>
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> Сотня больше вашего числа<br>
+				<br>
+				<span class="grey"># Ввод</span>
+				<br>
+				<span class="red">>></span> 58
+				<br>
+				<span class="grey"># Вывод</span>
+				<br>
+				<span class="red">>></span> Число меньше, чем шесть*десять<br>
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Белая или черная</span>
+			<p class="code">
+				<span class="grey"># Пользователь вводит два числа: координаты шахматной клетки.</span>
+				<br>
+				<span class="grey"># Выведите YES, если клетка белая, и NO, если - черная.<br></span>
+				<br>
+				x<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите координату x: '</span>))
+				<br>
+				y<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Введите координату y: '</span>))
+				<br>
+				<span class="grey"># Идея такая: если четность координат совпадает,</span>
+				<br>
+				<span class="grey"># то это черная клетка, а если - нет, то белая.<br></span>
+				<br>
+				<span class="red">if </span>(x <span class="red">+ </span>y) <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">1</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'YES'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'NO'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> NO<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> NO
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Белая или черная (случайные координаты)</span>
+			<p class="code">
+				<span class="grey"># Та же задача, но со случайными числами.</span>
+				<br>
+				<span class="grey"># Координаты шахматной клетки выбираются случайным образом</span>
+				<br>
+				<span class="grey"># Выведите YES, если клетка белая, и NO, если - черная.<br></span>
+				<br>
+				<span class="red"><span class="red">from </span></span>random <span class="red">import </span>randint <span class="grey"># импортирование функции randint</span>
+				<br>
+				x<span class="red"> = </span>rand<span class="blue">int</span>(<span class="purple">1</span>,8) <span class="grey"># функция randint вернет случайное число от 1 до 8</span>
+				<br>
+				y<span class="red"> = </span>rand<span class="blue">int</span>(<span class="purple">1</span>,8)
+				<br>
+				<span class="blue">print</span>(x, y) <span class="grey"># вывод пары случайных чисел<br></span>
+				<br>
+				<span class="red">if </span>(x <span class="red">+ </span>y) <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">1</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'YES'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'NO'</span>)
+			</p>
+			<h1 class="main-title">Решение задач</h1>
+			<span class="num">1.</span> <span class='task-title'>Меньшее из двух</span>
+			<p class="text">Пользователь вводит два целых числа. Выведите меньшее из них.</p>
+			<span class="num">2.</span> <span class='task-title'>Четырехзначное?</span>
+			<p class="text">Пользователь вводит целое число. Выведите YES, если это число является четырехзначным, и NO в противном случае.</p>
+			<span class="num">3.</span> <span class='task-title'>Треугольник?</span>
+			<p class="text">Треугольник существует только тогда, когда сумма любых двух его сторон больше третьей. Дано a, b, c - стороны предполагаемого треугольника. Требуется сравнить длину каждого отрезка-стороны с суммой двух других. Если хотя бы в одном случае отрезок окажется больше суммы двух других, то треугольника с такими сторонами не существует.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> YES<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> NO<br>
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Время суток</span>
+			<p class="text">Пользователь вводит время в часах. Если введенное число находится между 5 и 11 часами включительно, выведите строку 'Утро'. Если число лежит в диапазоне от 12 до 17 часов включительно, выведите строку 'День'. Если число находится между 18 и 22, то выведите 'Вечер'. В случае поздней ночи (от 23 до 4 включительно) выведите 'Ночь'. В остальных случаях выведите строку 'Ошибка'.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> Ночь<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 6
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> Утро<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 13
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> День<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 2020
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> Ошибка<br>
+			</p>
+			<span class="num">5.</span> <span class='task-title'>День недели</span>
+			<p class="text">Пользователь вводит номер дня недели. Выведите строку 'Выходные', если введенное число равно 6 или 7. В случае, если число лежит в диапазоне от 1 до 5 включительно, выведите строку 'Будни'.</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> Будни<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 6
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> Выходные<br>
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Описание числа</span>
+			<p class="text">Пользователь вводит целое число. Выведите его строку-описание вида "отрицательное четное число", "ноль", "положительное нечетное число", например, численным описанием числа 190 является строка "положительное четное число".</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> положительное нечетное число<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 06
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> отрицательное четное число<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> ноль<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> положительное четное число<br>
+			</p>
+			<span class="num">7.</span> <span class='task-title'>Конь (финальный босс)</span>
+			<p class="text">Шахматный конь ходит буквой "Г" - на две клетки по вертикали в любом направлении и на одну клетку по горизонтали, или наоборот. Даны две различные клетки шахматной доски, определите, может ли конь попасть с первой клетки на вторую одним ходом. В случае, если хотя бы одно из введенных чисел не лежит в диапазоне от 1 до 8, выведите строку "Ошибка!".</p>
+			<p class="code">
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># координата x1</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># координата y1</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># координата x2</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># координата y2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> NO<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># координата x1</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># координата y1</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># координата x2</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># координата y2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> YES<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># координата x1</span>
+				<br>
+				<span class="red">>></span> 8 <span class="grey"># координата y1</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># координата x2</span>
+				<br>
+				<span class="red">>></span> 6 <span class="grey"># координата y2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> YES<br>
+				<br>
+				<span class="grey"># Ввод:</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># координата x1</span>
+				<br>
+				<span class="red">>></span> 4 <span class="grey"># координата y1</span>
+				<br>
+				<span class="red">>></span> 5 <span class="grey"># координата x2</span>
+				<br>
+				<span class="red">>></span> 6 <span class="grey"># координата y2</span>
+				<br>
+				<span class="grey"># Вывод:</span>
+				<br>
+				<span class="red">>></span> YES
+			</p>
+
+		</div>
+	</body>
+</html>
