@@ -373,6 +373,12 @@ svg {
        
 
     }
+    .code {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 @media all and (max-width:480px) {
@@ -383,4 +389,5 @@ svg {
     #down img {
         width: 32px
     }
+
 }
