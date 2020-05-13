@@ -381,7 +381,7 @@ svg {
     }
     .main-title {
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 15px;
     }
     .task-title {
         margin-top: 0;
