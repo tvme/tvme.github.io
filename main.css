@@ -379,6 +379,13 @@ svg {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .main-title {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .task-title {
+        margin-top: 0;
+    }
 }
 
 @media all and (max-width:480px) {
