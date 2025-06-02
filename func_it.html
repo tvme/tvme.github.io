@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2CVN1GFW2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N2CVN1GFW2');
+    </script>
+    <!-- end Google tag (gtag.js) -->
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Funzioni in Python</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Funzioni in Python</h1>
+			<a href="index.html" class="link special">Torna all'inizio</a>
+			<p class="text">Una funzione è un blocco di codice nominato a cui è possibile fare riferimento da qualsiasi punto del programma. Una funzione ha un nome e un elenco di parametri di input, nonché un valore restituito.</p>
+			<p class="text">Una funzione consente di utilizzare lo stesso frammento di codice più volte in un programma. </p>
+			<p class="text">La dichiarazione di una funzione in Python appare così:</p>
+			<p class="code">
+				<span class="blue">def</span> <span class="green">nome_funzione</span>(<span class="orange">argomento1</span>, <span class="orange">argomento2</span>, ...):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># codice della funzione</span>
+				<br>
+				<span class="grey"># def - DEclare Function - "dichiarare una funzione"</span>
+				<br>
+				<span class="grey"># nome_funzione - nome della funzione</span>
+				<br>
+				<span class="grey"># (argomento1, argomento2, ...) - elenco di argomenti passati alla funzione al momento della sua chiamata</span>
+				<br>
+				<span class="grey"># corpo della funzione - è tutto il codice che segue i due punti<br></span>
+			</p>
+			<p class="code">
+				<span class="grey"># Dichiarazione della funzione<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">saluto</span>(nome):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ciao, '</span> <span class="red">+ </span>nome)<br>
+				<br>
+				<span class="grey"># Chiamate alla funzione <br></span>
+				<br>
+				<span class="blue">saluto</span>(<span class="yellow">'Max'</span>)
+				<br>
+				<span class="blue">saluto</span>(<span class="yellow">'Marco'</span>)
+				<br>
+				<span class="blue">saluto</span>(<span class="yellow">'Alex'</span>)
+				<br>
+				<span class="blue">saluto</span>(<span class="yellow">'Luciana'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output<br></span>
+				<br>
+				<span class="red">>></span> Ciao, Max
+				<br>
+				<span class="red">>></span> Ciao, Marco
+				<br>
+				<span class="red">>></span> Ciao, Alex
+				<br>
+				<span class="red">>></span> Ciao, Luciana
+			</p>
+			<p class="text">L'operatore return restituisce un valore dalla funzione.</p>
+			<p class="text">Immagina una normale calcolatrice. Inserisci il primo numero, l'operazione e il secondo numero. La calcolatrice ci restituisce il risultato dell'operazione su questi numeri. Semplice, vero? Le funzioni allo stesso modo sanno restituire un valore usando l'operatore speciale return.</p>
+			<p class="code">
+				<span class="grey"># Dichiarazione della funzione<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">somma2</span>(<span class="orange">a</span>, <span class="orange">b</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">+ </span>b<br>
+				<br>
+				<span class="grey"># Chiamate alla funzione<br></span>
+				<br>
+				s1<span class="red"> = </span><span class="blue">somma2</span>(<span class="purple">10</span>, <span class="purple">2</span>)
+				<br>
+				s2<span class="red"> = </span><span class="blue">somma2</span>(<span class="purple">108</span>, <span class="purple">100</span>)
+				<br>
+				s3<span class="red"> = </span><span class="blue">somma2</span>(<span class="purple">3</span>, <span class="purple">1</span>)<br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'s1 = </span>{s1}<span class="yellow">'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'s2 = </span>{s2}<span class="yellow">'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'s3 = </span>{s3}<span class="yellow">'</span>)
+			</p>
+			<p class="code">
+				<span class="red">>></span> s1<span class="red"> = </span><span class="purple">12</span>
+				<br>
+				<span class="red">>></span> s2<span class="red"> = </span><span class="purple">208</span>
+				<br>
+				<span class="red">>></span> s3<span class="red"> = </span><span class="purple">4</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Funzione di moltiplicazione di due numeri<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">molt2</span>(<span class="orange">a</span>, <span class="orange">b</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>a <span class="red">* </span>b<br>
+				<br>
+				<span class="grey"># Chiamiamo la nostra funzione<br></span>
+				<br>
+				m1<span class="red"> = </span><span class="blue">molt2</span>(<span class="purple">10</span>, <span class="purple">2</span>)
+				<br>
+				m2<span class="red"> = </span><span class="blue">molt2</span>(<span class="purple">108</span>, <span class="purple">100</span>)
+				<br>
+				m3<span class="red"> = </span><span class="blue">molt2</span>(<span class="purple">3</span>, <span class="purple">1</span>) <br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'m1 = </span>{m1}<span class="yellow">'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'m2 = </span>{m2}<span class="yellow">'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'m3 = </span>{m3}<span class="yellow">'</span>)
+			</p>
+			<p class="code">
+				<span class="red">>></span> m1<span class="red"> = </span><span class="purple">20</span>
+				<br>
+				<span class="red">>></span> m2<span class="red"> = </span><span class="purple">10800</span>
+				<br>
+				<span class="red">>></span> m3<span class="red"> = </span><span class="purple">3</span>
+			</p>
+			<p class="text">Per i parametri della funzione è possibile specificare valori predefiniti. Ciò consente di chiamare la funzione con un numero inferiore di parametri.</p>
+			<p class="code">
+				<span class="grey"># L'argomento nome per impostazione predefinita è 'mondo'<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">saluto</span>(<span class="orange">nome</span><span class="red">=</span><span class="yellow">'mondo'</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ciao, '</span> <span class="red">+ </span>nome)<br>
+				<br>
+				<span class="blue">saluto</span>()
+				<br>
+				<span class="blue">saluto</span>(<span class="yellow">'Marco'</span>)
+			</p>
+			<p class="code">
+				<span class="red">>></span> Ciao, mondo
+				<br>
+				<span class="red">>></span> Ciao, Marco
+			</p>
+			<h1 class="main-title" style="margin-bottom: 0">Esempi</h1>
+			<span class="num">1.</span> <span class='task-title'>Quadrato</span>
+			<p class="code">
+				<span class="grey"># Scrivere una funzione square() che calcola il quadrato di un numero.<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">square</span>(<span class="orange">numero</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>numero <span class="red">* </span>numero <span class="grey"># Restituiamo il risultato del lavoro della funzione al programma<br></span>
+				<br>
+				a<span class="red"> = </span><span class="blue">square</span>(<span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(a)
+			</p>
+			<p class="code">
+				<span class="red">>></span> <span class="purple">4</span>
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Perimetro</span>
+			<p class="code">
+				<span class="grey"># Scrivere una funzione perimetro che calcola il perimetro di un rettangolo con lati a e b.<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">perimetro</span>(<span class="orange">a</span>, <span class="orange">b</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span><span class="purple">2</span> <span class="red">* </span>(a <span class="red">+ </span>b)<br>
+				<br>
+				p<span class="red"> = </span><span class="blue">perimetro</span>(<span class="purple">4</span>, <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(p)
+			</p>
+			<p class="code">
+				<span class="red">>></span> <span class="purple">14</span>
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Numero pari</span>
+			<p class="code">
+				<span class="grey"># Scrivere una funzione isEven che restituisce True se il numero è pari, e False se è dispari.<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">isEven</span>(<span class="orange">x</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>x <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span><br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">isEven</span>(<span class="purple">10</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">isEven</span>(<span class="purple">11</span>))
+			</p>
+			<p class="code">
+				<span class="red">>></span> True
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Somma della lista</span>
+			<p class="code">
+				<span class="grey"># Scrivere una funzione amountList che restituisce la somma di tutti gli elementi della lista.<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">amountList</span>(<span class="orange">lst</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;amount<span class="red"> = </span><span class="purple">0</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span>lst:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount <span class="red">+= </span>x
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>amount<br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">amountList</span>([<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>]))<br>
+				<br>
+				mylist<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">8</span>, <span class="purple">16</span>]
+				<br>
+				s<span class="red"> = </span><span class="blue">amountList</span>(mylist)<br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'La somma della lista </span>{mylist}<span class="yellow"> è uguale a </span>{s}<span class="yellow">'</span>)
+			</p>
+			<p class="code">
+				<span class="red">>></span> <span class="purple">6</span>
+				<br>
+				<span class="red">>></span> La somma della lista [<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">8</span>, <span class="purple">16</span>] è uguale a <span class="purple">31</span>
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Fibonacci</span>
+			<p class="code">
+				<span class="grey"># Scrivere una funzione fib che restituisce l'n-esimo numero di Fibonacci.</span>
+				<br>
+				<span class="grey"># La sequenza di Fibonacci appare così: 1 1 2 3 5 8 13 21 34<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">fib</span>(<span class="orange">n</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;a, b<span class="red"> = </span><span class="purple">0</span>, <span class="purple">1</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>n <span class="red">==</span> <span class="purple">0</span>: <span class="red">return </span><span class="purple">0</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">f<span class="red">or </span></span>i<span class="red"> in </span><span class="blue">range</span>(<span class="purple">1</span>, n):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a, b<span class="red"> = </span>b, a <span class="red">+ </span>b
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>b<br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">2</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">3</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">4</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">5</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fib</span>(<span class="purple">10</span>))
+			</p>
+			<p class="code">
+				<span class="red">>></span> <span class="purple">1</span>
+				<br>
+				<span class="red">>></span> <span class="purple">2</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="red">>></span> <span class="purple">5</span>
+				<br>
+				<span class="red">>></span> <span class="purple">55</span>
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Fattoriale</span>
+			<p class="code">
+				
+				<span class="grey"># Scrivere una funzione fact che calcola il valore del fattoriale del numero N.</span>
+				<br>
+				<span class="grey"># Il fattoriale di un numero è il prodotto di tutti i numeri da 1 a N.</span>
+				<br>
+				<span class="grey"># Ad esempio, il fattoriale del numero 5 è uguale a 120 (5! = 120).<br></span>
+				<br>
+				<span class="blue">def</span> <span class="green">fact</span>(<span class="orange">n</span>):
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;result<span class="red"> = </span><span class="purple">1</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">while </span>n<span class="red"> > </span><span class="purple">1</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result <span class="red">*=</span> n
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n <span class="red">-=</span> <span class="purple">1</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">return </span>result<br>
+				<br>
+				<span class="blue">print</span>(<span class="blue">fact</span>(<span class="purple">2</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fact</span>(<span class="purple">3</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fact</span>(<span class="purple">4</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">fact</span>(<span class="purple">5</span>))
+			</p>
+			<p class="code">
+				<span class="red">>></span> <span class="purple">2</span>
+				<br>
+				<span class="red">>></span> <span class="purple">6</span>
+				<br>
+				<span class="red">>></span> <span class="purple">24</span>
+				<br>
+				<span class="red">>></span> <span class="purple">120</span>
+			</p>
+			<h1 class="main-title" style="margin-bottom: 0">Risoluzione dei problemi</h1>
+			<span class="num">1.</span> <span class='task-title'>Area del cerchio</span>
+			<p class="text">Scrivere una funzione che riceve come argomento il raggio di un cerchio e ne calcola l'area. </p>
+			<p class="code">
+				<span class="grey"># Non dimenticare di scrivere la funzione cerchio...<br></span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">cerchio</span>(<span class="purple">4</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">cerchio</span>(<span class="purple">1</span>))
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">50.24</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3.14</span>
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Per tre</span>
+			<p class="text">Scrivere una funzione che restituisce True se il numero è divisibile per 3, e False se non lo è.</p>
+			<p class="code">
+				<span class="grey"># Non dimenticare di scrivere la funzione tre...<br></span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">tre</span>(<span class="purple">4</span>))
+				<br>
+				<span class="blue">print</span>(<span class="blue">tre</span>(<span class="purple">3</span>))
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">False</span>
+				<br>
+				<span class="red">>></span> <span class="purple">True</span>
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Massimo nella lista</span>
+			<p class="text">Scrivere una funzione che restituisce l'elemento massimo dalla lista passata ad essa.</p>
+			<p class="code">
+				<span class="grey"># Scrivere la funzione maxList...</span>
+				<br>
+				mylist<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">3</span>, <span class="purple">2</span>]
+				<br>
+				<span class="blue">print</span>(<span class="blue">maxList</span>(mylist))
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+			</p>
+			<span class="num">4. </span> <span class='task-title'>Quanti pari</span>
+			<p class="text">Scrivere una funzione che restituisce il numero di elementi pari nella lista.</p>
+			<p class="code">
+				<span class="grey"># Scrivere la funzione evenCounter...</span>
+				<br>
+				mylist<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">10</span>, <span class="purple">2</span>, <span class="purple">4</span>, <span class="purple">6</span>]
+				<br>
+				pari<span class="red"> = </span><span class="blue">evenCounter</span>(mylist)
+				<br>
+				<span class="blue">print</span>(pari)
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">4</span>
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Unici</span>
+			<p class="text">Scrivere una funzione che restituisce una lista con elementi unici (non ripetuti).</p>
+			<p class="code">
+				<span class="grey"># Scrivere la funzione unique...</span>
+				<br>
+				mylist<span class="red"> = </span>[<span class="purple">1</span>, <span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">1</span>, <span class="purple">3</span>, <span class="purple">2</span>, <span class="purple">3</span>]
+				<br>
+				<span class="blue">print</span>(<span class="blue">unique</span>(mylist))
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> [<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>]
+			</p>
+
+		</div>
+	</body>
+</html>
