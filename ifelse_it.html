@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Operatore condizionale in Python</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Operatore condizionale in Python</h1>
+			<a href="index.html" class="link special">Torna all'inizio</a>
+			<p class="text">L'operatore condizionale esegue una determinata azione se la condizione specificata è vera (uguale a True). </p>
+			<p class="code">
+				<span class="grey"># Presta attenzione all'indentazione di quattro (4!) spazi</span>
+				<br>
+				<span class="grey"># o una tabulazione (tasto TAB)</span>
+				<br>
+				<span class="red">if </span><span class="purple">True</span>: <span class="grey"># Due punti obbligatori prima del blocco di codice</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'La condizione è vera, quindi verrò stampato'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> La condizione è vera, quindi verrò stampato
+			</p>
+			<p class="text">Nella condizione, qualsiasi tipo di dati viene implicitamente convertito in bool. Una stringa vuota e zero sono uguali a False.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="purple">1</span>)) <span class="grey"># -> True</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="purple">0</span>)) <span class="grey"># -> False</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="purple">10.2</span>)) <span class="grey"># -> True</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="yellow">''</span>)) <span class="grey"># -> False</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">bool</span>(<span class="yellow">'Hello'</span>)) <span class="grey"># -> True</span>
+			</p>
+			<p class="text">Se la condizione è falsa, il codice sotto l'operatore if non verrà eseguito.</p>
+			<p class="code">
+				<span class="red">if </span><span class="purple">0</span>: <span class="grey"># Due punti obbligatori prima del blocco di codice</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Non verrò mai stampato :('</span>)
+			</p>
+			<p class="text">Se la condizione in if è falsa, verrà eseguito l'operatore sotto l'operatore else.</p>
+			<p class="code">
+				<span class="red">if </span><span class="purple">0</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Non verrò mai stampato :('</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">"L'operatore else entra in gioco"</span>) <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># Per utilizzare un apostrofo in apice, è necessario racchiudere l'intera riga in un doppio apostrofo.</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> L'operatore else entra in gioco
+			</p>
+			<p class="text">A volte due opzioni non sono sufficienti, per questo esiste l'operatore elif, e per tutto il resto c'è...</p>
+			<p class="code">
+				age<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>())
+				<br>
+				<span class="red">if </span>age<span class="red"> < </span><span class="purple">10</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'La tua età è una cifra singola :)'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>age<span class="red"> < </span><span class="purple">15</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'In bocca al lupo con la geometria :):):)'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Sei già abbastanza grande :('</span>)
+			</p>
+			<p class="text">Se la condizione nell'operatore if è falsa, l'interprete controlla la verità della condizione degli operatori elif, tutti in ordine. Se tutte le condizioni sono false, verrà eseguito l'operatore else.</p>
+			<h1 class="main-title">Esempi</h1>
+			<span class="num">1.</span> <span class='task-title'>Pari-dispari</span>
+			<p class="code">
+				<span class="grey"># Stampa la stringa 'pari' se il numero inserito è pari, e la stringa 'dispari' se il numero è dispari.</span>
+				<br>
+				a<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>())
+				<br>
+				<span class="red">if </span>a <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'pari'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'dispari'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Input</span>
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> pari<br>
+				<br>
+				<span class="grey"># Input</span>
+				<br>
+				<span class="red">>></span> 11
+				<br>
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> dispari
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Molti elif</span>
+			<p class="code">
+				<span class="grey"># Se nel tuo codice ci sono più di tre elif, significa che qualcosa non va e dovresti pensare a un nuovo algoritmo.</span>
+				<br>
+				<span class="grey"># Questo è un esempio puramente accademico, non dovresti scrivere così.</span>
+				<br>
+				a<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero da 1 a 100'</span>))
+				<br>
+				<span class="red">if </span>a<span class="red"> < </span><span class="purple">10</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Il tuo numero è minore di 10'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">20</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Il tuo numero è minore di venti'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">30</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'30 è il limite massimo'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">40</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Il tuo numero è minore di 40'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">50</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Molto, ma non più di cinquanta'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">60</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Il numero è minore di sei*dieci'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">70</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Il tuo numero si trova nell'ottava decina'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">80</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Il tuo numero è minore di 80'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">90</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Il tuo numero si trova nella nona decina'</span>)
+				<br>
+				<span class="red">el<span class="red">if </span></span>a<span class="red"> < </span><span class="purple">100</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Cento è maggiore del tuo numero'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Astuto, ma non mi inganni, il numero è troppo grande'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Input</span>
+				<br>
+				<span class="red">>></span> 11
+				<br>
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> Il tuo numero è minore di venti<br>
+				<br>
+				<span class="grey"># Input</span>
+				<br>
+				<span class="red">>></span> 91
+				<br>
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> Cento è maggiore del tuo numero<br>
+				<br>
+				<span class="grey"># Input</span>
+				<br>
+				<span class="red">>></span> 58
+				<br>
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> Il numero è minore di sei*dieci<br>
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Bianca o nera</span>
+			<p class="code">
+				<span class="grey"># L'utente inserisce due numeri: le coordinate di una casa della scacchiera.</span>
+				<br>
+				<span class="grey"># Stampa YES se la casa è bianca, e NO se è nera.<br></span>
+				<br>
+				x<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci la coordinata x: '</span>))
+				<br>
+				y<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci la coordinata y: '</span>))
+				<br>
+				<span class="grey"># L'idea è questa: se la parità delle coordinate coincide,</span>
+				<br>
+				<span class="grey"># allora è una casa nera, altrimenti è bianca.<br></span>
+				<br>
+				<span class="red">if </span>(x <span class="red">+ </span>y) <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">1</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'YES'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'NO'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> NO<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> NO
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Bianca o nera (coordinate casuali)</span>
+			<p class="code">
+				<span class="grey"># Stesso problema, ma con numeri casuali.</span>
+				<br>
+				<span class="grey"># Le coordinate della casa della scacchiera vengono scelte casualmente</span>
+				<br>
+				<span class="grey"># Stampa YES se la casa è bianca, e NO se è nera.<br></span>
+				<br>
+				<span class="red"><span class="red">from </span></span>random <span class="red">import </span>randint <span class="grey"># importazione della funzione randint</span>
+				<br>
+				x<span class="red"> = </span>rand<span class="blue">int</span>(<span class="purple">1</span>,8) <span class="grey"># la funzione randint restituirà un numero casuale da 1 a 8</span>
+				<br>
+				y<span class="red"> = </span>rand<span class="blue">int</span>(<span class="purple">1</span>,8)
+				<br>
+				<span class="blue">print</span>(x, y) <span class="grey"># stampa della coppia di numeri casuali<br></span>
+				<br>
+				<span class="red">if </span>(x <span class="red">+ </span>y) <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">1</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'YES'</span>)
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'NO'</span>)
+			</p>
+			<h1 class="main-title">Risoluzione dei problemi</h1>
+			<span class="num">1.</span> <span class='task-title'>Minore di due</span>
+			<p class="text">L'utente inserisce due numeri interi. Stampa il minore dei due.</p>
+			<span class="num">2.</span> <span class='task-title'>A quattro cifre?</span>
+			<p class="text">L'utente inserisce un numero intero. Stampa YES se questo numero è a quattro cifre, altrimenti NO.</p>
+			<span class="num">3.</span> <span class='task-title'>Triangolo?</span>
+			<p class="text">Un triangolo esiste solo quando la somma di due lati qualsiasi è maggiore del terzo. Dati a, b, c - lati del presunto triangolo. È necessario confrontare la lunghezza di ciascun segmento-lato con la somma degli altri due. Se almeno in un caso un segmento risulta maggiore della somma degli altri due, allora un triangolo con tali lati non esiste.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> YES<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> NO<br>
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Momento della giornata</span>
+			<p class="text">L'utente inserisce l'ora in ore. Se il numero inserito è compreso tra 5 e 11 ore inclusi, stampa la stringa 'Mattina'. Se il numero è compreso tra 12 e 17 ore inclusi, stampa la stringa 'Giorno'. Se il numero è compreso tra 18 e 22, stampa 'Sera'. In caso di notte fonda (da 23 a 4 inclusi) stampa 'Notte'. Negli altri casi stampa la stringa 'Errore'.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Notte<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 6
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Mattina<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 13
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Giorno<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 2020
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Errore<br>
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Giorno della settimana</span>
+			<p class="text">L'utente inserisce il numero del giorno della settimana. Stampa la stringa 'Fine settimana' se il numero inserito è 6 o 7. Se il numero è compreso tra 1 e 5 inclusi, stampa la stringa 'Giorni feriali'.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Giorni feriali<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 6
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Fine settimana<br>
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Descrizione del numero</span>
+			<p class="text">L'utente inserisce un numero intero. Stampa la sua descrizione sotto forma di stringa come "numero pari negativo", "zero", "numero dispari positivo", ad esempio, la descrizione numerica del numero 190 è la stringa "numero pari positivo".</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> numero dispari positivo<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> -6
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> numero pari negativo<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> zero<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> numero pari positivo<br>
+			</p>
+			<span class="num">7.</span> <span class='task-title'>Cavallo (boss finale)</span>
+			<p class="text">Il cavallo degli scacchi si muove a forma di "L" - due case in verticale in qualsiasi direzione e una casa in orizzontale, o viceversa. Date due diverse case della scacchiera, determina se il cavallo può passare dalla prima casa alla seconda in una mossa. Se almeno uno dei numeri inseriti non è compreso tra 1 e 8, stampa la stringa "Errore!".</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># coordinata x1</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># coordinata y1</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># coordinata x2</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># coordinata y2</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> NO<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># coordinata x1</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># coordinata y1</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># coordinata x2</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># coordinata y2</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> YES<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># coordinata x1</span>
+				<br>
+				<span class="red">>></span> 8 <span class="grey"># coordinata y1</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># coordinata x2</span>
+				<br>
+				<span class="red">>></span> 6 <span class="grey"># coordinata y2</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> YES<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># coordinata x1</span>
+				<br>
+				<span class="red">>></span> 4 <span class="grey"># coordinata y1</span>
+				<br>
+				<span class="red">>></span> 5 <span class="grey"># coordinata x2</span>
+				<br>
+				<span class="red">>></span> 6 <span class="grey"># coordinata y2</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> YES
+			</p>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Ciclo for in Python</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Ciclo for in Python</h1>
+			<a href="index.html" class="link special">Torna all'inizio</a>
+			<p class="text">Un ciclo in qualsiasi linguaggio di programmazione è l'esecuzione ripetuta della stessa azione. </p>
+			<p class="text">In Python è un po' diverso. Qui il ciclo for è un ciclo di iterazione su una sequenza. È composto da due componenti: una variabile (o variabili) del ciclo e una sequenza. Ecco un esempio:</p>
+			<p class="code">
+				<span class="red">f<span class="red">or </span></span>item<span class="red"> in </span><span class="yellow">'one'</span>, <span class="yellow">'two'</span>, <span class="yellow">'three'</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(item)
+			</p>
+			<p class="text">Nell'esempio precedente, la variabile del ciclo item assume successivamente ogni valore della sequenza, che è scritta dopo la parola chiave in. Alla prima iterazione, la variabile item è uguale alla stringa 'one', alla seconda - alla stringa 'two', alla terza - alla stringa 'three'.</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> one
+				<br>
+				<span class="red">>></span> two
+				<br>
+				<span class="red">>></span> three
+			</p>
+			<p class="text">Altri esempi:</p>
+			<p class="code">
+				<span class="red">f<span class="red">or </span></span>element<span class="red"> in </span><span class="yellow">'1'</span>, <span class="yellow">'hello'</span>, <span class="purple">2</span>, <span class="purple">1990</span>, <span class="purple">True</span>, <span class="purple">False</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(element)
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> hello
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 1990
+				<br>
+				<span class="red">>></span> True
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<p class="code">
+				<span class="red">f<span class="red">or </span></span>letter<span class="red"> in </span><span class="yellow">'Hello world'</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(letter)
+			</p>
+			<p class="code">
+				<span class="red">>></span> H
+				<br>
+				<span class="red">>></span> e
+				<br>
+				<span class="red">>></span> l
+				<br>
+				<span class="red">>></span> l
+				<br>
+				<span class="red">>></span> o
+				<br>
+				<span class="red">>></span>
+				<br>
+				<span class="red">>></span> w
+				<br>
+				<span class="red">>></span> o
+				<br>
+				<span class="red">>></span> r
+				<br>
+				<span class="red">>></span> l
+				<br>
+				<span class="red">>></span> d
+			</p>
+			<p class="title" style='font-weight: bold'>Funzione range() </h1>
+			<p class="text">La funzione range() restituisce un intervallo (sequenza) di numeri interi. range() può accettare 1, 2 o 3 argomenti.</p>
+			<p class="text">Esempi della funzione range() con un argomento:</p>
+			<p class="code">
+				<span class="grey"># range() con un argomento<br></span>
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'range(3) -> 0, 1, 2'</span>)
+				<br>
+				<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span><span class="blue">range</span>(<span class="purple">3</span>): <span class="grey"># range(3) -> 0, 1, 2</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(x)<br>
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'range(5) -> 0, 1, 2, 3, 4'</span>)
+				<br>
+				<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span><span class="blue">range</span>(<span class="purple">5</span>): <span class="grey"># range(5) -> 0, 1, 2, 3, 4</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(x)<br>
+				<br>
+				<span class="grey"># range(1) -> 0</span>
+				<br>
+				<span class="grey"># range(6) -> 0, 1, 2, 3, 4, 5</span>
+				<br>
+				<span class="grey"># range(10) -> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> range(3) -> 0, 1, 2
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> range(5) -> 0, 1, 2, 3, 4
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+			</p>
+			<p class="text">Esempi della funzione range() con due argomenti:</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="yellow">'range(3, 5) -> 3, 4'</span>)
+				<br>
+				<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span><span class="blue">range</span>(<span class="purple">3</span>, <span class="purple">5</span>): <span class="grey"># range(3, 5) -> 3, 4</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(x)<br>
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'range(1, 5) -> 1, 2, 3, 4'</span>)
+				<br>
+				<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span><span class="blue">range</span>(<span class="purple">1</span>, <span class="purple">5</span>): <span class="grey"># range(1, 5) -> 1, 2, 3, 4</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(x)<br>
+				<br>
+				<span class="grey"># range(2, 7) -> 2, 3, 4, 5, 6</span>
+				<br>
+				<span class="grey"># range(100, 105) -> 100, 101, 102, 103, 104</span>
+				<br>
+				<span class="grey"># range(50, 53) -> 50, 51, 52</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> range(3, 5) -> 3, 4
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> range(1, 5) -> 1, 2, 3, 4
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+			</p>
+			<p class="text">Esempi della funzione range() con tre argomenti:</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="yellow">'range(0, 10, 2) -> 0, 2, 4, 6, 8'</span>)
+				<br>
+				<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span><span class="blue">range</span>(<span class="purple">0</span>, <span class="purple">10</span>, <span class="purple">2</span>): <span class="grey"># range(0, 10, 2) -> 0, 2, 4, 6, 8</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(x)<br>
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'range(1, 10, 2) -> 1, 3, 5, 7, 9'</span>)
+				<br>
+				<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span><span class="blue">range</span>(<span class="purple">1</span>, <span class="purple">10</span>, <span class="purple">2</span>): <span class="grey"># range(1, 10, 2) -> 1, 3, 5, 7, 9</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(x)<br>
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'range(10, 20, 3) -> 10, 13, 16, 19'</span>)
+				<br>
+				<span class="red">f<span class="red">or </span></span>x<span class="red"> in </span><span class="blue">range</span>(<span class="purple">10</span>, <span class="purple">20</span>, <span class="purple">3</span>): <span class="grey"># range(10, 20, 3) -> 10, 13, 16, 19</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(x)<br>
+				<br>
+				<span class="grey"># range(2, 7, 5) -> 2</span>
+				<br>
+				<span class="grey"># range(1, 8, 4) -> 1, 5</span>
+				<br>
+				<span class="grey"># range(4, 20, 5) -> 4, 9, 14, 19</span>
+			</p>
+			<p class="code">
+				<span class="red">>></span> range(0, 10, 2) -> 0, 2, 4, 6, 8
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 6
+				<br>
+				<span class="red">>></span> 8
+				<br>
+				<span class="red">>></span> range(1, 10, 2) -> 1, 3, 5, 7, 9
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="red">>></span> 7
+				<br>
+				<span class="red">>></span> 9
+				<br>
+				<span class="red">>></span> range(10, 20, 3) -> 10, 13, 16, 19
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 13
+				<br>
+				<span class="red">>></span> 16
+				<br>
+				<span class="red">>></span> 19
+			</p>
+			<h1 class="main-title">Risoluzione dei problemi</h1>
+			<span class="num">1.</span> <span class='task-title'>Stampa dei numeri da 0 a N</span>
+			<p class="text">L'utente inserisce un numero N. Stampa tutti i numeri da 0 a N inclusi.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Stampa dei numeri da K a N</span>
+			<p class="text">L'utente inserisce i numeri K e N. Stampa tutti i numeri da K a N inclusi.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 7
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="red">>></span> 6
+				<br>
+				<span class="red">>></span> 7
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Somma da K a N</span>
+			<p class="text">L'utente inserisce i numeri K e N. Stampa la somma dei numeri da K a N inclusi.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">1</span>
+				<br>
+				<span class="red">>></span> <span class="purple">5</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">15</span>
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Somma dei pari da K a N</span>
+			<p class="text">L'utente inserisce i numeri K e N. Stampa la somma dei soli numeri pari da K a N inclusi.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 6 <span class="grey"># 2 + 4</span>
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Somma di frazioni (parte prima)</span>
+			<p class="text">L'utente inserisce un numero N. Trova la somma dei numeri: 1 + 1.1 + 1.2 + 1.3 + ... + (1 + N / 10).</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 7.5
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Somma di frazioni (parte seconda)</span>
+			<p class="text">L'utente inserisce un numero N. Trova la somma dei numeri: 1 + 1/2 + 1/3 + ... + 1/N</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 2.283
+			</p>
+			<span style='display: block;' class='task-title'>Questa volta niente boss finale...</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Operatori in Python</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Operatori in Python</h1>
+			<a href="index.html" class="link special">Torna all'inizio</a>
+			<p class="text">Nel linguaggio di programmazione Python esistono operatori aritmetici, logici e di confronto. </p>
+			<p class="text">Addizione:</p>
+			<p class="code">
+				<span class="grey"># Addizione</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">+ </span><span class="purple">30</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 40
+			</p>
+			<p class="text">Sottrazione:</p>
+			<p class="code">
+				<span class="grey"># Sottrazione</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">30</span> <span class="red">- </span><span class="purple">20</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 10
+			</p>
+			<p class="text">Moltiplicazione:</p>
+			<p class="code">
+				<span class="grey"># Moltiplicazione</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">* </span><span class="purple">9</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 18
+			</p>
+			<p class="text">Divisione:</p>
+			<p class="code">
+				<span class="grey"># Divisione</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">100</span><span class="red"> / </span><span class="purple">25</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 4
+			</p>
+			<p class="text">Oltre ai quattro operatori familiari, ce ne sono alcuni più esotici: modulo (resto della divisione), divisione intera, elevamento a potenza.</p>
+			<p class="text">Modulo (resto della divisione):</p>
+			<p class="code">
+				<span class="grey"># Modulo della divisione per 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">0</span> <span class="red">%</span> <span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span> <span class="red">%</span> <span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">%</span> <span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span> <span class="red">%</span> <span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">4</span> <span class="red">%</span> <span class="purple">2</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 0 % 2</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 1 % 2</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 2 % 2</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 3 % 2</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 4 % 2</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Modulo della divisione per 3</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">0</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">3</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">4</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">5</span> <span class="red">%</span> <span class="purple">3</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">6</span> <span class="red">%</span> <span class="purple">3</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 0 % 3</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 1 % 3</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># 2 % 3</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 3 % 3</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 4 % 3</span>
+				<br>
+				<span class="red">>></span> 2 <span class="grey"># 5 % 3</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 6 % 3</span>
+			</p>
+			<p class="text">Divisione intera:</p>
+			<p class="code">
+				<span class="grey"># Divisione intera per 10</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">91</span> <span class="red">// </span><span class="purple">10</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">85</span> <span class="red">// </span><span class="purple">10</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">16</span> <span class="red">// </span><span class="purple">10</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">8</span> <span class="red">// </span><span class="purple">10</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 9 <span class="grey"># 91 // 10</span>
+				<br>
+				<span class="red">>></span> 8 <span class="grey"># 85 // 10</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># 16 // 10</span>
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 8 // 10</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Divisione intera per 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">14</span> <span class="red">// </span><span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">15</span> <span class="red">// </span><span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">7</span> <span class="red">// </span><span class="purple">2</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">6</span> <span class="red">// </span><span class="purple">2</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 7 <span class="grey"># 14 // 2</span>
+				<br>
+				<span class="red">>></span> 7 <span class="grey"># 15 // 2</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># 7 // 2</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># 6 // 2</span>
+			</p>
+			<p class="text">Elevamento a potenza:</p>
+			<p class="code">
+				<span class="grey"># Elevamento a potenza del numero 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">0</span>) <span class="grey"># 1</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">1</span>) <span class="grey"># 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">2</span>) <span class="grey"># 2 * 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">3</span>) <span class="grey"># 2 * 2 * 2</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">2</span> <span class="red">*<span class="red">* </span></span><span class="purple">4</span>) <span class="grey"># 2 * 2 * 2 * 2</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 8
+				<br>
+				<span class="red">>></span> 16
+			</p>
+			<p class="text">Gli operatori di confronto (╮°-°)╮ possono restituire solo due risultati: True e False.</p>
+			<p class="text">L'operatore di uguaglianza == restituisce True se i numeri sono uguali, altrimenti False.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">10</span>
+				<br>
+				b<span class="red"> = </span><span class="purple">10</span>
+				<br>
+				<span class="blue">print</span>(a <span class="red">==</span> b)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">8</span>
+				<br>
+				b<span class="red"> = </span><span class="purple">7</span>
+				<br>
+				<span class="blue">print</span>(a <span class="red">==</span> b)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<p class="text">L'operatore di disuguaglianza != restituisce True se i numeri non sono uguali, altrimenti False.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">8</span>
+				<br>
+				b<span class="red"> = </span><span class="purple">7</span>
+				<br>
+				<span class="blue">print</span>(a <span class="red">!= </span>b)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<p class="text">L'operatore maggiore > restituisce True se il primo numero è maggiore del secondo, altrimenti False.</p>
+			<p class="code">
+				a<span class="red"> = </span><span class="purple">8</span>
+				<br>
+				b<span class="red"> = </span><span class="purple">7</span>
+				<br>
+				<span class="blue">print</span>(a<span class="red"> > </span>b)
+				<br>
+				<span class="blue">print</span>(b<span class="red"> > </span>a)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> True <span class="grey"># a > b</span>
+				<br>
+				<span class="red">>></span> False <span class="grey"># b > a</span>
+			</p>
+			<p class="text">L'operatore minore < restituisce True se il primo numero è minore del secondo, altrimenti False.</p>
+			<p class="code">
+				c<span class="red"> = </span><span class="purple">100</span>
+				<br>
+				d<span class="red"> = </span><span class="purple">200</span>
+				<br>
+				<span class="blue">print</span>(c<span class="red"> < </span>d)
+				<br>
+				<span class="blue">print</span>(d<span class="red"> < </span>c)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> True <span class="grey"># c < d</span>
+				<br>
+				<span class="red">>></span> False <span class="grey"># d < c</span>
+			</p>
+			<p class="text">L'operatore minore o uguale <= restituisce True se il primo numero è minore o uguale al secondo, altrimenti False.</p>
+			<p class="text">L'operatore maggiore o uguale >= restituisce True se il primo numero è maggiore o uguale al secondo, altrimenti False.</p>
+			<p class="code">
+				c<span class="red"> = </span><span class="purple">200</span>
+				<br>
+				d<span class="red"> = </span><span class="purple">200</span>
+				<br>
+				<span class="blue">print</span>(c <span class="red">>= </span>d)
+				<br>
+				<span class="blue">print</span>(d <span class="red"><= </span>c)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> True <span class="grey"># c >= d</span>
+				<br>
+				<span class="red">>></span> True <span class="grey"># d <= c</span>
+			</p>
+			<p class="text">A volte è necessario eseguire più operatori di confronto contemporaneamente. A tale scopo esiste l'operatore and (operatore di moltiplicazione logica, congiunzione).</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">10</span><span class="red"> > </span><span class="purple">0</span> <span class="red">and </span><span class="purple">5</span><span class="red"> > </span><span class="purple">0</span>)
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span> <span class="red">and </span><span class="purple">12</span> <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>) <span class="grey"># entrambi i numeri sono pari</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> True
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<p class="text">Se almeno uno degli operatori è False, il risultato dell'operatore sarà False. La congiunzione è vera se e solo se tutte le condizioni sono vere.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">10</span><span class="red"> > </span><span class="purple">100</span> <span class="red">and </span><span class="purple">5</span><span class="red"> > </span><span class="purple">0</span> <span class="red">and </span><span class="purple">10</span><span class="red"> > </span><span class="purple">0</span>) <span class="grey"># False</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<p class="text">L'addizione logica (disgiunzione) o operatore or richiede che ALMENO una condizione sia soddisfatta.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">10</span><span class="red"> > </span><span class="purple">100</span> <span class="red">or </span><span class="purple">5</span><span class="red"> > </span><span class="purple">100</span> <span class="red">or </span><span class="purple">10</span><span class="red"> > </span><span class="purple">0</span>) <span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">1</span> <span class="red">==</span> <span class="purple">0</span> <span class="red">or </span><span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>) <span class="grey"># False, entrambe le condizioni sono false</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> True
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<p class="text">L'ultimo degli operatori è l'operatore di inversione not. L'operatore not cambia (inverte) il valore al suo opposto.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="red">not </span>False) <span class="grey"># True</span>
+				<br>
+				<span class="blue">print</span>(<span class="red">not </span>True) <span class="grey"># False</span>
+				<br>
+				<span class="blue">print</span>(<span class="red">not </span><span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>) <span class="grey"># True</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> True
+				<br>
+				<span class="red">>></span> False
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<p class="text">L'operatore not ha la priorità.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="red">not </span><span class="purple">1</span> <span class="red">==</span> <span class="purple">0</span> <span class="red">or </span><span class="purple">2</span> <span class="red">==</span> <span class="purple">0</span>) <span class="grey"># True, il valore della prima condizione è invertito</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<h1 class="main-title">Risoluzione dei problemi</h1>
+			<span class="num">1.</span> <span class='task-title'>Stessa parità</span>
+			<p class="text">Dati due numeri interi: A, B. Verificare la verità dell'affermazione: "I numeri A e B hanno la stessa parità".</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> False<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Uno positivo</span>
+			<p class="text">Dati tre numeri interi: A, B, C. Verificare la verità dell'affermazione: "Almeno uno dei numeri A, B, C è positivo".</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> -1
+				<br>
+				<span class="red">>></span> -10
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> False<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> -1
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> True
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Ultima cifra</span>
+			<p class="text">Dato un numero naturale. Visualizza la sua ultima cifra.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 2345678
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 8<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 19
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 9
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Cifre di un numero a due cifre</span>
+			<p class="text">Dato un numero a due cifre. Trova la somma delle sue cifre.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 22
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 4<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 99
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 18
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Cifre di un numero a tre cifre</span>
+			<p class="text">Dato un numero a tre cifre. Trova la somma delle sue cifre.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span>123
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 6<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 332
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 8
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Cifre diverse</span>
+			<p class="text">Dato un numero a tre cifre. Verificare la verità dell'affermazione: "Tutte le cifre di questo numero sono diverse".</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 123
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> True<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 332
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> False
+			</p>
+			<span class="num">7.</span> <span class='task-title'>Orologio (boss finale)</span>
+			<p class="text">Dall'inizio della giornata sono trascorsi N secondi (N - intero). Trova il numero di ore, minuti e secondi sull'orologio elettronico.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1000
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 0 16 40<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 10000
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 2 46 40<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 85001
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 23 36 41<br>
+			</p>
+
+		</div>
+	</body>
+</html>

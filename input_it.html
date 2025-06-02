@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Input e output dei dati</title>
+	<link rel="stylesheet" href="main.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Input e output dei dati</h1>
+			<a href="index.html" class="link special">Torna all'inizio</a>
+			<p class="text">Una variabile è un contenitore nominato per un valore specificato.</p>
+			<p class="code">
+				<span class="grey"># Esempio di creazione di variabili<br></span>
+				<br>
+				age<span class="red"> = </span><span class="purple">19</span>
+				<br>
+				name<span class="red"> = </span><span class="yellow">'Lorenzo'</span>
+				<br>
+				isActive<span class="red"> = </span><span class="purple">True</span>
+			</p>
+			<p class="code">
+				name<span class="red"> = </span><span class="yellow">'Marco'</span>
+				<br>
+				Name<span class="red"> = </span><span class="yellow">'Lorenzo'</span><br>
+				<br>
+				<span class="grey"># name e Name sono variabili diverse</span>
+			</p>
+			<p class="code">
+				<span class="grey"># I nomi delle variabili non possono iniziare con un numero!</span>
+			</p>
+			<p class="text">In Python ci sono 4 tipi di dati primitivi:</p>
+			<p class="code">
+				<span class="grey"># int (numeri interi)</span>
+				<br>
+				age<span class="red"> = </span><span class="purple">18</span><br>
+				<br>
+				<span class="grey"># float (numeri decimali)</span>
+				<br>
+				fraction<span class="red"> = </span><span class="purple">2.5</span><br>
+				<br>
+				<span class="grey"># str (stringhe)</span>
+				<br>
+				fruit<span class="red"> = </span><span class="yellow">'apple'</span><br>
+				<br>
+				<span class="grey"># bool (vero o falso)</span>
+				<br>
+				isReady<span class="red"> = </span><span class="purple">True</span> <span class="grey"># solo due valori: True e False</span>
+			</p>
+			<p class="text">Possiamo convertire un tipo di dati in un altro usando funzioni con lo stesso nome. Ad esempio, un numero può diventare una stringa, una stringa un numero, un numero decimale un intero.</p>
+			<p class="code">
+				age<span class="red"> = </span><span class="yellow">'22'</span> <span class="grey"># str -> '22'</span>
+				<br>
+				age<span class="red"> = </span><span class="blue">int</span>(age) <span class="grey"># int -> 22</span>
+				<br>
+				age<span class="red"> = </span><span class="blue">float</span>(age) <span class="grey"># float -> 22.0</span>
+				<br>
+				age<span class="red"> = </span><span class="blue">bool</span>(age) <span class="grey"># bool -> True</span>
+			</p>
+			<p class="text">La funzione print() visualizza i dati sullo schermo. </p>
+			<p class="code">
+				name<span class="red"> = </span><span class="yellow">'Alessandro'</span>
+				<br>
+				<span class="grey"># Tra parentesi vengono scritti i parametri passati alla funzione</span>
+				<br>
+				<span class="blue">print</span>(name)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> Alessandro
+			</p>
+			<p class="text">La funzione print() può accettare più parametri di input.</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="purple">1</span>, <span class="purple">2</span>, <span class="purple">3</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> 1 2 3
+			</p>
+			<p class="text">Ogni print() visualizza i dati su una nuova riga. Per impostazione predefinita, il carattere di terminazione della stringa è uguale al carattere di nuova riga (\n).</p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="yellow">'Hello'</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'world'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> Hello
+				<br>
+				<span class="red">>></span> world
+			</p>
+			<p class="text">Il carattere di terminazione della stringa nella funzione print() può essere modificato. </p>
+			<p class="code">
+				<span class="blue">print</span>(<span class="yellow">'Hello'</span>, <span class="orange">end</span><span class="red">=</span><span class="yellow">' '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'world'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output</span>
+				<br>
+				<span class="red">>></span> Hello world
+			</p>
+			<p class="text">La funzione input() accetta l'input di dati da parte dell'utente.</p>
+			<p class="code">
+				name<span class="red"> = </span><span class="blue">input</span>()
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello '</span> <span class="red">+ </span>name)
+				<br>
+				<span class="grey"># Dopo l'avvio dello script, Python attenderà l'input dei dati</span>
+			</p>
+			<p class="text">La funzione input può accettare solo un argomento: una stringa che verrà visualizzata prima della stringa di input.</p>
+			<p class="code">
+				name<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Enter your name: '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Hello, '</span> <span class="red">+ </span>name)
+			</p>
+			<p class="text">I dati ottenuti con la funzione input() sono di tipo stringa (str).</p>
+			<p class="text">Le stringhe possono essere sommate tra loro, tale somma è chiamata concatenazione o unione.</p>
+			<p class="code">
+				<span class="grey"># Somma di due numeri stringa</span>
+				<br>
+				number1<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>)
+				<br>
+				number2<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>)
+				<br>
+				<span class="blue">print</span>(number1 <span class="red">+ </span>number2)
+			</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 12
+			</p>
+			<p class="text">Convertiamo il tipo stringa in un numero intero (str -> int).</p>
+			<p class="code">
+				<span class="grey"># Somma corretta di due numeri</span>
+				<br>
+				number1<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>))
+				<br>
+				number2<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>))
+				<br>
+				<span class="blue">print</span>(number1 <span class="red">+ </span>number2)
+			</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 3
+			</p>
+			<h1 class="main-title">Esempi</h1>
+			<span class="num">1.</span> <span class='task-title'>Prodotto</span>
+			<p class="code">
+				<span class="grey"># Prodotto di due numeri inseriti</span>
+				<br>
+				a<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>))
+				<br>
+				b<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>))
+				<br>
+				<span class="blue">print</span>(a <span class="red">* </span>b)
+			</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 12
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Saluto</span>
+			<p class="code">
+				<span class="grey"># Saluto all'utente con il suo nome</span>
+				<br>
+				firstname<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Inserisci il tuo nome: '</span>) <span class="grey"># qui non è necessario convertire in int</span>
+				<br>
+				lastname<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Inserisci il tuo cognome: '</span>)
+				<br>
+				<span class="blue">print</span>(<span class="yellow">'Buongiorno, '</span> <span class="red">+ </span>firstname <span class="red">+ </span><span class="yellow">' '</span> <span class="red">+ </span>lastname) <span class="grey"># non dimenticare lo spazio tra le parole</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> Lorenzo
+				<br>
+				<span class="red">>></span> Rossi
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Buongiorno, Lorenzo Rossi
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Resto</span>
+			<p class="code">
+				<span class="grey"># L'operazione % permette di ottenere il resto della divisione</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">%</span> <span class="purple">2</span>) <span class="grey"># 0, poiché 10 è divisibile per 2 senza resto</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">%</span> <span class="purple">3</span>) <span class="grey"># 1, il resto è 1</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">%</span> <span class="purple">4</span>) <span class="grey"># 2, il resto è 2</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Divisione intera</span>
+			<p class="code">
+				<span class="grey"># L'operazione // permette di ottenere la parte intera della divisione</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">// </span><span class="purple">2</span>) <span class="grey"># 5</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">// </span><span class="purple">3</span>) <span class="grey"># 3</span>
+				<br>
+				<span class="blue">print</span>(<span class="purple">10</span> <span class="red">// </span><span class="purple">4</span>) <span class="grey"># 2</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 2
+			</p>
+			<h1 class="main-title">Risoluzione dei problemi</h1>
+			<span class="num">1.</span> <span class='task-title'>Somma di tre</span>
+			<p class="text">Calcola la somma di tre numeri interi inseriti</p>
+			<span class="num">2.</span> <span class='task-title'>Area</span>
+			<p class="text">L'utente inserisce i lati di un rettangolo, visualizza la sua area</p>
+			<span class="num">3.</span> <span class='task-title'>Perimetro</span>
+			<p class="text">L'utente inserisce i lati di un rettangolo, visualizza il suo perimetro</p>
+			<span class="num">4.</span> <span class='task-title'>Area del cerchio</span>
+			<p class="text">L'utente inserisce il raggio di un cerchio, visualizza l'area del cerchio</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 12.56
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Somma di decimali</span>
+			<p class="text">Calcola la somma di tre numeri decimali inseriti.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1.5
+				<br>
+				<span class="red">>></span> 2.5
+				<br>
+				<span class="red">>></span> 1.1
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 5.1
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Scolari e mele</span>
+			<p class="text">n scolari dividono k mele equamente, il resto non divisibile rimane nel cestino. Quante mele riceverà ogni scolaro? Quante mele rimarranno nel cestino?</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 3 <span class="grey"># per ciascuno</span>
+				<br>
+				<span class="red">>></span> 1 <span class="grey"># rimarrà</span>
+			</p>
+		</div>
+	</body>
+</html>
