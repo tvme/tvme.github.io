@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Ciclo while in Python</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Ciclo while in Python</h1>
+			<a href="index.html" class="link special">Torna all'inizio</a>
+			<p class="text">Il ciclo while ("mentre") permette di eseguire la stessa sequenza di azioni finché la condizione verificata è vera. La condizione viene scritta dopo la parola chiave while e viene verificata prima dell'esecuzione del corpo del ciclo.</p>
+			<p class="text">Il ciclo while viene utilizzato quando è impossibile determinare il numero esatto di ripetizioni del ciclo.</p>
+			<p class="code">
+				i<span class="red"> = </span><span class="purple">0</span> <span class="grey"># dichiarazione della variabile i per la condizione del ciclo</span>
+				<br>
+				<span class="red">while </span>i<span class="red"> < </span><span class="purple">5</span>: <span class="grey"># parola chiave 'while' e condizione di esecuzione del ciclo</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># corpo del ciclo</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(i) <span class="grey"># stampa del valore della variabile i</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span> <span class="grey"># incremento del valore della variabile i di uno</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+			</p>
+			<p class="text">Il ciclo while può essere infinito.</p>
+			<p class="code">
+				i<span class="red"> = </span><span class="purple">0</span>
+				<br>
+				<span class="red">while </span><span class="purple">True</span>: <span class="grey"># la condizione è sempre vera</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(i)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				...
+				<br>
+				<span class="red">>></span> 999
+				<br>
+				...
+				<br>
+				<span class="grey"># Questo può continuare a lungo...</span>
+			</p>
+			<p class="text">L'esecuzione del ciclo può essere interrotta con l'operatore break.</p>
+			<p class="code">
+				i<span class="red"> = </span><span class="purple">0</span>
+				<br>
+				<span class="red">while </span><span class="purple">1</span>: <span class="grey"># la condizione è sempre vera</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>i <span class="red">==</span> <span class="purple">3</span>: <span class="grey"># se i è uguale a 3, allora chiamiamo l'operatore break</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">break</span> <span class="grey"># l'operatore break interrompe l'esecuzione del ciclo</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(i)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+			</p>
+			<p class="text">L'operatore continue ricomincia l'iterazione del ciclo.</p>
+			<p class="code">
+				i<span class="red"> = </span><span class="purple">0</span>
+				<br>
+				<span class="red">while </span>i<span class="red"> < </span><span class="purple">5</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;i <span class="red">+= </span><span class="purple">1</span> <span class="grey">#</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">if </span>i <span class="red">%</span> <span class="purple">2</span> <span class="red">==</span> <span class="purple">1</span>: <span class="grey"># se il valore di i è dispari, allora chiamiamo l'operatore continue</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">continue</span> <span class="grey"># l'operatore continue ricomincia l'iterazione del ciclo</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># in caso di chiamata a continue il codice sottostante non verrà eseguito</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(i)
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 4
+			</p>
+			<p class="text">Come per il ciclo for, per il ciclo while possiamo scrivere la costruzione else.</p>
+			<p class="code">
+				x<span class="red"> = </span><span class="purple">1</span>
+				<br>
+				<span class="red">while </span>x<span class="red"> < </span><span class="purple">5</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(x)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;x <span class="red">+= </span><span class="purple">1</span>
+				<br>
+				<span class="red">else</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(<span class="yellow">'Ciclo completato'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> Ciclo completato
+			</p>
+			<h1 class="main-title">Esempi</h1>
+			<span class="num">1.</span> <span class='task-title'>Numeri da A a B</span>
+			<p class="code">
+				<span class="grey"># L'utente inserisce i numeri a e b (a > b). Stampa tutti i numeri da a a b inclusi.<br></span>
+				<br>
+				a<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>))
+				<br>
+				b<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>))<br>
+				<br>
+				<span class="red">while </span>a <span class="red">>= </span>b:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(a)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;a <span class="red">-=</span> <span class="purple">1</span>
+			</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 12
+				<br>
+				<span class="red">>></span> 7
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 12
+				<br>
+				<span class="red">>></span> 11
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 9
+				<br>
+				<span class="red">>></span> 8
+				<br>
+				<span class="red">>></span> 7<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 2
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Molti numeri</span>
+			<p class="code">
+				<span class="grey"># L'utente inserisce numeri finché non inserisce 0.</span>
+				<br>
+				<span class="grey"># Stampa il numero di numeri inseriti (0 non deve essere contato).<br></span>
+				<br>
+				n<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>))
+				<br>
+				counter<span class="red"> = </span><span class="purple">0</span> <span class="grey"># contatore dei numeri inseriti</span>
+				<br>
+				<span class="red">while </span>n: <span class="grey"># n viene implicitamente convertito in tipo bool</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># se n è uguale a 0, l'esecuzione del ciclo si interromperà</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;n<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>)) <span class="grey"># inseriamo un altro numero</span>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;counter <span class="red">+= </span><span class="purple">1</span> <span class="grey"># incrementiamo il contatore<br></span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'Numero di numeri</span> {counter}<span class="yellow">'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 100
+				<br>
+				<span class="red">>></span> 1000
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Numero di numeri 4
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Divisore più piccolo</span>
+			<p class="code">
+				<span class="grey"># L'utente inserisce un numero N (N > 1). Stampa il suo divisore più piccolo.</span>
+				<br>
+				N<span class="red"> = </span><span class="blue">int</span>(<span class="blue">input</span>(<span class="yellow">'Inserisci un numero: '</span>))
+				<br>
+				div<span class="red"> = </span><span class="purple">2</span><br>
+				<br>
+				<span class="red">while </span>N <span class="red">%</span> div <span class="red">!= </span><span class="purple">0</span>:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;div <span class="red">+= </span><span class="purple">1</span>
+				<br>
+				<span class="blue">print</span>(<span class="blue">f</span><span class="yellow">'Il divisore più piccolo è </span>{div}<span class="yellow">'</span>)
+			</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Il divisore più piccolo è 2<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 15
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Il divisore più piccolo è 3<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 17
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Il divisore più piccolo è 17<br>
+			</p>
+			<h1 class="main-title">Risoluzione dei problemi</h1>
+			<span class="num">1.</span> <span class='task-title'>Pari da A a B</span>
+			<p class="text">L'utente inserisce i numeri A e B (A > B). Stampa i numeri pari da A a B inclusi.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 8
+				<br>
+				<span class="red">>></span> 6
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="red">>></span> 2
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Da A a B divisibili per tre</span>
+			<p class="text">L'utente inserisce i numeri A e B (A < B, A minore di B). Stampa i numeri da A a B inclusi, che sono divisibili per tre.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 15
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="red">>></span> 6
+				<br>
+				<span class="red">>></span> 9
+				<br>
+				<span class="red">>></span> 12
+				<br>
+				<span class="red">>></span> 15
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Somma dei numeri</span>
+			<p class="text">L'utente inserisce numeri finché non inserisce 0. Stampa la somma dei numeri inseriti (0 non deve essere contato). </p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 15
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 11
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> La somma è: 39
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Massimo</span>
+			<p class="text">L'utente inserisce numeri finché non inserisce 0. Stampa il numero massimo inserito (0 non deve essere contato). </p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 15
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 11
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 0
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Il massimo è: 15
+			</p>
+			<span class="num">5.</span> <span class='task-title'>Minimo</span>
+			<p class="text">L'utente inserisce numeri finché non inserisce 0. Stampa il numero minimo inserito (0 non deve essere contato). </p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 1
+				<br>
+				<span class="red">>></span> 15
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="red">>></span> 11
+				<br>
+				<span class="red">>></span> 2
+				<br>
+				<span class="red">>></span> 0 <span class="grey"># 0 non fa parte della sequenza</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Il minimo è: 1
+			</p>
+			<span class="num">6.</span> <span class='task-title'>Fattoriale</span>
+			<p class="text">L'utente inserisce un numero N. Stampa il fattoriale del numero N. Il fattoriale del numero N è il prodotto di tutti i numeri da 1 a N inclusi. Ad esempio, il fattoriale del numero 5 è 120.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 120<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 3
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 6<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 4
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 24<br>
+			</p>
+			<span class="num">7.</span> <span class='task-title'>Fibonacci (boss finale)</span>
+			<p class="text">L'utente inserisce un numero N. Stampa l'N-esimo numero di Fibonacci. La sequenza dei numeri di Fibonacci è calcolata con la seguente formula: F(1) = 1, F(2) = 1, F(K) = F(K-2) + F(K-1). L'idea è questa: ogni numero successivo è uguale alla somma dei due precedenti.</p>
+			<p class="text">I primi 10 numeri della sequenza: 1 1 2 3 5 8 13 21 34 55 ...</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 5
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 5<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 10
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 55<br>
+				<br>
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> 8
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> 21<br>
+			</p>
+
+		</div>
+	</body>
+</html>
