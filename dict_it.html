@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2CVN1GFW2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N2CVN1GFW2');
+    </script>
+    <!-- end Google tag (gtag.js) -->
+	<meta charset="UTF-8">
+	<meta content="width=device-width" name='viewport'>
+	<title>Dizionari in Python</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+			<h1 class="main-title">Dizionari in Python</h1>
+			<a href="index.html" class="link special">Torna all'inizio</a>
+			<p class="text">Un dizionario è una struttura dati non ordinata che permette di memorizzare coppie «chiave — valore». </p>
+			<p class="code">
+				<span class="grey"># Creazione di un dizionario tramite letterale<br></span>
+				<br>
+				studente<span class="red"> = </span>{<span class="yellow">'nome'</span>: <span class="yellow">'Marco'</span>, <span class="yellow">'eta'</span>: <span class="purple">12</span>}
+				<br>
+				credenziali<span class="red"> = </span>{<span class="yellow">'email'</span>: <span class="yellow">'hacker1337@mail.ru'</span>, <span class="yellow">'password'</span>: <span class="yellow">'123456'</span>}
+			</p>
+			<p class="code">
+				<span class="grey"># Creazione di un dizionario tramite la funzione dict()<br></span>
+				<br>
+				studente<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">nome</span><span class="red">=</span><span class="yellow">'Marco'</span>, <span class="orange">eta</span><span class="red">=</span><span class="purple">12</span>)
+				<br>
+				credenziali<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">email</span><span class="red">=</span><span class="yellow">'hacker1337@mail.ru'</span>, <span class="orange">password</span><span class="red">=</span><span class="yellow">'123456'</span>)
+			</p>
+			<p class="text">Per ottenere il valore di una chiave specifica si usano le parentesi quadre []. </p>
+			<p class="code">
+				<span class="grey"># Otteniamo il valore con la chiave 'nome'<br></span>
+				<br>
+				studente<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">nome</span><span class="red">=</span><span class="yellow">'Marco'</span>, <span class="orange">eta</span><span class="red">=</span><span class="purple">12</span>)
+				<br>
+				<span class="blue">print</span>(studente[<span class="yellow">'nome'</span>]) <span class="grey"># -> Marco</span>
+			</p>
+			<p class="text">L'aggiornamento dei valori esistenti avviene esattamente allo stesso modo.</p>
+			<p class="code">
+				<span class="grey"># Otteniamo il valore con la chiave 'nome'<br></span>
+				<br>
+				studente<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">nome</span><span class="red">=</span><span class="yellow">'Marco'</span>, <span class="orange">eta</span><span class="red">=</span><span class="purple">12</span>)
+				<br>
+				studente[<span class="yellow">'nome'</span>]<span class="red"> = </span><span class="yellow">'Antonio'</span> <br>
+				<br>
+				<span class="blue">print</span>(studente[<span class="yellow">'nome'</span>]) <span class="grey"># -> Antonio</span>
+			</p>
+			<p class="text">Per eliminare una chiave e il valore corrispondente da un dizionario si può usare del</p>
+			<p class="code">
+				<span class="grey"># Eliminazione della chiave 'eta'<br></span>
+				<br>
+				studente<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">nome</span><span class="red">=</span><span class="yellow">'Marco'</span>, <span class="orange">eta</span><span class="red">=</span><span class="purple">12</span>)
+				<br>
+				<span class="red">del</span> studente[<span class="yellow">'eta'</span>]<br>
+				<br>
+				<span class="blue">print</span>(studente) <span class="grey"># -> {'nome': 'Marco'}</span>
+			</p>
+			<p class="text">Il metodo get() restituisce il valore per la chiave specificata. Se la chiave specificata non esiste, il metodo restituirà None. È anche possibile specificare un valore predefinito che verrà restituito al posto di None se la chiave non si trova nel dizionario.</p>
+			<p class="code">
+				<span class="grey"># Utilizzo del metodo get()<br></span>
+				<br>
+				studente<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">nome</span><span class="red">=</span><span class="yellow">'Marco'</span>, <span class="orange">eta</span><span class="red">=</span><span class="purple">12</span>)<br>
+				<br>
+				<span class="blue">print</span>(studente.<span class="blue">get</span>(<span class="yellow">'nome'</span>))&nbsp;&nbsp;&nbsp;&nbsp; <span class="grey"># -> Marco</span>
+				<br>
+				<span class="blue">print</span>(studente.<span class="blue">get</span>(<span class="yellow">'cognome'</span>)) <span class="grey"># -> None</span>
+				<br>
+				<span class="blue">print</span>(studente.<span class="blue">get</span>(<span class="yellow">'cognome'</span>, <span class="yellow">'Nessuna chiave'</span>)) <span class="grey"># -> Nessuna chiave</span>
+			</p>
+			<p class="text">Il metodo pop() elimina la chiave e restituisce il valore corrispondente.</p>
+			<p class="code">
+				<span class="grey"># Utilizzo del metodo pop()<br></span>
+				<br>
+				sneakers<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">marca</span><span class="red">=</span><span class="yellow">'Adidas'</span>, <span class="orange">prezzo</span><span class="red">=</span><span class="yellow">'110 €'</span>, <span class="orange">modello</span><span class="red">=</span><span class="yellow">'Nite Jogger'</span>)<br>
+				<br>
+				modello<span class="red"> = </span>sneakers.<span class="blue">pop</span>(<span class="yellow">'modello'</span>)<br>
+				<br>
+				<span class="blue">print</span>(sneakers) <span class="grey"># -> {'marca': 'Adidas', 'prezzo': '110 €'}</span>
+				<br>
+				<span class="blue">print</span>(modello)&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey"># -> Nite Jogger</span>
+			</p>
+			<p class="text">Il metodo keys() restituisce una speciale collezione di chiavi nel dizionario. </p>
+			<p class="code">
+				<span class="grey"># Utilizzo del metodo keys()<br></span>
+				<br>
+				sneakers<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">marca</span><span class="red">=</span><span class="yellow">'Adidas'</span>, <span class="orange">prezzo</span><span class="red">=</span><span class="yellow">'110 €'</span>, <span class="orange">modello</span><span class="red">=</span><span class="yellow">'Nite Jogger'</span>)<br>
+				<br>
+				<span class="blue">print</span>(sneakers.<span class="blue">keys</span>()) <span class="grey"># -> dict_keys(['marca', 'prezzo', 'modello'])<br></span>
+				<br>
+				<span class="grey"># dict_keys - è una collezione immutabile di elementi. <br></span>
+				<br>
+				chiavi<span class="red"> = </span><span class="blue">list</span>(sneakers.<span class="blue">keys</span>())
+				<br>
+				<span class="blue">print</span>(chiavi) <span class="grey"># -> ['marca', 'prezzo', 'modello']</span>
+			</p>
+			<p class="text">Il metodo values() restituisce una speciale collezione di valori nel dizionario. </p>
+			<p class="code">
+				<span class="grey"># Utilizzo del metodo values()<br></span>
+				<br>
+				sneakers<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">marca</span><span class="red">=</span><span class="yellow">'Adidas'</span>, <span class="orange">prezzo</span><span class="red">=</span><span class="yellow">'110 €'</span>, <span class="orange">modello</span><span class="red">=</span><span class="yellow">'Nite Jogger'</span>)<br>
+				<br>
+				<span class="blue">print</span>(sneakers.<span class="blue">values</span>()) <span class="grey"># -> dict_values(['Adidas', '110 €', 'Nite Jogger'])<br></span>
+				<br>
+				<span class="grey"># dict_values - è una collezione immutabile di elementi. <br></span>
+				<br>
+				valori<span class="red"> = </span><span class="blue">list</span>(sneakers.<span class="blue">values</span>())
+				<br>
+				<span class="blue">print</span>(valori) <span class="grey"># -> ['Adidas', '110 €', 'Nite Jogger']</span>
+			</p>
+			<p class="text">Il metodo items() restituisce coppie «chiave — valore» in formato di tuple.</p>
+			<p class="code">
+				<span class="grey"># Utilizzo del metodo items()<br></span>
+				<br>
+				sneakers<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">marca</span><span class="red">=</span><span class="yellow">'Adidas'</span>, <span class="orange">prezzo</span><span class="red">=</span><span class="yellow">'110 €'</span>, <span class="orange">modello</span><span class="red">=</span><span class="yellow">'Nite Jogger'</span>)<br>
+				<br>
+				<span class="blue">print</span>(sneakers.<span class="blue">items</span>()) <span class="grey"># -> dict_items([('marca', 'Adidas'), ('prezzo', '110 €'), ('modello', 'Nite Jogger')])<br></span>
+				<br>
+				<span class="grey"># dict_items - è una collezione immutabile di elementi. <br></span>
+				<br>
+				items<span class="red"> = </span><span class="blue">list</span>(sneakers.<span class="blue">items</span>())
+				<br>
+				<span class="blue">print</span>(items) <span class="grey"># -> [('marca', 'Adidas'), ('prezzo', '110 €'), ('modello', 'Nite Jogger')]</span>
+			</p>
+			<p class="code">
+				sneakers<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">marca</span><span class="red">=</span><span class="yellow">'Adidas'</span>, <span class="orange">prezzo</span><span class="red">=</span><span class="yellow">'110 €'</span>, <span class="orange">modello</span><span class="red">=</span><span class="yellow">'Nite Jogger'</span>)<br>
+				<br>
+				<span class="grey"># Stampa delle chiavi del dizionario con un ciclo for<br></span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>chiave<span class="red"> in </span>sneakers:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(chiave)<br>
+				<br>
+				<span class="grey"># -> marca</span>
+				<br>
+				<span class="grey"># -> prezzo</span>
+				<br>
+				<span class="grey"># -> modello<br></span>
+				<br>
+				<span class="grey"># Stampa dei valori del dizionario con un ciclo for<br></span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>valore<span class="red"> in </span>sneakers.<span class="blue">values</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(valore)<br>
+				<br>
+				<span class="grey"># -> Adidas</span>
+				<br>
+				<span class="grey"># -> 110 €</span>
+				<br>
+				<span class="grey"># -> Nite Jogger<br></span>
+				<br>
+				<span class="grey"># Stampa di chiavi e valori del dizionario con un ciclo for<br></span>
+				<br>
+				<span class="red">f<span class="red">or </span></span>chiave, valore<span class="red"> in </span>sneakers.<span class="blue">items</span>():
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">print</span>(chiave, valore)<br>
+				<br>
+				<span class="grey"># -> marca Adidas</span>
+				<br>
+				<span class="grey"># -> prezzo 110 €</span>
+				<br>
+				<span class="grey"># -> modello Nite Jogger</span>
+			</p>
+			<p class="text">Il metodo setdefault() restituisce il valore della chiave, ma se non esiste, crea la chiave con il valore specificato (predefinito None).</p>
+			<p class="code">
+				<span class="grey"># Metodo setdefault() <br></span>
+				<br>
+				studente<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">nome</span><span class="red">=</span><span class="yellow">'Marco'</span>, <span class="orange">eta</span><span class="red">=</span><span class="purple">12</span>)<br>
+				studente.<span class="blue">setdefault</span>(<span class="yellow">'cognome'</span>, <span class="yellow">'Rossi'</span>)<br>
+				<br>
+				<span class="blue">print</span>(studente) <span class="grey"># -> {'nome': 'Marco', 'eta': 12, 'cognome': 'Rossi'}</span>
+			</p>
+			<h1 class="main-title">Risoluzione dei problemi</h1>
+			<span class="num">1.</span> <span class='task-title'>Utente</span>
+			<p class="code">
+				<span class="grey"># L'utente inserisce nome, cognome, età. Crea un dizionario utente e registra i dati dell'utente in esso.</span>
+				<br>
+				nome<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Inserisci il tuo nome: '</span>)
+				<br>
+				cognome<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Inserisci il tuo cognome: '</span>)
+				<br>
+				eta<span class="red"> = </span><span class="blue">input</span>(<span class="yellow">'Inserisci la tua età: '</span>)<br>
+				<br>
+				utente<span class="red"> = </span><span class="blue">dict</span>(<span class="orange">nome</span><span class="red">=</span>nome, <span class="orange">cognome</span><span class="red">=</span>cognome, <span class="orange">eta</span><span class="red">=</span>eta)
+				<br>
+				<span class="blue">print</span>(utente)
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Trova parola</span>
+			<p class="code">
+				<span class="grey"># Stampa la parola più frequente nella stringa inserita.</span>
+				<br>
+				lista_di_parole<span class="red"> = </span>[<span class="yellow">'ciao'</span>, <span class="yellow">'ciao'</span>, <span class="yellow">'salve'</span>]
+				<br>
+				parole<span class="red"> = </span>{}<br>
+				<br>
+				<span class="red">f<span class="red">or </span></span>parola<span class="red"> in </span>lista_di_parole:
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;parole[parola]<span class="red"> = </span>parole.<span class="blue">get</span>(parola, <span class="purple">0</span>) <span class="red">+ </span><span class="purple">1</span><br>
+				<br>
+				<span class="grey"># La funzione max può ricevere una funzione come secondo argomento</span>
+				<br>
+				parola_freq<span class="red"> = </span><span class="blue">max</span>(parole, <span class="orange">key</span><span class="red">=</span>parole.get)<br>
+				<br>
+				<span class="blue">print</span>(parola_freq)
+			</p>
+			<h1 class="main-title">Problemi da risolvere autonomamente</h1>
+			<span class="num">1.</span> <span class='task-title'>Frutta</span>
+			<p class="text">L'utente inserisce un numero K - la quantità di frutta. Quindi inserisce K frutti nel formato: nome del frutto e sua quantità. Aggiungi tutti i frutti al dizionario, dove il nome del frutto è la chiave e la quantità è il valore. Per esempio: </p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span> <span class="grey"># Quantità di frutta</span>
+				<br>
+				<span class="red">>></span> Mela
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="red">>></span> Arancia
+				<br>
+				<span class="red">>></span> <span class="purple">3</span>
+				<br>
+				<span class="red">>></span> Mandarino
+				<br>
+				<span class="red">>></span> <span class="purple">10</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> {<span class="yellow">'Mela'</span>: <span class="purple">3</span>, <span class="yellow">'Arancia'</span>: <span class="purple">3</span>, <span class="yellow">'Mandarino'</span>: <span class="purple">10</span>}
+			</p>
+			<span class="num">2.</span> <span class='task-title'>Maggiore e minore</span>
+			<p class="text">L'utente inserisce un numero N. Quindi inserisce i dati personali (nome ed età) dei suoi N amici. Crea una lista friends e aggiungi ad essa N dizionari con le chiavi name ed age. Trova il più giovane degli amici e stampa il suo nome.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span> <span class="grey"># Numero di amici</span>
+				<br>
+				<span class="red">>></span> Marco
+				<br>
+				<span class="red">>></span> <span class="purple">11</span>
+				<br>
+				<span class="red">>></span> Alessandro
+				<br>
+				<span class="red">>></span> <span class="purple">12</span>
+				<br>
+				<span class="red">>></span> Lorenzo
+				<br>
+				<span class="red">>></span> <span class="purple">10</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> Lorenzo
+			</p>
+			<span class="num">3.</span> <span class='task-title'>Ancora un po' sugli amici</span>
+			<p class="text">L'utente inserisce un numero N. Quindi inserisce i dati personali (nome ed età) dei suoi N amici. Crea una lista amici e aggiungi ad essa N dizionari con le chiavi nome ed eta. Stampa l'età media di tutti gli amici e il nome più lungo.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">3</span> <span class="grey"># Numero di amici</span>
+				<br>
+				<span class="red">>></span> Marco
+				<br>
+				<span class="red">>></span> <span class="purple">12</span>
+				<br>
+				<span class="red">>></span> Gabriele
+				<br>
+				<span class="red">>></span> <span class="purple">20</span>
+				<br>
+				<span class="red">>></span> Lorenzo
+				<br>
+				<span class="red">>></span> <span class="purple">10</span>
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">14</span>
+				<br>
+				<span class="red">>></span> Gabriele
+			</p>
+			<span class="num">4.</span> <span class='task-title'>Dizionario inglese</span>
+			<p class="text">"È ora di imparare l'inglese", si disse Stepa e decise di scrivere un programma per imparare l'inglese. Il programma riceve in input una parola in inglese e diverse sue traduzioni in russo. Componi un dizionario in cui la chiave è la parola inglese e il valore è una lista di parole russe. In questo problema è necessario utilizzare il <a href="https://docs.python.org/3.7/library/stdtypes.html#str.split" class='link' style='font-size: 20px;padding:3px 10px;'>metodo split()</a> delle stringhe.</p>
+			<p class="code">
+				<span class="grey"># Input:</span>
+				<br>
+				<span class="red">>></span> <span class="purple">4</span> <span class="grey"># Numero di parole</span>
+				<br>
+				<span class="red">>></span> apple <span class="red">- </span>mela
+				<br>
+				<span class="red">>></span> orange <span class="red">- </span>arancione, arancia
+				<br>
+				<span class="red">>></span> grape <span class="red">- </span>uva, acino
+				<br>
+				<span class="red">>></span> easy <span class="red">- </span>semplice, facile, non difficile, comodo, non complicato
+				<br>
+				<span class="grey"># Output:</span>
+				<br>
+				<span class="red">>></span> {<span class="yellow">'apple'</span>: [<span class="yellow">'mela'</span>], <span class="yellow">'orange'</span>: [<span class="yellow">'arancione'</span>, <span class="yellow">'arancia'</span>], <span class="yellow">'grape'</span>: [<span class="yellow">'uva'</span>, <span class="yellow">'acino'</span>], <span class="yellow">'easy'</span>: [<span class="yellow">'semplice'</span>, <span class="yellow">'facile'</span>, <span class="yellow">'non difficile'</span>, <span class="yellow">'comodo'</span>, <span class="yellow">'non complicato'</span>]}
+			</p>
+
+		</div>
+	</body>
+</html>
